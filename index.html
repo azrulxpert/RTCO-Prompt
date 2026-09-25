@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome 6.5.1 CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Google Fonts: Plus Jakarta Sans, Space Grotesk, JetBrains Mono & Italianno (Monotype Corsiva equivalent) -->
+    <!-- Google Fonts: Plus Jakarta Sans, Space Grotesk, JetBrains Mono & Italianno -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -198,7 +198,7 @@
 
             <!-- Butang Masuk -->
             <div class="pt-2">
-                <button onclick="launchGatewaySequence()" class="group relative inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-amber-500 via-amber-400 to-cyan-400 hover:from-amber-400 hover:to-cyan-300 text-slate-950 font-bold font-display text-xs tracking-wider uppercase rounded-2xl shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:scale-105 active:scale-95 transition-all duration-300">
+                <button type="button" onclick="launchGatewaySequence()" class="group relative inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-amber-500 via-amber-400 to-cyan-400 hover:from-amber-400 hover:to-cyan-300 text-slate-950 font-bold font-display text-xs tracking-wider uppercase rounded-2xl shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer z-30">
                     <i class="fa-solid fa-arrow-right-to-bracket text-base"></i>
                     <span>MASUK KE PUSAT KECEMERLANGAN AI</span>
                     <i class="fa-solid fa-arrow-right-long text-xs transition-transform group-hover:translate-x-1.5"></i>
@@ -347,7 +347,7 @@
             </div>
         </div>
 
-        <!-- ANALISIS FORMULASI PROMPT EKSEKUTIF (BAHASA MELAYU KORPORAT) -->
+        <!-- ANALISIS FORMULASI PROMPT EKSEKUTIF -->
         <div class="mb-6 glass-panel rounded-3xl p-5 border border-janm-border shadow-xl">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-4 pb-4 border-b border-janm-border/60">
                 <div class="flex items-center gap-3 w-full lg:w-auto">
@@ -363,7 +363,7 @@
                     </div>
                 </div>
 
-                <!-- Headline KPI Cards (Bahasa Melayu Korporat) -->
+                <!-- Headline KPI Cards -->
                 <div class="grid grid-cols-3 gap-3 w-full lg:w-auto font-mono text-center">
                     <div class="bg-janm-obsidian/90 px-4 py-2 rounded-2xl border border-janm-border">
                         <span class="text-[10px] text-slate-400 block uppercase">Skor Keseluruhan</span>
@@ -380,7 +380,7 @@
                 </div>
             </div>
 
-            <!-- 4 Pillar Metrics (Royal Blue, Azure & Gold Palette) -->
+            <!-- 4 Pillar Metrics -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4 font-mono">
                 <!-- R: Persona Clarity -->
                 <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
@@ -443,7 +443,6 @@
         <!-- Live AI Companion & Pedagogical Banner -->
         <div class="mb-6 glass-panel p-4 sm:p-5 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden border-t-2 border-t-amber-400">
             <div class="flex items-center gap-4 sm:gap-5 w-full md:w-auto">
-                <!-- Avatar Bot Dominan -->
                 <div class="relative w-20 h-20 sm:w-24 sm:h-24 shrink-0 flex items-center justify-center group cursor-pointer" onclick="pokeBotSentinel()">
                     <div id="botAuraGlow" class="absolute inset-0 rounded-2xl bg-cyan-400/25 blur-lg group-hover:bg-amber-400/40 transition duration-300"></div>
                     <div class="relative z-10 w-full h-full rounded-2xl bg-slate-950/85 border border-cyan-400/40 flex items-center justify-center overflow-hidden p-1 shadow-inner">
@@ -459,7 +458,6 @@
                         </span>
                         <span id="botMoodBadge" class="bg-blue-950 text-cyan-300 border border-cyan-500/40 text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold">Pembimbing Digital Bersedia</span>
                     </div>
-                    <!-- Struktur Ayat Dimurnikan Bahasa Melayu Korporat Pentadbiran -->
                     <p id="botSpeechText" class="text-xs sm:text-sm text-slate-200 mt-1.5 leading-relaxed font-medium">
                         Kerangka RTCO membimbing penggubalan arahan AI secara sistematik merangkumi ketetapan Peranan (R), Tugasan (T), Rujukan Konteks (C) serta Format Hasil (O). Pemanfaatan modul pembantu AI ini berfungsi memperkayakan cadangan idea mengikut komponen khusus secara teratur dan berintegriti.
                     </p>
@@ -503,10 +501,10 @@
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
             
-            <!-- LEFT 7-COLUMN: RTCO INPUT STATIONS DENGAN SEMPADAN KETAT MODULAR -->
+            <!-- LEFT 7-COLUMN: RTCO INPUT STATIONS -->
             <div class="lg:col-span-7 space-y-4">
                 
-                <!-- R - RULES (PERANAN & PERSONA SAHAJA) -->
+                <!-- R - RULES -->
                 <div class="glass-panel rounded-2xl p-4 sm:p-5 border-l-4 border-l-amber-400 transition hover:border-l-amber-300">
                     <div class="flex items-center justify-between gap-3 mb-2.5">
                         <div class="flex items-center gap-2.5 min-w-0">
@@ -529,7 +527,7 @@
                     </div>
                 </div>
 
-                <!-- T - TASK (TUGASAN SPESIFIK SAHAJA) -->
+                <!-- T - TASK -->
                 <div class="glass-panel rounded-2xl p-4 sm:p-5 border-l-4 border-l-cyan-400 transition hover:border-l-cyan-300">
                     <div class="flex items-center justify-between gap-3 mb-2.5">
                         <div class="flex items-center gap-2.5 min-w-0">
@@ -552,7 +550,7 @@
                     </div>
                 </div>
 
-                <!-- C - CONTEXT (KONTEKS, DASAR & TEMA SAHAJA) -->
+                <!-- C - CONTEXT -->
                 <div class="glass-panel rounded-2xl p-4 sm:p-5 border-l-4 border-l-emerald-400 transition hover:border-l-emerald-300">
                     <div class="flex items-center justify-between gap-3 mb-2.5">
                         <div class="flex items-center gap-2.5 min-w-0">
@@ -575,7 +573,7 @@
                     </div>
                 </div>
 
-                <!-- O - OUTPUT (FORMAT & GAYA HASIL SAHAJA) -->
+                <!-- O - OUTPUT -->
                 <div class="glass-panel rounded-2xl p-4 sm:p-5 border-l-4 border-l-indigo-400 transition hover:border-l-indigo-300">
                     <div class="flex items-center justify-between gap-3 mb-2.5">
                         <div class="flex items-center gap-2.5 min-w-0">
@@ -696,7 +694,6 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
                 
-                <!-- Identiti Sistem & Jabatan (Logo Jata Negara yang sama) -->
                 <div class="flex items-center gap-3 justify-center md:justify-start">
                     <img src="JATA NEGARA.png" alt="Jata Negara Malaysia" class="h-9 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(251,191,36,0.3)] shrink-0" onerror="this.onerror=null; this.src='Logo Kementerian Kewangan JANM.png';">
                     <div>
@@ -709,7 +706,6 @@
                     </div>
                 </div>
 
-                <!-- Kad Akreditasi Penyedia (Tengah) -->
                 <div class="flex justify-center">
                     <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-janm-deep/80 border border-amber-400/40 text-[11px] font-mono shadow-sm">
                         <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
@@ -720,7 +716,6 @@
                     </div>
                 </div>
 
-                <!-- Aspirasi & Moto Rasmi JANM (Tipografi Monotype Corsiva Style) -->
                 <div class="text-center md:text-right">
                     <div class="text-[11px] text-amber-300/90 font-medium font-display">
                         Aspirasi Pelan Strategik JANM 2026–2030
@@ -732,7 +727,6 @@
 
             </div>
 
-            <!-- Baris Hak Cipta Bawah -->
             <div class="mt-5 pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 font-mono gap-2">
                 <div>
                     © 2026 Kementerian Kewangan Malaysia • Jabatan Akauntan Negara Malaysia. Hak Cipta Terpelihara.
@@ -823,12 +817,18 @@
         let audioContext = null;
 
         function getAudioContext() {
-            if (!audioContext) {
-                const AudioCtx = window.AudioContext || window.webkitAudioContext;
-                audioContext = new AudioCtx();
-            }
-            if (audioContext.state === 'suspended') {
-                audioContext.resume();
+            try {
+                if (!audioContext) {
+                    const AudioCtx = window.AudioContext || window.webkitAudioContext;
+                    if (AudioCtx) {
+                        audioContext = new AudioCtx();
+                    }
+                }
+                if (audioContext && audioContext.state === 'suspended') {
+                    audioContext.resume();
+                }
+            } catch (e) {
+                console.warn('AudioContext not supported or blocked:', e);
             }
             return audioContext;
         }
@@ -836,6 +836,7 @@
         function playCinematicWarpSound() {
             try {
                 const ctx = getAudioContext();
+                if (!ctx) return;
                 const now = ctx.currentTime;
 
                 const osc = ctx.createOscillator();
@@ -860,6 +861,7 @@
         function playHapticTick() {
             try {
                 const ctx = getAudioContext();
+                if (!ctx) return;
                 const now = ctx.currentTime;
                 const osc = ctx.createOscillator();
                 const gain = ctx.createGain();
@@ -877,18 +879,20 @@
 
         // Canvas Background Tunnel
         const warpCanvas = document.getElementById('warpTunnelCanvas');
-        const warpCtx = warpCanvas.getContext('2d');
+        const warpCtx = warpCanvas ? warpCanvas.getContext('2d') : null;
         let warpStars = [];
         let warpSpeed = 1.5;
         let isWarping = false;
 
         function resizeWarpCanvas() {
+            if (!warpCanvas) return;
             warpCanvas.width = window.innerWidth;
             warpCanvas.height = window.innerHeight;
             initWarpStars();
         }
 
         function initWarpStars() {
+            if (!warpCanvas) return;
             warpStars = [];
             const count = Math.floor((warpCanvas.width * warpCanvas.height) / 4200);
             for (let i = 0; i < count; i++) {
@@ -902,6 +906,7 @@
         }
 
         function renderWarpTunnel() {
+            if (!warpCtx || !warpCanvas) return;
             warpCtx.fillStyle = 'rgba(3, 13, 34, 0.28)';
             warpCtx.fillRect(0, 0, warpCanvas.width, warpCanvas.height);
             const cx = warpCanvas.width / 2;
@@ -935,9 +940,11 @@
             requestAnimationFrame(renderWarpTunnel);
         }
 
-        window.addEventListener('resize', resizeWarpCanvas);
-        resizeWarpCanvas();
-        renderWarpTunnel();
+        if (warpCanvas) {
+            window.addEventListener('resize', resizeWarpCanvas);
+            resizeWarpCanvas();
+            renderWarpTunnel();
+        }
 
         function launchGatewaySequence() {
             if (isWarping) return;
@@ -946,22 +953,26 @@
             playCinematicWarpSound();
 
             const gateway = document.getElementById('hyperGateway');
-            gateway.classList.add('portal-smooth-fade');
+            if (gateway) {
+                gateway.classList.add('portal-smooth-fade');
 
-            setTimeout(() => {
-                gateway.style.display = 'none';
-                isWarping = false;
-                warpSpeed = 1.5;
-                compileRealtimePrompt();
-                triggerToast("Pusat AI Diaktifkan", "Selamat datang ke RTCO AI Prompt Studio JANM.");
-            }, 750);
+                setTimeout(() => {
+                    gateway.style.display = 'none';
+                    isWarping = false;
+                    warpSpeed = 1.5;
+                    compileRealtimePrompt();
+                    triggerToast("Pusat AI Diaktifkan", "Selamat datang ke RTCO AI Prompt Studio JANM.");
+                }, 750);
+            }
         }
 
         function reopenGateway() {
             playHapticTick();
             const gateway = document.getElementById('hyperGateway');
-            gateway.style.display = 'flex';
-            gateway.classList.remove('portal-smooth-fade');
+            if (gateway) {
+                gateway.style.display = 'flex';
+                gateway.classList.remove('portal-smooth-fade');
+            }
             isWarping = false;
             warpSpeed = 1.5;
         }
@@ -1007,15 +1018,15 @@
             const copyBtnText = document.getElementById('copyButtonText');
 
             if (mode === 'gems') {
-                btnGems.className = "px-3 py-1 rounded-lg text-xs font-bold transition bg-cyan-400 text-slate-950 shadow-sm";
-                btnStandard.className = "px-3 py-1 rounded-lg text-xs font-medium text-slate-300 hover:text-white transition";
-                pillDesc.innerHTML = `<i class="fa-solid fa-gem text-amber-400"></i> <span>Mod Gemini Gems: Diformat khusus sebagai <strong>Instructions</strong> kekal untuk Custom Gem jabatan anda di Google Gemini.</span>`;
-                copyBtnText.innerText = "SALIN INSTRUCTIONS UNTUK GEMS";
+                if (btnGems) btnGems.className = "px-3 py-1 rounded-lg text-xs font-bold transition bg-cyan-400 text-slate-950 shadow-sm";
+                if (btnStandard) btnStandard.className = "px-3 py-1 rounded-lg text-xs font-medium text-slate-300 hover:text-white transition";
+                if (pillDesc) pillDesc.innerHTML = `<i class="fa-solid fa-gem text-amber-400"></i> <span>Mod Gemini Gems: Diformat khusus sebagai <strong>Instructions</strong> kekal untuk Custom Gem jabatan anda di Google Gemini.</span>`;
+                if (copyBtnText) copyBtnText.innerText = "SALIN INSTRUCTIONS UNTUK GEMS";
             } else {
-                btnStandard.className = "px-3 py-1 rounded-lg text-xs font-bold transition bg-amber-500 text-slate-950 shadow-sm";
-                btnGems.className = "px-3 py-1 rounded-lg text-xs font-medium text-slate-300 hover:text-white transition";
-                pillDesc.innerHTML = `<i class="fa-solid fa-terminal text-amber-400"></i> <span>Mod Sembang Harian: Salin terus ke kotak sembang ChatGPT atau Google Gemini.</span>`;
-                copyBtnText.innerText = "SALIN PROMPT SEKARANG";
+                if (btnStandard) btnStandard.className = "px-3 py-1 rounded-lg text-xs font-bold transition bg-amber-500 text-slate-950 shadow-sm";
+                if (btnGems) btnGems.className = "px-3 py-1 rounded-lg text-xs font-medium text-slate-300 hover:text-white transition";
+                if (pillDesc) pillDesc.innerHTML = `<i class="fa-solid fa-terminal text-amber-400"></i> <span>Mod Sembang Harian: Salin terus ke kotak sembang ChatGPT atau Google Gemini.</span>`;
+                if (copyBtnText) copyBtnText.innerText = "SALIN PROMPT SEKARANG";
             }
 
             compileRealtimePrompt();
@@ -1025,6 +1036,8 @@
         function handleFieldFocus(type) {
             const botSpeech = document.getElementById('botSpeechText');
             const moodBadge = document.getElementById('botMoodBadge');
+
+            if (!botSpeech || !moodBadge) return;
 
             if (type === 'rules') {
                 botSpeech.innerText = "Fokus [Rules]: Tetapkan identiti, kepakaran khusus dan etika penjawat awam. Elakkan memasukkan tindakan kerja di sini.";
@@ -1042,10 +1055,10 @@
         }
 
         function checkCompletenessCount() {
-            const rules = document.getElementById('boxRules').value.trim();
-            const task = document.getElementById('boxTask').value.trim();
-            const context = document.getElementById('boxContext').value.trim();
-            const output = document.getElementById('boxOutput').value.trim();
+            const rules = document.getElementById('boxRules')?.value.trim() || '';
+            const task = document.getElementById('boxTask')?.value.trim() || '';
+            const context = document.getElementById('boxContext')?.value.trim() || '';
+            const output = document.getElementById('boxOutput')?.value.trim() || '';
 
             let count = 0;
             if (rules) count++;
@@ -1055,14 +1068,10 @@
             return count;
         }
 
-        /**
-         * ENJIN RUBRIK SEMANTIK REALISTIK
-         */
         function evaluateSemanticQuality(text, type) {
             const trimmed = text.trim();
             if (!trimmed) return { score: 0, feedback: "Belum diisi" };
 
-            // Ujian Pengesanan Teks Berulang / Gibberish
             if (/(.)\1{4,}/i.test(trimmed)) {
                 return { score: 5, feedback: "Dikesan teks berulang / tidak sah" };
             }
@@ -1143,10 +1152,10 @@
         }
 
         function compileRealtimePrompt() {
-            const rules = document.getElementById('boxRules').value.trim();
-            const task = document.getElementById('boxTask').value.trim();
-            const context = document.getElementById('boxContext').value.trim();
-            const output = document.getElementById('boxOutput').value.trim();
+            const rules = document.getElementById('boxRules')?.value.trim() || '';
+            const task = document.getElementById('boxTask')?.value.trim() || '';
+            const context = document.getElementById('boxContext')?.value.trim() || '';
+            const output = document.getElementById('boxOutput')?.value.trim() || '';
 
             let completed = 0;
             updateBadgeStyle('badgeR', rules); if (rules) completed++;
@@ -1155,10 +1164,11 @@
             updateBadgeStyle('badgeO', output); if (output) completed++;
 
             const percent = Math.round((completed / 4) * 100);
-            document.getElementById('scoreBar').style.width = percent + '%';
-            document.getElementById('scoreText').innerText = `${completed} / 4 Selesai (${percent}%)`;
+            const scoreBar = document.getElementById('scoreBar');
+            const scoreText = document.getElementById('scoreText');
+            if (scoreBar) scoreBar.style.width = percent + '%';
+            if (scoreText) scoreText.innerText = `${completed} / 4 Selesai (${percent}%)`;
 
-            // Penilaian Semantik Sebenar
             const evalR = evaluateSemanticQuality(rules, 'rules');
             const evalT = evaluateSemanticQuality(task, 'task');
             const evalC = evaluateSemanticQuality(context, 'context');
@@ -1171,11 +1181,12 @@
 
             const overallScore = Math.round((rScore + tScore + cScore + oScore) / 4);
 
-            document.getElementById("qualityScore").innerText = overallScore + "/100";
+            const qualityScoreEl = document.getElementById("qualityScore");
+            if (qualityScoreEl) qualityScoreEl.innerText = overallScore + "/100";
+            
             const overallScoreEl = document.getElementById("overallScoreText");
             if (overallScoreEl) overallScoreEl.innerText = overallScore + "%";
 
-            // Status & Readiness Berbahasa Melayu Korporat
             const statusEl = document.getElementById("promptStatusText");
             const readinessEl = document.getElementById("promptReadinessText");
             const overallBadgeEl = document.getElementById("overallBadge");
@@ -1222,13 +1233,15 @@
                 }
             }
 
-            // Kemaskini RTCO Progress Timeline
-            document.getElementById('stepR').className = (rules && rScore >= 30) ? 'text-amber-300 font-bold transition' : 'text-slate-500 font-bold transition';
-            document.getElementById('stepT').className = (task && tScore >= 30) ? 'text-cyan-300 font-bold transition' : 'text-slate-500 font-bold transition';
-            document.getElementById('stepC').className = (context && cScore >= 30) ? 'text-emerald-300 font-bold transition' : 'text-slate-500 font-bold transition';
-            document.getElementById('stepO').className = (output && oScore >= 30) ? 'text-indigo-300 font-bold transition' : 'text-slate-500 font-bold transition';
+            const stepR = document.getElementById('stepR');
+            const stepT = document.getElementById('stepT');
+            const stepC = document.getElementById('stepC');
+            const stepO = document.getElementById('stepO');
+            if (stepR) stepR.className = (rules && rScore >= 30) ? 'text-amber-300 font-bold transition' : 'text-slate-500 font-bold transition';
+            if (stepT) stepT.className = (task && tScore >= 30) ? 'text-cyan-300 font-bold transition' : 'text-slate-500 font-bold transition';
+            if (stepC) stepC.className = (context && cScore >= 30) ? 'text-emerald-300 font-bold transition' : 'text-slate-500 font-bold transition';
+            if (stepO) stepO.className = (output && oScore >= 30) ? 'text-indigo-300 font-bold transition' : 'text-slate-500 font-bold transition';
 
-            // Garis Penyambung Timeline
             const lineR = document.getElementById('lineR');
             const lineT = document.getElementById('lineT');
             const lineC = document.getElementById('lineC');
@@ -1236,7 +1249,6 @@
             if (lineT) lineT.className = (task && context && tScore >= 30 && cScore >= 30) ? 'h-[2px] bg-emerald-400 flex-1 mx-2 transition-colors' : 'h-[2px] bg-slate-800 flex-1 mx-2 transition-colors';
             if (lineC) lineC.className = (context && output && cScore >= 30 && oScore >= 30) ? 'h-[2px] bg-indigo-400 flex-1 mx-2 transition-colors' : 'h-[2px] bg-slate-800 flex-1 mx-2 transition-colors';
 
-            // Kemaskini Bar & Label Analitik
             const elAnR = document.getElementById('analyticsR');
             const elAnT = document.getElementById('analyticsT');
             const elAnC = document.getElementById('analyticsC');
@@ -1255,7 +1267,6 @@
             if (barC) barC.style.width = cScore + '%';
             if (barO) barO.style.width = oScore + '%';
 
-            // Feedback Teks
             const fbR = document.getElementById('feedbackR');
             const fbT = document.getElementById('feedbackT');
             const fbC = document.getElementById('feedbackC');
@@ -1574,17 +1585,17 @@ PANDUAN KETAT:
 
         function copyGeneratedPrompt() {
             playHapticTick();
-            const rules = document.getElementById('boxRules').value.trim();
-            const task = document.getElementById('boxTask').value.trim();
-            const context = document.getElementById('boxContext').value.trim();
-            const output = document.getElementById('boxOutput').value.trim();
+            const rules = document.getElementById('boxRules')?.value.trim() || '';
+            const task = document.getElementById('boxTask')?.value.trim() || '';
+            const context = document.getElementById('boxContext')?.value.trim() || '';
+            const output = document.getElementById('boxOutput')?.value.trim() || '';
 
             if (!rules && !task && !context && !output) {
                 triggerToast("Borang Kosong", "Sila masukkan sekurang-kurangnya satu medan RTCO.");
                 return;
             }
             
-            const text = document.getElementById('displayRealtimePrompt').textContent;
+            const text = document.getElementById('displayRealtimePrompt')?.textContent || '';
             const tempArea = document.createElement("textarea");
             tempArea.value = text;
             document.body.appendChild(tempArea);
@@ -1600,17 +1611,17 @@ PANDUAN KETAT:
         }
 
         function exportTxtDoc() {
-            const rules = document.getElementById('boxRules').value.trim();
-            const task = document.getElementById('boxTask').value.trim();
-            const context = document.getElementById('boxContext').value.trim();
-            const output = document.getElementById('boxOutput').value.trim();
+            const rules = document.getElementById('boxRules')?.value.trim() || '';
+            const task = document.getElementById('boxTask')?.value.trim() || '';
+            const context = document.getElementById('boxContext')?.value.trim() || '';
+            const output = document.getElementById('boxOutput')?.value.trim() || '';
 
             if (!rules && !task && !context && !output) {
                 triggerToast("Borang Kosong", "Tiada maklumat untuk dimuat turun.");
                 return;
             }
 
-            const text = document.getElementById('displayRealtimePrompt').textContent;
+            const text = document.getElementById('displayRealtimePrompt')?.textContent || '';
             const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
             const link = document.createElement("a");
             link.href = URL.createObjectURL(blob);
@@ -1623,18 +1634,20 @@ PANDUAN KETAT:
         }
 
         function printFormattedDoc() {
-            const rules = document.getElementById('boxRules').value.trim();
-            const task = document.getElementById('boxTask').value.trim();
-            const context = document.getElementById('boxContext').value.trim();
-            const output = document.getElementById('boxOutput').value.trim();
+            const rules = document.getElementById('boxRules')?.value.trim() || '';
+            const task = document.getElementById('boxTask')?.value.trim() || '';
+            const context = document.getElementById('boxContext')?.value.trim() || '';
+            const output = document.getElementById('boxOutput')?.value.trim() || '';
 
             if (!rules && !task && !context && !output) {
                 triggerToast("Borang Kosong", "Tiada kandungan untuk dicetak.");
                 return;
             }
 
-            const text = document.getElementById('displayRealtimePrompt').textContent;
+            const text = document.getElementById('displayRealtimePrompt')?.textContent || '';
             const printWin = window.open('', '_blank');
+            if (!printWin) return;
+            
             printWin.document.write(`
                 <!DOCTYPE html>
                 <html>
@@ -1668,29 +1681,34 @@ PANDUAN KETAT:
         }
 
         function clearRTCOFields() {
-            document.getElementById('boxRules').value = '';
-            document.getElementById('boxTask').value = '';
-            document.getElementById('boxContext').value = '';
-            document.getElementById('boxOutput').value = '';
-            document.getElementById('presetSelector').value = '';
+            if (document.getElementById('boxRules')) document.getElementById('boxRules').value = '';
+            if (document.getElementById('boxTask')) document.getElementById('boxTask').value = '';
+            if (document.getElementById('boxContext')) document.getElementById('boxContext').value = '';
+            if (document.getElementById('boxOutput')) document.getElementById('boxOutput').value = '';
+            if (document.getElementById('presetSelector')) document.getElementById('presetSelector').value = '';
             compileRealtimePrompt();
             triggerToast("Tetapan Semula", "Semua ruangan input telah dikosongkan.");
         }
 
         function openHelpDialog() {
             const modal = document.getElementById('helpModal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            }
         }
 
         function closeHelpDialog() {
             const modal = document.getElementById('helpModal');
-            modal.classList.remove('flex');
-            modal.classList.add('hidden');
+            if (modal) {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
         }
 
         function triggerToast(title, message) {
             const toast = document.getElementById('toastBox');
+            if (!toast) return;
             document.getElementById('toastHeader').innerText = title;
             document.getElementById('toastDetail').innerText = message;
             toast.classList.remove('translate-y-24', 'opacity-0');
@@ -1703,13 +1721,11 @@ PANDUAN KETAT:
         const TRACKING_NAMESPACE = 'janm_rtco_analytics';
 
         function initializeTrafficIntelligence() {
-    // Penyelarasan ke domain Cloudflare Pages terkini
-    const currentHost = window.location.hostname || 'rtco-prompt.pages.dev';
-    const domainBadge = document.getElementById('currentDomainBadge');
-    if (domainBadge) {
-        domainBadge.innerText = currentHost;
-    }
-    // ... enjin pemantauan statistik pelawat
+            const currentHost = window.location.hostname || 'rtco-prompt.pages.dev';
+            const domainBadge = document.getElementById('currentDomainBadge');
+            if (domainBadge) {
+                domainBadge.innerText = currentHost;
+            }
 
             let totalPageviews = parseInt(sessionStorage.getItem(`${TRACKING_NAMESPACE}_views`) || '0', 10);
             totalPageviews += 1;
