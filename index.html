@@ -220,8 +220,12 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
             
             <div class="flex items-center gap-3.5">
-                <!-- Logo Kementerian Kewangan JANM pada Header -->
-                <img src="Logo Kementerian Kewangan JANM.png" alt="Logo Kementerian Kewangan JANM" class="h-11 sm:h-12 w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="reopenGateway()" onerror="this.src='JATA NEGARA.png';">
+                <!-- Logo Jata Negara Kementerian Kewangan / JANM pada Header -->
+                <img src="JATA NEGARA.png" alt="Jata Negara - Kementerian Kewangan & Jabatan Akauntan Negara Malaysia" class="h-11 sm:h-12 w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="reopenGateway()" onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('fallbackHeaderCrest').classList.remove('hidden');">
+                
+                <div id="fallbackHeaderCrest" class="hidden flex items-center justify-center w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/40 text-amber-400">
+                    <i class="fa-solid fa-landmark text-lg"></i>
+                </div>
 
                 <div>
                     <div class="flex items-center gap-2">
