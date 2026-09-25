@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RTCO AI Prompt Studio | JANM</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome 6.5.1 CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts: Plus Jakarta Sans, Space Grotesk, JetBrains Mono & Italianno (Monotype Corsiva equivalent) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -37,7 +40,8 @@
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
                         display: ['"Space Grotesk"', 'sans-serif'],
-                        mono: ['"JetBrains Mono"', 'monospace']
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                        cursive: ['"Italianno"', '"Monotype Corsiva"', 'cursive']
                     }
                 }
             }
@@ -45,64 +49,87 @@
     </script>
 
     <style>
-        /* Executive Royal GovTech Circuit Pattern (Pelan Strategik JANM 2026-2030) */
+        /* Royal GovTech Background berinspirasikan Pelan Strategik JANM 2026-2030 */
         .cyber-bg {
             background-color: #030d22;
             background-image: 
-                radial-gradient(circle at 18% 12%, rgba(29, 78, 216, 0.28) 0%, transparent 45%),
-                radial-gradient(circle at 82% 18%, rgba(0, 210, 255, 0.18) 0%, transparent 40%),
-                radial-gradient(circle at 50% 90%, rgba(245, 158, 11, 0.12) 0%, transparent 50%),
-                linear-gradient(90deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px),
-                linear-gradient(0deg, rgba(56, 189, 248, 0.04) 1px, transparent 1px);
-            background-size: 100% 100%, 100% 100%, 100% 100%, 32px 32px, 32px 32px;
+                radial-gradient(circle at 20% 15%, rgba(29, 78, 216, 0.22) 0%, transparent 45%),
+                radial-gradient(circle at 80% 20%, rgba(0, 210, 255, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 50% 90%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+                linear-gradient(90deg, rgba(56, 189, 248, 0.035) 1px, transparent 1px),
+                linear-gradient(0deg, rgba(56, 189, 248, 0.035) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 100% 100%, 36px 36px, 36px 36px;
         }
 
-        /* Royal Glassmorphism */
+        /* Glassmorphism Korporat Premium */
         .glass-panel {
             background: linear-gradient(140deg, rgba(9, 33, 78, 0.78) 0%, rgba(4, 18, 48, 0.92) 100%);
             backdrop-filter: blur(14px);
             -webkit-backdrop-filter: blur(14px);
-            border: 1px solid rgba(56, 189, 248, 0.28);
-            box-shadow: 0 16px 36px -12px rgba(2, 11, 30, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            box-shadow: 0 16px 36px -12px rgba(2, 11, 30, 0.85), inset 0 1px 0 rgba(255, 255, 255, 0.12);
         }
 
         .glass-panel:hover {
-            border-color: rgba(0, 210, 255, 0.55);
-            box-shadow: 0 20px 40px -10px rgba(19, 62, 124, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+            border-color: rgba(0, 210, 255, 0.5);
+            box-shadow: 0 20px 40px -10px rgba(19, 62, 124, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
         }
 
-        /* Portal Entrance Animation */
-        .warp-accelerate {
-            animation: warpJump 0.9s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+        /* Peralihan Gerbang Yang Tenang & Eksekutif */
+        .portal-smooth-fade {
+            animation: smoothExecutiveEntry 0.75s cubic-bezier(0.25, 1, 0.5, 1) forwards;
         }
 
-        @keyframes warpJump {
-            0% { transform: scale(1); filter: brightness(1); opacity: 1; }
-            40% { transform: scale(1.15) rotate(1deg); filter: brightness(2) contrast(1.2); opacity: 0.9; }
-            100% { transform: scale(3.5); filter: brightness(4); opacity: 0; pointer-events: none; }
+        @keyframes smoothExecutiveEntry {
+            0% { 
+                transform: scale(1); 
+                opacity: 1; 
+                filter: blur(0px); 
+            }
+            40% { 
+                transform: scale(1.03); 
+                opacity: 0.85; 
+                filter: blur(1.5px); 
+            }
+            100% { 
+                transform: scale(1.06); 
+                opacity: 0; 
+                filter: blur(5px); 
+                pointer-events: none; 
+            }
         }
 
-        /* Floating & Orbit Rings */
-        @keyframes orbitCW {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
+        /* Gelung Aura Tenang */
+        @keyframes subtlePulse {
+            0%, 100% { transform: scale(1); opacity: 0.6; }
+            50% { transform: scale(1.04); opacity: 0.9; }
+        }
+        .animate-aura-pulse {
+            animation: subtlePulse 4s ease-in-out infinite;
         }
 
-        @keyframes orbitCCW {
-            from { transform: rotate(360deg); }
-            to { transform: rotate(0deg); }
+        @keyframes botFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
         }
-
-        .animate-orbit-cw { animation: orbitCW 60s linear infinite; }
-        .animate-orbit-ccw { animation: orbitCCW 45s linear infinite; }
+        .animate-bot-float {
+            animation: botFloat 4.5s ease-in-out infinite;
+        }
 
         @keyframes botWave {
             0%, 100% { transform: translateY(0) rotate(0deg); }
-            25% { transform: translateY(-5px) rotate(4deg); }
-            75% { transform: translateY(-3px) rotate(-4deg); }
+            25% { transform: translateY(-4px) rotate(4deg); }
+            75% { transform: translateY(-2px) rotate(-4deg); }
         }
         .animate-bot-wave {
             animation: botWave 0.7s ease-in-out 3;
+        }
+
+        /* Tipografi Kaligrafi Eksekutif */
+        .font-corsiva-style {
+            font-family: 'Italianno', 'Monotype Corsiva', 'Zapf Chancery', cursive;
+            font-style: italic;
+            letter-spacing: 0.5px;
         }
 
         /* Custom Scrollbar */
@@ -117,98 +144,65 @@
     <!-- PUSAT KECEMERLANGAN AI (SPLASH SCREEN COMMAND CENTRE) -->
     <div id="hyperGateway" class="fixed inset-0 z-50 bg-janm-obsidian flex flex-col items-center justify-center p-4 sm:p-6 transition-all duration-700 select-none overflow-hidden">
         
-        <!-- Live Particle Hyperspace Canvas -->
-        <canvas id="warpTunnelCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-85"></canvas>
+        <!-- Live Particle Canvas -->
+        <canvas id="warpTunnelCanvas" class="absolute inset-0 w-full h-full pointer-events-none opacity-80"></canvas>
 
-        <!-- Top GovTech Badges -->
-        <div class="absolute top-6 left-6 font-mono text-[11px] text-amber-300 tracking-wider flex items-center gap-2.5 z-10">
-            <span class="relative flex h-2.5 w-2.5">
-                <span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-amber-500"></span>
-            </span>
-            <span>PELAN STRATEGIK JANM 2026–2030 • KEMENTERIAN KEWANGAN</span>
-        </div>
-
-        <div class="absolute top-6 right-6 font-mono text-[11px] text-cyan-300 hidden md:flex items-center gap-2 z-10">
-            <i class="fa-solid fa-graduation-cap text-amber-400"></i>
-            <span>PEMBELAJARAN PROMPT BERSTRUKTUR RTCO</span>
-        </div>
-
-        <!-- Center Cyber Portal Rig -->
-        <div class="relative z-10 max-w-2xl w-full text-center space-y-5 flex flex-col items-center my-auto">
+        <div class="relative z-10 max-w-2xl w-full text-center space-y-6 flex flex-col items-center my-auto">
             
-            <!-- Logo Presentation (Jata Negara pada Splash Screen) -->
-            <div class="flex flex-col items-center mb-1">
-                <img src="JATA NEGARA.png" alt="Jata Negara - Jabatan Akauntan Negara Malaysia" class="h-20 sm:h-24 object-contain filter drop-shadow-[0_0_20px_rgba(251,191,36,0.3)] transition-transform hover:scale-105" onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('fallbackGovCrest').classList.remove('hidden');">
-                <div id="fallbackGovCrest" class="hidden flex items-center gap-3 px-4 py-2 rounded-2xl glass-panel border border-amber-400/40">
-                    <i class="fa-solid fa-landmark text-2xl text-amber-400"></i>
-                    <div class="text-left font-display">
-                        <div class="text-xs font-extrabold text-white tracking-wider uppercase">KEMENTERIAN KEWANGAN</div>
-                        <div class="text-[10px] text-amber-300 tracking-wide">JABATAN AKAUNTAN NEGARA MALAYSIA</div>
-                    </div>
-                </div>
+            <!-- Logo Presentation (Logo Rasmi Kementerian Kewangan JANM) -->
+            <div class="flex flex-col items-center">
+                <img src="Logo Kementerian Kewangan JANM.png" alt="Kementerian Kewangan Malaysia - Jabatan Akauntan Negara Malaysia" class="h-20 sm:h-24 object-contain filter drop-shadow-[0_0_20px_rgba(251,191,36,0.3)] transition-transform hover:scale-105" onerror="this.onerror=null; this.src='JATA NEGARA.png';">
             </div>
 
-            <!-- AI Command Centre Core Reactor Visual -->
-            <div class="relative w-56 h-56 sm:w-64 sm:h-64 flex items-center justify-center cursor-pointer group" onclick="launchGatewaySequence()">
-                <div class="absolute inset-0 rounded-full border border-cyan-400/40 animate-orbit-cw flex items-center justify-center">
-                    <div class="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_14px_#f59e0b] absolute -top-1"></div>
-                    <div class="w-2 h-2 rounded-full bg-cyan-300 absolute -bottom-1"></div>
-                </div>
-                <div class="absolute inset-4 rounded-full border-2 border-dashed border-amber-400/40 animate-orbit-ccw"></div>
-                <div class="absolute inset-8 rounded-full bg-gradient-to-tr from-blue-600/30 via-cyan-500/20 to-amber-500/30 blur-2xl group-hover:scale-110 transition duration-500"></div>
+            <!-- AI Bot Dominan & Korporat Pada Podium Eksekutif -->
+            <div class="relative w-64 h-64 sm:w-72 sm:h-72 flex items-center justify-center cursor-pointer group my-1" onclick="launchGatewaySequence()">
+                <!-- Aura Lingkaran Luaran Tenang -->
+                <div class="absolute inset-0 rounded-full border border-cyan-400/30 animate-aura-pulse"></div>
+                <div class="absolute inset-3 rounded-full border border-dashed border-amber-400/35"></div>
+                <div class="absolute inset-6 rounded-full bg-gradient-to-tr from-blue-600/25 via-cyan-500/20 to-amber-500/20 blur-3xl group-hover:scale-105 transition duration-700"></div>
 
-                <div class="w-36 h-36 sm:w-40 sm:h-40 rounded-full glass-panel border-2 border-amber-400/80 shadow-[0_0_25px_rgba(245,158,11,0.35)] flex flex-col items-center justify-center relative overflow-hidden group-hover:border-cyan-300 group-hover:shadow-[0_0_35px_rgba(0,210,255,0.5)] transition-all duration-300 p-2">
-                    <div class="absolute inset-x-0 h-1 bg-gradient-to-r from-transparent via-amber-300 to-transparent animate-pulse"></div>
-                    <img src="AI BOT GenAI.png" alt="NEXUS AI Bot" onerror="this.onerror=null; this.src='AI BOT GenAI.jpg';" class="w-24 h-24 sm:w-28 sm:h-28 object-contain filter drop-shadow-[0_4px_12px_rgba(0,210,255,0.4)] group-hover:scale-110 transition-transform duration-300 animate-pulse">
-                    <div class="mt-1 flex items-center gap-1.5">
-                        <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
-                        <span class="font-mono text-[9px] tracking-widest text-amber-300 font-bold uppercase" title="National Executive eXperience Utility System">NEXUS-JANM</span>
+                <!-- Bekas Utama AI Bot -->
+                <div class="w-52 h-52 sm:w-60 sm:h-60 rounded-full glass-panel border-2 border-amber-400/80 shadow-[0_0_35px_rgba(245,158,11,0.35)] flex flex-col items-center justify-center relative overflow-hidden group-hover:border-cyan-300 group-hover:shadow-[0_0_40px_rgba(0,210,255,0.5)] transition-all duration-500 p-2 bg-gradient-to-b from-janm-royal/70 to-slate-950/90">
+                    <div class="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-cyan-300 to-transparent"></div>
+                    
+                    <!-- Imej AI Bot Dominan -->
+                    <img src="AI BOT GenAI.png" alt="NEXUS-JANM AI Bot" onerror="this.onerror=null; this.src='AI BOT GenAI.jpg';" class="w-40 h-40 sm:w-48 sm:h-48 object-contain filter drop-shadow-[0_8px_18px_rgba(0,210,255,0.5)] transition-transform duration-500 group-hover:scale-105 animate-bot-float">
+                    
+                    <div class="absolute bottom-2.5 inset-x-0 flex items-center justify-center gap-1.5 bg-slate-950/85 py-1 px-3 mx-8 rounded-full border border-amber-400/40 backdrop-blur-md">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                        <span class="font-mono text-[10px] tracking-widest text-amber-300 font-extrabold uppercase">NEXUS-JANM</span>
                     </div>
                 </div>
 
-                <div class="absolute -bottom-2 px-3.5 py-1 rounded-full bg-slate-900/95 border border-amber-400/50 text-[10px] font-mono text-amber-300 tracking-wider flex items-center gap-1.5 shadow-lg group-hover:bg-blue-950/95 transition">
-                    <i class="fa-solid fa-hand-pointer text-[10px] text-amber-400"></i> Buka Studio Eksekutif
+                <div class="absolute -bottom-2 px-4 py-1.5 rounded-full bg-slate-900/95 border border-amber-400/60 text-[11px] font-mono text-amber-300 tracking-wider flex items-center gap-2 shadow-xl group-hover:bg-blue-950/95 transition-all">
+                    <i class="fa-solid fa-hand-pointer text-xs text-amber-400"></i> Buka Studio Eksekutif
                 </div>
             </div>
 
-            <!-- Title & Slogan -->
-            <div class="space-y-2">
-                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-blue-950/90 border border-amber-400/40 text-amber-300 text-[11px] font-mono font-semibold">
-                    <i class="fa-solid fa-compass-drafting text-amber-400"></i> Digital Finance Intelligence Platform
-                </div>
+            <!-- Tajuk & Penerangan Korporat -->
+            <div class="space-y-3">
                 <h1 class="text-2xl sm:text-4xl font-extrabold font-display tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-cyan-200">
                     RTCO AI PROMPT STUDIO
                 </h1>
-                <div class="mt-2 text-xs sm:text-sm text-slate-400 font-mono">
-                    AI Governance • Prompt Engineering • Google Gemini • Gems • ChatGPT
-                </div>
-                
-                <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-slate-900/90 border border-cyan-400/40 text-[11px] font-mono text-cyan-200">
-                    <i class="fa-solid fa-robot text-amber-400"></i>
-                    <span>Disediakan oleh:</span>
-                    <strong class="text-amber-300 font-bold">Kamsiazrul Sidek</strong>
-                    <span class="text-slate-500">•</span>
-                    <span class="text-emerald-300 font-semibold">AI AGENT JANM (BPAD)</span>
+
+                <!-- Dua Baris Rasmi Agensi -->
+                <div class="text-xs sm:text-sm font-semibold tracking-wider text-slate-300 uppercase space-y-0.5 font-display">
+                    <div>KEMENTERIAN KEWANGAN MALAYSIA</div>
+                    <div class="text-amber-300">JABATAN AKAUNTAN NEGARA MALAYSIA</div>
                 </div>
 
-                <p class="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
-                    Sistem bimbingan formulasi berstruktur <strong class="text-amber-300 font-bold">RTCO</strong> (Rules, Task, Context, Output) yang mendidik warga jabatan membina prompt berkualiti tinggi, berintegriti dan berimpak.
+                <p class="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed pt-1">
+                    Sistem bimbingan formulasi berstruktur <strong class="text-amber-300 font-bold">RTCO</strong> (Rules, Task, Context, Output) bagi membimbing warga jabatan membina arahan kecerdasan buatan yang berintegriti, tepat dan berimpak tinggi.
                 </p>
             </div>
 
-            <!-- Entry Action Button -->
-            <div class="pt-1">
+            <!-- Butang Masuk -->
+            <div class="pt-2">
                 <button onclick="launchGatewaySequence()" class="group relative inline-flex items-center gap-3 px-8 py-3.5 bg-gradient-to-r from-amber-500 via-amber-400 to-cyan-400 hover:from-amber-400 hover:to-cyan-300 text-slate-950 font-bold font-display text-xs tracking-wider uppercase rounded-2xl shadow-[0_0_20px_rgba(245,158,11,0.4)] hover:scale-105 active:scale-95 transition-all duration-300">
-                    <i class="fa-solid fa-bolt-lightning text-base"></i>
+                    <i class="fa-solid fa-arrow-right-to-bracket text-base"></i>
                     <span>MASUK KE PUSAT KECEMERLANGAN AI</span>
                     <i class="fa-solid fa-arrow-right-long text-xs transition-transform group-hover:translate-x-1.5"></i>
                 </button>
-            </div>
-
-            <div class="text-[10px] text-slate-400 flex items-center justify-center gap-2 font-mono">
-                <i class="fa-solid fa-certificate text-amber-400"></i>
-                <span>NEXUS-JANM • Resolusi Rasmi Pelan Strategik JANM 2026–2030</span>
             </div>
 
         </div>
@@ -220,19 +214,16 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
             
             <div class="flex items-center gap-3.5">
-                <!-- Logo Jata Negara Kementerian Kewangan / JANM pada Header -->
-                <img src="JATA NEGARA.png" alt="Jata Negara - Kementerian Kewangan & Jabatan Akauntan Negara Malaysia" class="h-11 sm:h-12 w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="reopenGateway()" onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('fallbackHeaderCrest').classList.remove('hidden');">
-                
-                <div id="fallbackHeaderCrest" class="hidden flex items-center justify-center w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-400/40 text-amber-400">
-                    <i class="fa-solid fa-landmark text-lg"></i>
-                </div>
+                <!-- Logo Rasmi Kementerian Kewangan & JANM -->
+                <img src="Logo Kementerian Kewangan JANM.png" alt="Logo Kementerian Kewangan JANM" class="h-11 sm:h-12 w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="reopenGateway()" onerror="this.onerror=null; this.src='JATA NEGARA.png';">
 
                 <div>
-                    <div class="flex items-center gap-2">
-                        <span class="font-display font-extrabold text-white text-sm sm:text-base tracking-wide">RTCO AI PROMPT STUDIO</span>
-                        <span class="bg-amber-950/80 text-amber-300 border border-amber-500/40 text-[9px] font-mono px-2 py-0.5 rounded-full font-semibold">PS 2026-2030</span>
+                    <span class="font-display font-extrabold text-white text-sm sm:text-base tracking-wide block">RTCO AI PROMPT STUDIO</span>
+                    <!-- Dua Baris Nama Agensi Pada Header -->
+                    <div class="text-[10px] text-slate-300 leading-tight hidden sm:block">
+                        <div>Kementerian Kewangan Malaysia</div>
+                        <div class="text-amber-300/90 font-medium">Jabatan Akauntan Negara Malaysia</div>
                     </div>
-                    <p class="text-[10px] text-slate-300 hidden sm:block">Kementerian Kewangan Malaysia • Jabatan Akauntan Negara Malaysia</p>
                 </div>
             </div>
 
@@ -296,7 +287,7 @@
             <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pb-3 mb-3 border-b border-janm-border/60">
                 <div class="flex items-center gap-2.5">
                     <span class="relative flex h-3 w-3">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                        <span class="animate-pulse absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                         <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                     </span>
                     <span class="font-display font-bold text-xs sm:text-sm text-white tracking-wide uppercase">
@@ -356,7 +347,7 @@
             </div>
         </div>
 
-        <!-- EXECUTIVE ANALYTICS & KPI DASHBOARD (SUSUNAN ATAS) -->
+        <!-- ANALISIS FORMULASI PROMPT EKSEKUTIF (BAHASA MELAYU KORPORAT) -->
         <div class="mb-6 glass-panel rounded-3xl p-5 border border-janm-border shadow-xl">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-4 pb-4 border-b border-janm-border/60">
                 <div class="flex items-center gap-3 w-full lg:w-auto">
@@ -365,26 +356,26 @@
                     </div>
                     <div>
                         <div class="flex items-center gap-2">
-                            <h2 class="font-display font-extrabold text-white text-base">EXECUTIVE PROMPT ANALYTICS</h2>
-                            <span id="overallBadge" class="bg-blue-950 text-cyan-300 border border-cyan-500/40 text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold">Beginner</span>
+                            <h2 class="font-display font-extrabold text-white text-base">ANALISIS FORMULASI PROMPT EKSEKUTIF</h2>
+                            <span id="overallBadge" class="bg-slate-900 text-slate-400 border border-slate-700 text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold">Peringkat Asas</span>
                         </div>
-                        <p class="text-xs text-slate-300">Penilaian Kualiti & Keberkesanan Formulasi Prompt Sektor Awam</p>
+                        <p class="text-xs text-slate-300">Analisis Penjajaran dan Ketepatan Struktur Komponen RTCO</p>
                     </div>
                 </div>
 
-                <!-- Headline KPI Cards -->
+                <!-- Headline KPI Cards (Bahasa Melayu Korporat) -->
                 <div class="grid grid-cols-3 gap-3 w-full lg:w-auto font-mono text-center">
                     <div class="bg-janm-obsidian/90 px-4 py-2 rounded-2xl border border-janm-border">
-                        <span class="text-[10px] text-slate-400 block uppercase">Overall Score</span>
+                        <span class="text-[10px] text-slate-400 block uppercase">Skor Keseluruhan</span>
                         <span id="overallScoreText" class="text-lg font-extrabold text-amber-300">0%</span>
                     </div>
                     <div class="bg-janm-obsidian/90 px-4 py-2 rounded-2xl border border-janm-border">
-                        <span class="text-[10px] text-slate-400 block uppercase">Status</span>
-                        <span id="promptStatusText" class="text-xs font-bold text-slate-300 mt-1 block">Draf Awal</span>
+                        <span class="text-[10px] text-slate-400 block uppercase">Status Formulasi</span>
+                        <span id="promptStatusText" class="text-xs font-bold text-slate-300 mt-1 block">Dalam Penggubalan</span>
                     </div>
                     <div class="bg-janm-obsidian/90 px-4 py-2 rounded-2xl border border-janm-border">
-                        <span class="text-[10px] text-slate-400 block uppercase">Readiness</span>
-                        <span id="promptReadinessText" class="text-xs font-bold text-cyan-300 mt-1 block">Incomplete</span>
+                        <span class="text-[10px] text-slate-400 block uppercase">Tahap Kesiagaan</span>
+                        <span id="promptReadinessText" class="text-xs font-bold text-slate-400 mt-1 block">Belum Lengkap</span>
                     </div>
                 </div>
             </div>
@@ -395,7 +386,7 @@
                 <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
                     <div class="flex justify-between items-center text-xs">
                         <span class="text-slate-300 flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-amber-400"></span> Persona Clarity (R)
+                            <span class="w-2 h-2 rounded-full bg-amber-400"></span> Kejelasan Peranan (R)
                         </span>
                         <span id="analyticsR" class="font-bold text-amber-300">0%</span>
                     </div>
@@ -409,7 +400,7 @@
                 <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
                     <div class="flex justify-between items-center text-xs">
                         <span class="text-slate-300 flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Task Definition (T)
+                            <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Definisi Tugasan (T)
                         </span>
                         <span id="analyticsT" class="font-bold text-cyan-300">0%</span>
                     </div>
@@ -419,11 +410,11 @@
                     <span id="feedbackT" class="text-[9px] text-slate-400 mt-1.5 block truncate">Belum diisi</span>
                 </div>
 
-                <!-- C: Context Strength (Pilihan A: Emerald seragam dengan input RTCO) -->
+                <!-- C: Context Strength -->
                 <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
                     <div class="flex justify-between items-center text-xs">
                         <span class="text-slate-300 flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Context Strength (C)
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Kekuatan Konteks (C)
                         </span>
                         <span id="analyticsC" class="font-bold text-emerald-300">0%</span>
                     </div>
@@ -437,7 +428,7 @@
                 <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
                     <div class="flex justify-between items-center text-xs">
                         <span class="text-slate-300 flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-amber-300"></span> Output Precision (O)
+                            <span class="w-2 h-2 rounded-full bg-amber-300"></span> Ketepatan Format (O)
                         </span>
                         <span id="analyticsO" class="font-bold text-amber-200">0%</span>
                     </div>
@@ -451,24 +442,26 @@
 
         <!-- Live AI Companion & Pedagogical Banner -->
         <div class="mb-6 glass-panel p-4 sm:p-5 rounded-3xl flex flex-col md:flex-row items-center justify-between gap-5 relative overflow-hidden border-t-2 border-t-amber-400">
-            <div class="flex items-center gap-4 w-full md:w-auto">
-                <div class="relative w-16 h-16 sm:w-20 sm:h-20 shrink-0 flex items-center justify-center group cursor-pointer" onclick="pokeBotSentinel()">
+            <div class="flex items-center gap-4 sm:gap-5 w-full md:w-auto">
+                <!-- Avatar Bot Dominan -->
+                <div class="relative w-20 h-20 sm:w-24 sm:h-24 shrink-0 flex items-center justify-center group cursor-pointer" onclick="pokeBotSentinel()">
                     <div id="botAuraGlow" class="absolute inset-0 rounded-2xl bg-cyan-400/25 blur-lg group-hover:bg-amber-400/40 transition duration-300"></div>
-                    <div class="relative z-10 w-full h-full rounded-2xl bg-slate-950/80 border border-cyan-400/40 flex items-center justify-center overflow-hidden p-1 shadow-inner">
-                        <img id="botAvatarImg" src="AI BOT GenAI.png" alt="NEXUS-JANM AI Bot" onerror="this.onerror=null; this.src='AI BOT GenAI.jpg';" class="w-full h-full object-contain filter drop-shadow-[0_2px_8px_rgba(56,189,248,0.5)] transition-transform duration-300 group-hover:scale-110">
+                    <div class="relative z-10 w-full h-full rounded-2xl bg-slate-950/85 border border-cyan-400/40 flex items-center justify-center overflow-hidden p-1 shadow-inner">
+                        <img id="botAvatarImg" src="AI BOT GenAI.png" alt="NEXUS-JANM AI Bot" onerror="this.onerror=null; this.src='AI BOT GenAI.jpg';" class="w-full h-full object-contain filter drop-shadow-[0_2px_10px_rgba(56,189,248,0.55)] transition-transform duration-300 group-hover:scale-110">
                     </div>
                     <span id="botStatusDot" class="absolute -top-1 -right-1 w-3.5 h-3.5 bg-cyan-400 border-2 border-slate-900 rounded-full shadow-[0_0_8px_#38bdf8] z-20"></span>
                 </div>
 
                 <div class="flex-grow">
                     <div class="flex items-center gap-2">
-                        <span class="font-mono text-xs text-amber-300 font-bold uppercase tracking-wider flex items-center gap-1" title="National Executive eXperience Utility System">
+                        <span class="font-mono text-xs sm:text-sm text-amber-300 font-extrabold uppercase tracking-wider flex items-center gap-1.5" title="National Executive eXperience Utility System">
                             <i class="fa-solid fa-sparkles text-amber-400"></i> NEXUS-JANM AI MENTOR
                         </span>
-                        <span id="botMoodBadge" class="bg-blue-950 text-cyan-300 border border-cyan-500/30 text-[9px] font-mono px-2 py-0.2 rounded-full">Sedia Membantu</span>
+                        <span id="botMoodBadge" class="bg-blue-950 text-cyan-300 border border-cyan-500/40 text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold">Pembimbing Digital Bersedia</span>
                     </div>
-                    <p id="botSpeechText" class="text-xs sm:text-sm text-slate-200 mt-1 leading-relaxed font-medium">
-                        Setiap kotak RTCO mempunyai fungsi khusus: <strong>R</strong> untuk Peranan/Persona, <strong>T</strong> untuk Tugas, <strong>C</strong> untuk Konteks, dan <strong>O</strong> untuk Format Hasil. Butang AI memperkayakan idea mengikut kotak yang dipilih secara berdisiplin!
+                    <!-- Struktur Ayat Dimurnikan Bahasa Melayu Korporat Pentadbiran -->
+                    <p id="botSpeechText" class="text-xs sm:text-sm text-slate-200 mt-1.5 leading-relaxed font-medium">
+                        Kerangka RTCO membimbing penggubalan arahan AI secara sistematik merangkumi ketetapan Peranan (R), Tugasan (T), Rujukan Konteks (C) serta Format Hasil (O). Pemanfaatan modul pembantu AI ini berfungsi memperkayakan cadangan idea mengikut komponen khusus secara teratur dan berintegriti.
                     </p>
                 </div>
             </div>
@@ -484,7 +477,7 @@
                 </div>
                 <div class="mt-3 pt-2.5 border-t border-slate-800">
                     <div class="flex justify-between items-center text-xs font-mono mb-2">
-                        <span class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-chart-line text-cyan-400"></i> Prompt Quality:</span>
+                        <span class="text-slate-400 flex items-center gap-1.5"><i class="fa-solid fa-chart-line text-cyan-400"></i> Kualiti Formulasi:</span>
                         <span id="qualityScore" class="font-bold text-cyan-300 bg-cyan-950/70 border border-cyan-500/40 px-2 py-0.5 rounded text-[11px]">0/100</span>
                     </div>
                 </div>
@@ -530,7 +523,6 @@
                         </button>
                     </div>
                     <textarea id="boxRules" rows="3" onfocus="handleFieldFocus('rules')" oninput="compileRealtimePrompt()" placeholder="Taip ringkas (cth: 'nak jadikan sebagai pereka grafik' atau 'juruaudit forensik'). Klik butang AI untuk memperkayakan watak/persona profesional sahaja tanpa mencampuri tugas/format." class="w-full bg-janm-obsidian/90 border border-janm-border rounded-xl p-3 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-amber-400 focus:ring-1 focus:ring-amber-400 transition font-sans"></textarea>
-                    <!-- Educational Tagline -->
                     <div class="mt-2 flex items-center gap-2 text-[10px] text-slate-400 font-mono">
                         <span class="text-amber-400"><i class="fa-solid fa-check"></i> Merangkumi:</span>
                         <span>Identiti • Kepakaran Khusus • Tona Tutur Kata • Batasan Etika</span>
@@ -579,7 +571,7 @@
                     <textarea id="boxContext" rows="3" onfocus="handleFieldFocus('context')" oninput="compileRealtimePrompt()" placeholder="Taip ringkas (cth: 'warna biru emas tema janm' atau 'rujuk AP 138'). Klik butang AI untuk memperincikan konteks tadbir urus dan rujukan rasmi." class="w-full bg-janm-obsidian/90 border border-janm-border rounded-xl p-3 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition font-sans"></textarea>
                     <div class="mt-2 flex items-center gap-2 text-[10px] text-slate-400 font-mono">
                         <span class="text-emerald-400"><i class="fa-solid fa-check"></i> Merangkumi:</span>
-                        <span>Pelan Strategik 2026-2030 • Arahan Perbendaharaan • Skema Warna • Khalayak Sasaran</span>
+                        <span>Pelan Strategik JANM • Arahan Perbendaharaan • Skema Warna • Khalayak Sasaran</span>
                     </div>
                 </div>
 
@@ -602,7 +594,7 @@
                     <textarea id="boxOutput" rows="3" onfocus="handleFieldFocus('output')" oninput="compileRealtimePrompt()" placeholder="Taip ringkas (cth: 'jadual matriks dan memo' atau 'prompt visual 8k'). Klik butang AI untuk memperkayakan spesifikasi format hasil." class="w-full bg-janm-obsidian/90 border border-janm-border rounded-xl p-3 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-indigo-400 focus:ring-1 focus:ring-indigo-400 transition font-sans"></textarea>
                     <div class="mt-2 flex items-center gap-2 text-[10px] text-slate-400 font-mono">
                         <span class="text-indigo-400"><i class="fa-solid fa-check"></i> Merangkumi:</span>
-                        <span>Struktur Seksyen • Format Jadual / Matriks • Laras Bahasa Kerajaan • Aspek Nisbah</span>
+                        <span>Struktur Seksyen • Format Jadual / Matriks • Laras Bahasa Rasmi Kerajaan</span>
                     </div>
                 </div>
 
@@ -699,26 +691,55 @@
 
     </main>
 
-    <!-- FOOTER -->
-    <footer class="border-t border-janm-border/60 bg-janm-obsidian py-4 text-slate-300 text-xs">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-3">
-            <div class="flex items-center gap-2">
-                <span class="w-2 h-2 rounded-full bg-amber-400"></span>
-                <span>RTCO AI PROMPT STUDIO • Jabatan Akauntan Negara Malaysia (JANM)</span>
-            </div>
-            
-            <div class="flex flex-wrap items-center justify-center gap-2 font-mono text-[11px]">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-blue-950/80 border border-amber-400/40 text-slate-200">
-                    <i class="fa-solid fa-robot text-cyan-400"></i>
-                    <span>Disediakan oleh:</span>
-                    <span class="font-bold text-amber-300">Kamsiazrul Sidek</span>
-                    <span class="text-slate-500">•</span>
-                    <span class="text-emerald-300 font-semibold">AI AGENT JANM (BPAD)</span>
+    <!-- FOOTER KORPORAT EKSEKUTIF MODEN -->
+    <footer class="border-t border-janm-border/60 bg-janm-obsidian/95 backdrop-blur-md py-6 text-slate-300 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5 items-center">
+                
+                <!-- Identiti Sistem & Jabatan (Logo Jata Negara yang sama) -->
+                <div class="flex items-center gap-3 justify-center md:justify-start">
+                    <img src="JATA NEGARA.png" alt="Jata Negara Malaysia" class="h-9 w-auto object-contain filter drop-shadow-[0_0_10px_rgba(251,191,36,0.3)] shrink-0" onerror="this.onerror=null; this.src='Logo Kementerian Kewangan JANM.png';">
+                    <div>
+                        <div class="font-display font-extrabold text-white text-xs sm:text-sm tracking-wide">
+                            RTCO AI PROMPT STUDIO
+                        </div>
+                        <div class="text-[11px] text-slate-400 font-sans">
+                            Jabatan Akauntan Negara Malaysia (JANM)
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Kad Akreditasi Penyedia (Tengah) -->
+                <div class="flex justify-center">
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-janm-deep/80 border border-amber-400/40 text-[11px] font-mono shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0"></span>
+                        <span class="text-slate-300">Disediakan oleh:</span>
+                        <strong class="text-amber-300 font-bold">Kamsiazrul Sidek</strong>
+                        <span class="text-slate-500">•</span>
+                        <span class="text-cyan-300 font-semibold">AI AGENT JANM (BPAD)</span>
+                    </div>
+                </div>
+
+                <!-- Aspirasi & Moto Rasmi JANM (Tipografi Monotype Corsiva Style) -->
+                <div class="text-center md:text-right">
+                    <div class="text-[11px] text-amber-300/90 font-medium font-display">
+                        Aspirasi Pelan Strategik JANM 2026–2030
+                    </div>
+                    <div class="font-corsiva-style text-2xl sm:text-3xl font-normal text-amber-300 tracking-wide mt-0.5 drop-shadow-[0_2px_8px_rgba(245,158,11,0.25)] leading-tight">
+                        "Excellent Accounting @ Your Service"
+                    </div>
+                </div>
+
             </div>
 
-            <div class="font-mono text-[11px] text-slate-400">
-                Aspirasi Pelan Strategik JANM 2026–2030 • "Excellent Accounting @ Your Service"
+            <!-- Baris Hak Cipta Bawah -->
+            <div class="mt-5 pt-4 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 font-mono gap-2">
+                <div>
+                    © 2026 Kementerian Kewangan Malaysia • Jabatan Akauntan Negara Malaysia. Hak Cipta Terpelihara.
+                </div>
+                <div class="flex items-center gap-3 text-slate-400">
+                    <span>Perakaunan dan Kewangan Mampan Melalui Pendigitalan</span>
+                </div>
             </div>
         </div>
     </footer>
@@ -740,7 +761,7 @@
             <div class="flex items-center justify-between border-b border-janm-border pb-3 mb-4">
                 <div class="flex items-center gap-2">
                     <i class="fa-solid fa-graduation-cap text-amber-300"></i>
-                    <h3 class="font-bold text-white font-display text-base">DISIPLIN & TATACARA FORMULASI RTCO</h3>
+                    <h3 class="font-bold text-white font-display text-base">TATACARA FORMULASI PROMPT RTCO</h3>
                 </div>
                 <button onclick="closeHelpDialog()" class="text-slate-400 hover:text-white text-lg">
                     <i class="fa-solid fa-xmark"></i>
@@ -752,38 +773,38 @@
                     <img src="AI BOT GenAI.png" alt="NEXUS AI Bot" onerror="this.onerror=null; this.src='AI BOT GenAI.jpg';" class="w-12 h-12 object-contain shrink-0 filter drop-shadow-[0_2px_8px_rgba(245,158,11,0.4)]">
                     <div>
                         <span class="font-bold text-amber-300 font-mono text-xs block mb-1 flex items-center gap-1.5">
-                            <i class="fa-solid fa-robot text-cyan-400"></i> Mengenai Pembantu Maya NEXUS-JANM
+                            <i class="fa-solid fa-robot text-cyan-400"></i> Pembantu Maya NEXUS-JANM
                         </span>
                         <p class="text-slate-300 leading-relaxed text-xs">
-                            <strong>NEXUS-JANM</strong> (<em>National Executive eXperience Utility System</em>) ialah pembantu maya pintar JANM yang membimbing penjawat awam menghasilkan prompt berstruktur tinggi, mematuhi etika kerahsiaan kerajaan, dan menyokong Teras 2 Pelan Strategik JANM 2026–2030.
+                            <strong>NEXUS-JANM</strong> (<em>National Executive eXperience Utility System</em>) membimbing pegawai sektor awam merangka arahan AI secara teratur, berdisiplin serta memelihara etika kerahsiaan maklumat perakaunan kerajaan.
                         </p>
                     </div>
                 </div>
 
                 <div class="p-3.5 rounded-2xl bg-blue-950/90 border border-cyan-400/40">
                     <span class="font-bold text-cyan-300 font-mono text-xs block mb-1 flex items-center gap-1.5">
-                        <i class="fa-solid fa-lightbulb text-amber-400"></i> Mengapa Sempadan RTCO Mesti Diasingkan?
+                        <i class="fa-solid fa-lightbulb text-amber-400"></i> Prinsip Pengasingan Komponen RTCO
                     </span>
                     <p class="text-slate-300 leading-relaxed text-xs">
-                        Kejuruteraan prompt profesional menuntut <strong>pengasingan peranan (separation of concerns)</strong>. Jika anda memasukkan tugasan ke dalam Rules, AI akan keliru dan tidak dapat menetapkan piawaian persona yang konsisten. Isikan setiap kotak mengikut skop spesifiknya.
+                        Penggubalan prompt berkesan memerlukan <strong>pengasingan peranan secara berdisiplin</strong>. Setiap komponen (R, T, C, O) perlu difokuskan pada fungsinya yang tepat agar model kecerdasan buatan memahami kehendak tugasan dengan tepat tanpa kekeliruan.
                     </p>
                 </div>
 
                 <div class="p-3.5 rounded-2xl bg-janm-obsidian/90 border border-amber-500/30">
-                    <span class="font-bold text-amber-300 font-mono text-xs block mb-1">R - RULES (Siapakah AI?)</span>
-                    <p class="text-slate-300 leading-relaxed text-xs">Tetapkan identiti profesional, kepakaran bidang, etika rahsia kerajaan, dan tona tutur kata. Jangan masukkan tugasan apa yang perlu dibuat di sini.</p>
+                    <span class="font-bold text-amber-300 font-mono text-xs block mb-1">R - RULES (Peranan & Persona)</span>
+                    <p class="text-slate-300 leading-relaxed text-xs">Tetapkan identiti profesional, bidang kepakaran, etika perkhidmatan awam dan tona komunikasi rasmi.</p>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-janm-obsidian/90 border border-cyan-500/30">
-                    <span class="font-bold text-cyan-300 font-mono text-xs block mb-1">T - TASK (Apakah Kerja Khusus?)</span>
-                    <p class="text-slate-300 leading-relaxed text-xs">Nyatakan tindakan kerja secara jelas (contoh: sediakan minit mesyuarat, rangka konsep visual poster, analisis varian perbelanjaan).</p>
+                    <span class="font-bold text-cyan-300 font-mono text-xs block mb-1">T - TASK (Tugasan Khusus)</span>
+                    <p class="text-slate-300 leading-relaxed text-xs">Nyatakan tindakan kerja secara jelas (contoh: sediakan minit mesyuarat, rangka konsep visual, analisis varian perbelanjaan).</p>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-janm-obsidian/90 border border-emerald-500/30">
-                    <span class="font-bold text-emerald-300 font-mono text-xs block mb-1">C - CONTEXT (Apakah Rujukan & Dasar?)</span>
-                    <p class="text-slate-300 leading-relaxed text-xs">Pekeliling berkaitan (Arahan Perbendaharaan, Akta 370), sasaran audiens, atau tema korporat (Pelan Strategik JANM 2026-2030).</p>
+                    <span class="font-bold text-emerald-300 font-mono text-xs block mb-1">C - CONTEXT (Rujukan & Dasar)</span>
+                    <p class="text-slate-300 leading-relaxed text-xs">Asas perundangan atau pekeliling berkaitan (Arahan Perbendaharaan, Akta Tatacara Kewangan 1957, Akta WTD 1965).</p>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-janm-obsidian/90 border border-indigo-500/30">
-                    <span class="font-bold text-indigo-300 font-mono text-xs block mb-1">O - OUTPUT (Bagaimana Hasil Dipersembahkan?)</span>
-                    <p class="text-slate-300 leading-relaxed text-xs">Bentuk jawapan wajib: jadual matriks, memo rasmi, laras Bahasa Melayu kerajaan, had perenggan.</p>
+                    <span class="font-bold text-indigo-300 font-mono text-xs block mb-1">O - OUTPUT (Format & Susunan Hasil)</span>
+                    <p class="text-slate-300 leading-relaxed text-xs">Struktur jawapan yang dikehendaki: jadual matriks, memo rasmi, laras Bahasa Melayu kerajaan, had perenggan.</p>
                 </div>
             </div>
 
@@ -812,7 +833,6 @@
             return audioContext;
         }
 
-        // Audio cue korporat yang pendek & kemas (~0.25 saat)
         function playCinematicWarpSound() {
             try {
                 const ctx = getAudioContext();
@@ -823,7 +843,7 @@
 
                 osc.type = 'sine';
                 osc.frequency.setValueAtTime(523.25, now); // C5
-                osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.15); // G5 harmonic
+                osc.frequency.exponentialRampToValueAtTime(783.99, now + 0.15); // G5
 
                 gain.gain.setValueAtTime(0.001, now);
                 gain.gain.linearRampToValueAtTime(0.18, now + 0.04);
@@ -834,9 +854,7 @@
 
                 osc.start(now);
                 osc.stop(now + 0.3);
-            } catch (err) {
-                // Senyap jika pelayar menyekat audio
-            }
+            } catch (err) {}
         }
 
         function playHapticTick() {
@@ -861,7 +879,7 @@
         const warpCanvas = document.getElementById('warpTunnelCanvas');
         const warpCtx = warpCanvas.getContext('2d');
         let warpStars = [];
-        let warpSpeed = 20;
+        let warpSpeed = 1.5;
         let isWarping = false;
 
         function resizeWarpCanvas() {
@@ -872,7 +890,7 @@
 
         function initWarpStars() {
             warpStars = [];
-            const count = Math.floor((warpCanvas.width * warpCanvas.height) / 3800);
+            const count = Math.floor((warpCanvas.width * warpCanvas.height) / 4200);
             for (let i = 0; i < count; i++) {
                 warpStars.push({
                     x: (Math.random() - 0.5) * warpCanvas.width * 2,
@@ -909,8 +927,8 @@
                     warpCtx.beginPath();
                     warpCtx.moveTo(prevX, prevY);
                     warpCtx.lineTo(px, py);
-                    warpCtx.lineWidth = Math.min(3.5, (1 - s.z / warpCanvas.width) * 3);
-                    warpCtx.strokeStyle = isWarping ? 'rgba(245, 158, 11, 0.95)' : 'rgba(56, 189, 248, 0.5)';
+                    warpCtx.lineWidth = Math.min(2.5, (1 - s.z / warpCanvas.width) * 2.2);
+                    warpCtx.strokeStyle = isWarping ? 'rgba(245, 158, 11, 0.95)' : 'rgba(56, 189, 248, 0.45)';
                     warpCtx.stroke();
                 }
             }
@@ -924,31 +942,31 @@
         function launchGatewaySequence() {
             if (isWarping) return;
             isWarping = true;
-            warpSpeed = 20;
+            warpSpeed = 8;
             playCinematicWarpSound();
 
             const gateway = document.getElementById('hyperGateway');
-            gateway.classList.add('warp-accelerate');
+            gateway.classList.add('portal-smooth-fade');
 
             setTimeout(() => {
                 gateway.style.display = 'none';
                 isWarping = false;
-                warpSpeed = 2;
+                warpSpeed = 1.5;
                 compileRealtimePrompt();
                 triggerToast("Pusat AI Diaktifkan", "Selamat datang ke RTCO AI Prompt Studio JANM.");
-            }, 850);
+            }, 750);
         }
 
         function reopenGateway() {
             playHapticTick();
             const gateway = document.getElementById('hyperGateway');
             gateway.style.display = 'flex';
-            gateway.classList.remove('warp-accelerate');
+            gateway.classList.remove('portal-smooth-fade');
             isWarping = false;
-            warpSpeed = 2;
+            warpSpeed = 1.5;
         }
 
-        // Sentinel AI Bot Interactive Controller
+        // Sentinel AI Bot Controller
         let botMood = 'normal';
 
         function pokeBotSentinel() {
@@ -967,7 +985,7 @@
             }
 
             botMood = 'happy';
-            triggerToast("NEXUS-JANM AI", "Hai! Saya pembantu maya anda. Sedia membimbing formulasi RTCO berkualiti tinggi!");
+            triggerToast("NEXUS-JANM AI", "Salam mesra! Saya sedia membantu penggubalan formulasi RTCO anda.");
             
             setTimeout(() => {
                 const completed = checkCompletenessCount();
@@ -1009,16 +1027,16 @@
             const moodBadge = document.getElementById('botMoodBadge');
 
             if (type === 'rules') {
-                botSpeech.innerText = "Fokus [Rules]: Nyatakan identiti dan kepakaran AI sahaja. Jangan masukkan apa tugasan yang perlu dibuat di sini!";
+                botSpeech.innerText = "Fokus [Rules]: Tetapkan identiti, kepakaran khusus dan etika penjawat awam. Elakkan memasukkan tindakan kerja di sini.";
                 moodBadge.innerText = "Peranan & Persona (R)";
             } else if (type === 'task') {
-                botSpeech.innerText = "Fokus [Task]: Nyatakan kerja khusus yang perlu dilakukan. Mulakan dengan kata kerja tindakan yang jelas.";
+                botSpeech.innerText = "Fokus [Task]: Nyatakan kerja khusus yang perlu dilaksanakan. Mulakan dengan kata kerja tindakan yang jelas.";
                 moodBadge.innerText = "Tugasan Khusus (T)";
             } else if (type === 'context') {
-                botSpeech.innerText = "Fokus [Context]: Nyatakan pekeliling rujukan, tema jabatan, atau kekangan berkaitan situasi tugasan.";
+                botSpeech.innerText = "Fokus [Context]: Nyatakan rujukan undang-undang, Arahan Perbendaharaan atau latar belakang situasi kerja.";
                 moodBadge.innerText = "Konteks & Dasar (C)";
             } else if (type === 'output') {
-                botSpeech.innerText = "Fokus [Output]: Tentukan susunan dan format jawapan (cth: jadual matriks, memo rasmi, laras bahasa Melayu).";
+                botSpeech.innerText = "Fokus [Output]: Tentukan format hasil akhir seperti jadual matriks, memo rasmi atau laras Bahasa Melayu kerajaan.";
                 moodBadge.innerText = "Format Jawapan (O)";
             }
         }
@@ -1039,13 +1057,12 @@
 
         /**
          * ENJIN RUBRIK SEMANTIK REALISTIK
-         * Menguji teks sebenar, menolak teks merapu (gibberish/aaaaa), dan menilai ketepatan kejuruteraan prompt.
          */
         function evaluateSemanticQuality(text, type) {
             const trimmed = text.trim();
             if (!trimmed) return { score: 0, feedback: "Belum diisi" };
 
-            // Ujian Pengesanan Teks Merapu / Gibberish & Repetition Detection
+            // Ujian Pengesanan Teks Berulang / Gibberish
             if (/(.)\1{4,}/i.test(trimmed)) {
                 return { score: 5, feedback: "Dikesan teks berulang / tidak sah" };
             }
@@ -1055,7 +1072,6 @@
                 return { score: 5, feedback: "Format perkataan tidak wajar" };
             }
 
-            // Kepelbagaian perbendaharaan kata (Lexical Diversity)
             const uniqueWords = new Set(words.map(w => w.toLowerCase()));
             const vocabularyRatio = uniqueWords.size / words.length;
             if (words.length >= 6 && vocabularyRatio < 0.35) {
@@ -1066,7 +1082,6 @@
             let feedback = "Kualiti Sederhana";
             const lower = trimmed.toLowerCase();
 
-            // Penilaian Kualitatif Berperingkat Mengikut Sempadan RTCO
             if (type === 'rules') {
                 const hasRole = /(anda|bertindak|sebagai|ialah|peranan|pegawai|akauntan|juruaudit|pakar|pereka|ketua|penasihat|perunding)/i.test(lower);
                 const hasExpertise = /(pakar|pengalaman|kemahiran|mahir|bidang|kompetensi|kelayakan|menguasai|spesialis)/i.test(lower);
@@ -1079,7 +1094,7 @@
 
                 if (score >= 80) feedback = "Persona Sangat Jelas & Mantap";
                 else if (score >= 50) feedback = "Peranan Ditetapkan (Boleh Diperinci)";
-                else feedback = "Peranan Kurang Jelas (Nyatakan Watak AI)";
+                else feedback = "Nyatakan Watak & Kepakaran AI";
 
             } else if (type === 'task') {
                 const hasAction = /(sediakan|rangka|bina|analisis|buat|hasilkan|cadangkan|semak|laksanakan|nilai|kenal pasti|tulis|bentang)/i.test(lower);
@@ -1091,12 +1106,12 @@
                 if (hasScope) score += 15;
                 if (words.length >= 8 && words.length <= 100) score += 15;
 
-                if (score >= 80) feedback = "Tugasan Sangat Jelas & Berorientasi Tindakan";
+                if (score >= 80) feedback = "Tugasan Sangat Jelas & Padu";
                 else if (score >= 50) feedback = "Tugasan Boleh Dikenal Pasti";
-                else feedback = "Gunakan Kata Kerja Tindakan (Cth: Sediakan...)";
+                else feedback = "Gunakan Kata Kerja Tindakan";
 
             } else if (type === 'context') {
-                const hasPolicyRef = /(janm|kementerian|pelan strategik|2026-2030|arahan perbendaharaan|ap\s*138|akta|pekeliling|mpsas|ipsas|wtd|egumis|perolehan|jpka|mof)/i.test(lower);
+                const hasPolicyRef = /(janm|kementerian|pelan strategik|arahan perbendaharaan|ap\s*138|akta|pekeliling|mpsas|ipsas|wtd|egumis|perolehan|jpka|mof)/i.test(lower);
                 const hasAudienceOrDomain = /(rakyat|warga|kakitangan|pejabat perakaunan|agensi|sektor awam|kerajaan|industri|khalayak)/i.test(lower);
                 const hasSituation = /(bersempena|isu|situasi|sasaran|warna|tema|keutamaan|kekangan|objektif)/i.test(lower);
 
@@ -1106,8 +1121,8 @@
                 if (words.length >= 8 && words.length <= 120) score += 15;
 
                 if (score >= 80) feedback = "Konteks & Dasar Sangat Kukuh";
-                else if (score >= 50) feedback = "Konteks Memadai (Tambah Pekeliling/Dasar)";
-                else feedback = "Sertakan Rujukan Dasar / Situasi Sebenar";
+                else if (score >= 50) feedback = "Konteks Memadai";
+                else feedback = "Sertakan Rujukan Dasar / Situasi";
 
             } else if (type === 'output') {
                 const hasFormat = /(jadual|matriks|memo|laporan|kolom|format|struktur|seksyen|poin|bullet|perenggan)/i.test(lower);
@@ -1121,7 +1136,7 @@
 
                 if (score >= 80) feedback = "Spesifikasi Format Sangat Tepat";
                 else if (score >= 50) feedback = "Format Dinyatakan (Boleh Diperinci)";
-                else feedback = "Tentukan Bentuk Hasil (Jadual / Memo / Poin)";
+                else feedback = "Tentukan Bentuk Hasil (Jadual / Memo)";
             }
 
             return { score: Math.min(100, Math.max(0, score)), feedback };
@@ -1143,7 +1158,7 @@
             document.getElementById('scoreBar').style.width = percent + '%';
             document.getElementById('scoreText').innerText = `${completed} / 4 Selesai (${percent}%)`;
 
-            // Penilaian Semantik Sebenar menggunakan Enjin Rubrik
+            // Penilaian Semantik Sebenar
             const evalR = evaluateSemanticQuality(rules, 'rules');
             const evalT = evaluateSemanticQuality(task, 'task');
             const evalC = evaluateSemanticQuality(context, 'context');
@@ -1154,14 +1169,13 @@
             const cScore = evalC.score;
             const oScore = evalO.score;
 
-            // Overall Score berasaskan purata kualiti semantik 4 komponen
             const overallScore = Math.round((rScore + tScore + cScore + oScore) / 4);
 
             document.getElementById("qualityScore").innerText = overallScore + "/100";
             const overallScoreEl = document.getElementById("overallScoreText");
             if (overallScoreEl) overallScoreEl.innerText = overallScore + "%";
 
-            // Status & Readiness Classification
+            // Status & Readiness Berbahasa Melayu Korporat
             const statusEl = document.getElementById("promptStatusText");
             const readinessEl = document.getElementById("promptReadinessText");
             const overallBadgeEl = document.getElementById("overallBadge");
@@ -1169,41 +1183,41 @@
             if (overallScore >= 85) {
                 if (statusEl) statusEl.innerText = "Tahap Eksekutif";
                 if (readinessEl) {
-                    readinessEl.innerText = "Production Ready";
+                    readinessEl.innerText = "Sedia Dilaksanakan";
                     readinessEl.className = "text-xs font-bold text-emerald-400 mt-1 block";
                 }
                 if (overallBadgeEl) {
-                    overallBadgeEl.innerText = "Expert";
+                    overallBadgeEl.innerText = "Peringkat Cemerlang";
                     overallBadgeEl.className = "bg-emerald-950 text-emerald-300 border border-emerald-500/50 text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold shadow-[0_0_10px_rgba(16,185,129,0.3)]";
                 }
             } else if (overallScore >= 65) {
-                if (statusEl) statusEl.innerText = "Formulasi Baik";
+                if (statusEl) statusEl.innerText = "Formulasi Teratur";
                 if (readinessEl) {
-                    readinessEl.innerText = "Platform Ready";
+                    readinessEl.innerText = "Sedia Digunakan";
                     readinessEl.className = "text-xs font-bold text-cyan-300 mt-1 block";
                 }
                 if (overallBadgeEl) {
-                    overallBadgeEl.innerText = "Advanced";
+                    overallBadgeEl.innerText = "Peringkat Lanjutan";
                     overallBadgeEl.className = "bg-blue-950 text-cyan-300 border border-cyan-500/40 text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold";
                 }
             } else if (overallScore >= 35) {
                 if (statusEl) statusEl.innerText = "Perlu Penambahbaikan";
                 if (readinessEl) {
-                    readinessEl.innerText = "Drafting";
+                    readinessEl.innerText = "Dalam Penggubalan";
                     readinessEl.className = "text-xs font-bold text-amber-300 mt-1 block";
                 }
                 if (overallBadgeEl) {
-                    overallBadgeEl.innerText = "Intermediate";
+                    overallBadgeEl.innerText = "Peringkat Pertengahan";
                     overallBadgeEl.className = "bg-amber-950 text-amber-300 border border-amber-500/40 text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold";
                 }
             } else {
                 if (statusEl) statusEl.innerText = "Draf Awal";
                 if (readinessEl) {
-                    readinessEl.innerText = "Incomplete";
+                    readinessEl.innerText = "Belum Lengkap";
                     readinessEl.className = "text-xs font-bold text-slate-400 mt-1 block";
                 }
                 if (overallBadgeEl) {
-                    overallBadgeEl.innerText = "Beginner";
+                    overallBadgeEl.innerText = "Peringkat Asas";
                     overallBadgeEl.className = "bg-slate-900 text-slate-400 border border-slate-700 text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold";
                 }
             }
@@ -1222,7 +1236,7 @@
             if (lineT) lineT.className = (task && context && tScore >= 30 && cScore >= 30) ? 'h-[2px] bg-emerald-400 flex-1 mx-2 transition-colors' : 'h-[2px] bg-slate-800 flex-1 mx-2 transition-colors';
             if (lineC) lineC.className = (context && output && cScore >= 30 && oScore >= 30) ? 'h-[2px] bg-indigo-400 flex-1 mx-2 transition-colors' : 'h-[2px] bg-slate-800 flex-1 mx-2 transition-colors';
 
-            // Kemaskini Bar & Label Analitik Sebenar
+            // Kemaskini Bar & Label Analitik
             const elAnR = document.getElementById('analyticsR');
             const elAnT = document.getElementById('analyticsT');
             const elAnC = document.getElementById('analyticsC');
@@ -1241,7 +1255,7 @@
             if (barC) barC.style.width = cScore + '%';
             if (barO) barO.style.width = oScore + '%';
 
-            // Feedback teks semantik
+            // Feedback Teks
             const fbR = document.getElementById('feedbackR');
             const fbT = document.getElementById('feedbackT');
             const fbC = document.getElementById('feedbackC');
@@ -1254,7 +1268,7 @@
             let fullText = "";
             if (currentPromptMode === 'gems') {
                 fullText = `/* GEMINI GEM SYSTEM INSTRUCTIONS - JANM */
-/* Pelan Strategik JANM 2026-2030 • Sedia Digunakan di gemini.google.com/gems */
+/* Pelan Strategik JANM • Sedia Digunakan di gemini.google.com/gems */
 
 # 1. IDENTITY & PROFESSIONAL ROLE (RULES)
 ${rules || '- [Sila nyatakan identiti dan etika kerja pegawai/pakar perakaunan] -'}
@@ -1263,7 +1277,7 @@ ${rules || '- [Sila nyatakan identiti dan etika kerja pegawai/pakar perakaunan] 
 ${task || '- [Sila nyatakan tugasan kerja spesifik yang perlu dilaksanakan] -'}
 
 # 3. GOVERNING CONTEXT & COMPLIANCE (CONTEXT)
-${context || '- [Sila masukkan rujukan Pekeliling, Arahan Perbendaharaan atau Pelan Strategik JANM 2026-2030] -'}
+${context || '- [Sila masukkan rujukan Pekeliling, Arahan Perbendaharaan atau Pelan Strategik JANM] -'}
 
 # 4. OUTPUT SPECIFICATIONS & FORMAT (OUTPUT)
 ${output || '- [Sila nyatakan struktur jawapan rasmi, jadual matriks atau laras bahasa yang dikehendaki] -'}
@@ -1303,12 +1317,12 @@ ${output || '- [Belum Diisi] -'}`;
 
             if (overallScore >= 80) {
                 botMood = 'complete';
-                if (botMoodBadge) botMoodBadge.innerText = 'Formulasi Mantap (Expert)';
+                if (botMoodBadge) botMoodBadge.innerText = 'Formulasi Cemerlang';
                 if (botStatusDot) botStatusDot.className = "absolute -top-1 -right-1 w-3.5 h-3.5 bg-emerald-400 border-2 border-slate-900 rounded-full shadow-[0_0_12px_#10b981] z-20 animate-pulse";
                 if (botAura) botAura.className = "absolute inset-0 rounded-2xl bg-emerald-400/35 blur-lg transition duration-300";
             } else {
                 botMood = 'normal';
-                if (botMoodBadge) botMoodBadge.innerText = 'Sedia Membantu';
+                if (botMoodBadge) botMoodBadge.innerText = 'Pembimbing Digital Bersedia';
                 if (botStatusDot) botStatusDot.className = "absolute -top-1 -right-1 w-3.5 h-3.5 bg-cyan-400 border-2 border-slate-900 rounded-full shadow-[0_0_8px_#38bdf8] z-20";
                 if (botAura) botAura.className = "absolute inset-0 rounded-2xl bg-cyan-400/25 blur-lg group-hover:bg-amber-400/40 transition duration-300";
             }
@@ -1349,17 +1363,16 @@ ${output || '- [Belum Diisi] -'}`;
             if (moodBadge) moodBadge.innerText = `Memperkaya [${type.toUpperCase()}] Sahaja`;
             if (botSpeech) botSpeech.innerText = `NEXUS-JANM sedang memproses idea khusus untuk bahagian [${type.toUpperCase()}], memastikan ia berdisiplin tanpa mencampuri komponen RTCO yang lain...`;
 
-            // Prompt Kejuruteraan dengan Kawalan Sempadan Ketat
             let specificSystemPrompt = "";
             let specificUserPrompt = "";
 
             if (type === 'rules') {
                 specificSystemPrompt = `Anda ialah Pakar Kejuruteraan Prompt RTCO bagi Jabatan Akauntan Negara Malaysia (JANM).
 TUGAS MUTLAK: Ambil input ringkas pengguna dan kembangkannya KHUSUS dan TERHAD untuk bahagian RULES (Peranan, Identiti & Persona AI) sahaja.
-PANDUAN KETAT (JANGAN LANGGAR):
-1. HANYA huraikan: Siapakah watak AI (cth: Pereka Multimedia Kanan, Juruaudit Forensik Sektor Awam, Pegawai Perolehan Kerajaan), pengalaman kepakaran, nada tutur kata, dan batasan etika penjawat awam.
-2. DILARANG SAMA SEKALI memasukkan tugasan kerja spesifik (Task), pekeliling/isu khusus semasa (Context), atau arahan format jawapan seperti jadual/aspek nisbah (Output).
-3. Hasilkan 1 perenggan yang padat, berwibawa, dan profesional. Terus berikan teks tanpa kata pengantar atau tanda petik.`;
+PANDUAN KETAT:
+1. HANYA huraikan: Siapakah watak AI, pengalaman kepakaran, nada tutur kata, dan batasan etika penjawat awam.
+2. DILARANG SAMA SEKALI memasukkan tugasan kerja spesifik (Task), pekeliling/isu khusus semasa (Context), atau arahan format jawapan (Output).
+3. Hasilkan 1 perenggan yang padat, berwibawa, dan profesional. Terus berikan teks tanpa kata pengantar.`;
                 specificUserPrompt = currentText 
                     ? `Input pengguna untuk [RULES]: "${currentText}". Kembangkan watak/persona profesional ini sahaja.`
                     : `Berikan satu peranan profesional sektor awam yang berwibawa bagi bahagian [RULES].`;
@@ -1367,10 +1380,10 @@ PANDUAN KETAT (JANGAN LANGGAR):
             } else if (type === 'task') {
                 specificSystemPrompt = `Anda ialah Pakar Kejuruteraan Prompt RTCO bagi Jabatan Akauntan Negara Malaysia (JANM).
 TUGAS MUTLAK: Ambil input ringkas pengguna dan kembangkannya KHUSUS dan TERHAD untuk bahagian TASK (Tugas Utama & Skop Kerja) sahaja.
-PANDUAN KETAT (JANGAN LANGGAR):
+PANDUAN KETAT:
 1. HANYA huraikan: Tindakan spesifik apa yang perlu dibuat (Action verbs), skop kerja terperinci, dan apa hasil kerja yang perlu diselesaikan.
-2. DILARANG SAMA SEKALI mengulang siapa peranan AI (Rules), latar belakang dasar/pekeliling (Context), atau format persembahan output (Output).
-3. Hasilkan 1 atau 2 ayat/perenggan tindakan yang padu dan jelas. Terus berikan teks tanpa kata pengantar.`;
+2. DILARANG SAMA SEKALI mengulang siapa peranan AI (Rules), latar belakang dasar (Context), atau format persembahan output (Output).
+3. Hasilkan 1 atau 2 perenggan tindakan yang padu dan jelas. Terus berikan teks tanpa kata pengantar.`;
                 specificUserPrompt = currentText 
                     ? `Input pengguna untuk [TASK]: "${currentText}". Kembangkan tindakan kerja spesifik ini sahaja.`
                     : `Berikan satu contoh tugasan kerja terperinci bagi bahagian [TASK].`;
@@ -1378,8 +1391,8 @@ PANDUAN KETAT (JANGAN LANGGAR):
             } else if (type === 'context') {
                 specificSystemPrompt = `Anda ialah Pakar Kejuruteraan Prompt RTCO bagi Jabatan Akauntan Negara Malaysia (JANM).
 TUGAS MUTLAK: Ambil input ringkas pengguna dan kembangkannya KHUSUS dan TERHAD untuk bahagian CONTEXT (Konteks, Dasar, Latar Belakang & Rujukan) sahaja.
-PANDUAN KETAT (JANGAN LANGGAR):
-1. HANYA huraikan: Punca rujukan (Pelan Strategik JANM 2026-2030, Arahan Perbendaharaan, Akta WTD 1965), sasaran audiens, tema korporat (cth: warna biru diraja & emas warisan), atau kekangan situasi.
+PANDUAN KETAT:
+1. HANYA huraikan: Punca rujukan (Pelan Strategik JANM, Arahan Perbendaharaan, Akta WTD 1965), sasaran audiens, tema korporat, atau kekangan situasi.
 2. DILARANG SAMA SEKALI memasukkan peranan (Rules), senarai kerja (Task), atau susunan format jawapan (Output).
 3. Terus berikan teks isi tanpa kata pengantar.`;
                 specificUserPrompt = currentText 
@@ -1389,8 +1402,8 @@ PANDUAN KETAT (JANGAN LANGGAR):
             } else if (type === 'output') {
                 specificSystemPrompt = `Anda ialah Pakar Kejuruteraan Prompt RTCO bagi Jabatan Akauntan Negara Malaysia (JANM).
 TUGAS MUTLAK: Ambil input ringkas pengguna dan kembangkannya KHUSUS dan TERHAD untuk bahagian OUTPUT (Format, Struktur & Gaya Persembahan Jawapan) sahaja.
-PANDUAN KETAT (JANGAN LANGGAR):
-1. HANYA huraikan: Spesifikasi rupa bentuk jawapan (cth: jadual matriks, memo rasmi bernombor, laras Bahasa Melayu rasmi kerajaan).
+PANDUAN KETAT:
+1. HANYA huraikan: Spesifikasi rupa bentuk jawapan (jadual matriks, memo rasmi bernombor, laras Bahasa Melayu rasmi kerajaan).
 2. DILARANG SAMA SEKALI memasukkan peranan (Rules), tindakan kerja (Task), atau konteks rujukan (Context).
 3. Terus berikan teks spesifikasi format tanpa kata pengantar.`;
                 specificUserPrompt = currentText 
@@ -1431,15 +1444,12 @@ PANDUAN KETAT (JANGAN LANGGAR):
             }
         }
 
-        /**
-         * Enjin Kembangan Heuristik Tempatan Berdisiplin (Strict Modular Offline Engine)
-         */
         function fallbackStrictLocalExpansion(type, userText, boxElement) {
             const lower = userText.toLowerCase();
 
             if (type === 'rules') {
                 if (lower.includes('grafik') || lower.includes('gambar') || lower.includes('imej') || lower.includes('multimedia') || lower.includes('video') || lower.includes('poster')) {
-                    boxElement.value = "Anda bertindak sebagai Pereka Multimedia Kanan & Prompt Creative Specialist di Jabatan Akauntan Negara Malaysia (JANM). Anda mempunyai kepakaran tinggi dalam teori komposisi visual korporat, estetika seni digital sektor awam, pengarahan seni infografik data, serta mahir dalam formulasi arahan penjana imej AI dengan gaya berwibawa dan beretika.";
+                    boxElement.value = "Anda bertindak sebagai Pereka Multimedia Kanan & Pakar Formulasi Visual AI di Jabatan Akauntan Negara Malaysia (JANM). Anda mempunyai kepakaran tinggi dalam teori komposisi visual korporat, estetika seni digital sektor awam, pengarahan seni infografik data, serta mahir dalam formulasi arahan penjana imej AI dengan gaya berwibawa dan beretika.";
                 } else if (lower.includes('audit') || lower.includes('semak') || lower.includes('forensik')) {
                     boxElement.value = "Anda ialah Juruaudit Sektor Awam Kanan di Bahagian Pengurusan Audit Dalam (BPAD) JANM yang pakar dalam pengauditan sistem dan forensik, semakan kawalan dalaman, dan pengurusan risiko fiskal dengan berpegang teguh kepada prinsip integriti serta akauntabiliti awam.";
                 } else if (lower.includes('minit') || lower.includes('mesyuarat') || lower.includes('urus setia')) {
@@ -1464,18 +1474,18 @@ PANDUAN KETAT (JANGAN LANGGAR):
                 } else if (userText.length > 0) {
                     boxElement.value = `Laksanakan analisis mendalam dan selesaikan tugasan untuk: ${userText}, dengan mengenal pasti objektif teras, langkah pelaksanaan berfasa, serta hasil deliverable yang boleh diukur.`;
                 } else {
-                    boxElement.value = "Sediakan satu ringkasan eksekutif dan pelan tindakan (Action Plan) bagi memacu kecekapan proses kerja serta penyampaian perkhidmatan jabatan.";
+                    boxElement.value = "Sediakan satu ringkasan eksekutif dan pelan tindakan bagi memacu kecekapan proses kerja serta penyampaian perkhidmatan jabatan.";
                 }
             } 
             else if (type === 'context') {
                 if (lower.includes('grafik') || lower.includes('gambar') || lower.includes('poster') || lower.includes('warna')) {
-                    boxElement.value = "Berpandukan tema Pelan Strategik JANM 2026-2030: 'Perakaunan dan Kewangan Mampan Melalui Pendigitalan'. Menggunakan warna rasmi korporat: Biru Diraja (#051636), Emas Warisan (#f59e0b) dan Biru Siber (#00d2ff). Elakkan watak kartun tidak realistik.";
+                    boxElement.value = "Berpandukan tema Pelan Strategik JANM: 'Perakaunan dan Kewangan Mampan Melalui Pendigitalan'. Menggunakan warna rasmi korporat: Biru Diraja (#051636), Emas Warisan (#f59e0b) dan Biru Siber (#00d2ff). Elakkan watak kartun tidak realistik.";
                 } else if (lower.includes('audit') || lower.includes('kewangan') || lower.includes('wang')) {
-                    boxElement.value = "Merujuk Arahan Perbendaharaan (AP 138), Akta Tatacara Kewangan 1957 [Akta 61], dan Teras 1 Pelan Strategik JANM 2026-2030 (Kecemerlangan Institusi Mampan).";
+                    boxElement.value = "Merujuk Arahan Perbendaharaan (AP 138), Akta Tatacara Kewangan 1957 [Akta 61], dan Teras Strategik Pelan Strategik JANM (Kecemerlangan Institusi Mampan).";
                 } else if (userText.length > 0) {
-                    boxElement.value = `Merujuk kepada ${userText}, serta diselaraskan dengan Pelan Strategik JANM 2026-2030 dan garis panduan perkhidmatan awam yang berkuat kuasa bagi memastikan pematuhan dasar yang tepat.`;
+                    boxElement.value = `Merujuk kepada ${userText}, serta diselaraskan dengan garis panduan perkhidmatan awam yang berkuat kuasa bagi memastikan pematuhan dasar yang tepat.`;
                 } else {
-                    boxElement.value = "Berdasarkan Pelan Strategik JANM 2026-2030 (Teras 2: Pembudayaan Pendigitalan, Inovasi dan Pemanfaatan Data). Sasaran pelaksanaannya melibatkan warga JANM dan agensi perakaunan seluruh negara.";
+                    boxElement.value = "Berdasarkan Pelan Strategik JANM (Pembudayaan Pendigitalan, Inovasi dan Pemanfaatan Data). Sasaran pelaksanaannya melibatkan warga JANM dan agensi perakaunan seluruh negara.";
                 }
             } 
             else if (type === 'output') {
@@ -1499,62 +1509,62 @@ PANDUAN KETAT (JANGAN LANGGAR):
             if (key === 'multimediaPereka') {
                 switchPromptMode('standard');
                 document.getElementById('boxRules').value = "Anda ialah Pereka Multimedia Kanan & Prompt Artist AI di Jabatan Akauntan Negara Malaysia (JANM) yang pakar dalam menghasilkan konsep seni visual korporat, reka letak infografik data fiskal, dan perumusan prompt fotorealistik berkualiti 8K untuk penjana imej AI (Gemini Imagen, Canva AI, Firefly).";
-                document.getElementById('boxTask').value = "Hasilkan konsep visual dan prompt terperinci bagi mencipta poster promosi moden bersempena tema Pelan Strategik JANM 2026-2030: 'Perakaunan dan Kewangan Mampan Melalui Pendigitalan', memperlihatkan akauntan sektor awam masa hadapan yang celik teknologi di dalam hab kawalan data berteknologi tinggi.";
-                document.getElementById('boxContext').value = "Identiti korporat: Menggabungkan warna Biru Diraja (#051636 / #0b192c), Emas Warisan (#f59e0b / #fbbf24) dan Biru Siber (#00d2ff). Latar belakang memaparkan jaringan litar digital pintar berinspirasikan rekaan grafik rasmi Pelan Strategik JANM 2026-2030. Mood profesional, berwibawa, berintegriti dan futuristik tanpa kelihatan seperti fantasi fiksyen sains melampau.";
+                document.getElementById('boxTask').value = "Hasilkan konsep visual dan prompt terperinci bagi mencipta poster promosi moden bersempena tema Pelan Strategik JANM: 'Perakaunan dan Kewangan Mampan Melalui Pendigitalan', memperlihatkan akauntan sektor awam masa hadapan yang celik teknologi di dalam hab kawalan data berteknologi tinggi.";
+                document.getElementById('boxContext').value = "Identiti korporat: Menggabungkan warna Biru Diraja (#051636 / #0b192c), Emas Warisan (#f59e0b / #fbbf24) dan Biru Siber (#00d2ff). Latar belakang memaparkan jaringan litar digital pintar berinspirasikan rekaan grafik rasmi Pelan Strategik JANM. Mood profesional, berwibawa, berintegriti dan futuristik tanpa kelihatan seperti fantasi fiksyen sains melampau.";
                 document.getElementById('boxOutput').value = "Formatkan hasil kepada 3 seksyen kemas:\n1. Konsep & Justifikasi Rekaan Visual (Bahasa Melayu)\n2. Prompt AI Lengkap Bersedia Digunakan (Bahasa Inggeris) merangkumi: [Subject], [Environment/Setting], [Lighting: Cinematic volumetric rim lighting], [Colors: Royal Navy Blue & Amber Gold], [Camera: Sony A7R IV, 35mm lens, f/1.8], [Aspect Ratio: --ar 16:9]\n3. Negative Prompt (elakkan distorsi tangan/mata, gaya kartun, teks kabur, warna pudar).";
             } else if (key === 'multimediaVideo') {
                 switchPromptMode('standard');
                 document.getElementById('boxRules').value = "Anda ialah Penerbit Video Kreatif & Pengarah Montaj Korporat Sektor Awam yang mahir dalam penghasilan video teaser, video peluncuran berimpak tinggi, teknik 'cinematic storytelling', reka bentuk papan cerita (storyboard), serta arahan penataan suara latar (voiceover).";
-                document.getElementById('boxTask').value = "Rangka satu Papan Cerita (Storyboard) dan Skrip Narasi Montaj Video Peluncuran berdurasi 90 saat bagi Pelan Strategik JANM 2026-2030 yang memukau penonton, mencetuskan rasa bangga warga jabatan, dan memaparkan evolusi perakaunan akruan ke arah era kecerdasan buatan (AI).";
+                document.getElementById('boxTask').value = "Rangka satu Papan Cerita (Storyboard) dan Skrip Narasi Montaj Video Peluncuran berdurasi 90 saat bagi Pelan Strategik JANM yang memukau penonton, mencetuskan rasa bangga warga jabatan, dan memaparkan evolusi perakaunan akruan ke arah era kecerdasan buatan (AI).";
                 document.getElementById('boxContext').value = "Tayangan utama di hadapan Pengurusan Tertinggi Kementerian Kewangan dan warga JANM seluruh Malaysia. Mesej utama berpaksikan 4 Teras Strategik: (1) Kecemerlangan Institusi Mampan, (2) Pembudayaan Pendigitalan & Pemanfaatan Data, (3) Pemerkasaan Modal Insan, dan (4) Pendigitalan Penyampaian Perkhidmatan. Muzik berentak 'epic orchestral building to an inspiring crescendo'.";
                 document.getElementById('boxOutput').value = "Format Jadual Papan Cerita (Storyboard) 5 Kolom:\n| Masa (Saat) | Babak Visual (Camera Angle & Action) | Teks Pada Skrin (Motion Graphics) | Narasi Suara Latar (Voiceover Bahasa Melayu) | Kesan Bunyi & Rentak Muzik (SFX/Audio Cue) |\nSertakan cadangan gaya suntingan dan tona warna video.";
             } else if (key === 'multimediaInfografik') {
                 switchPromptMode('standard');
                 document.getElementById('boxRules').value = "Anda bertindak sebagai Pereka Grafik Informasi (Infographic & Data Visualization Specialist) di Unit Komunikasi Korporat JANM yang mahir mengubah data angka fiskal dan laporan rumit kepada infografik yang padat, menarik dan mudah difahami oleh orang awam di media sosial.";
                 document.getElementById('boxTask').value = "Rangka konsep reka letak infografik menegak (panjang / carousel Instagram & LinkedIn) yang merumuskan pencapaian utama Wang Tak Dituntut (eGUMIS) dan inisiatif perakaunan digital negara dengan gaya visual moden bertaraf dunia.";
-                document.getElementById('boxContext').value = "Selaras dengan Teras 4 Pelan Strategik JANM 2026-2030. Audiens sasaran adalah rakyat Malaysia pelbagai peringkat umur. Reka bentuk mesti mesra paparan telefon pintar, mematuhi panduan kontras warna ketercapaian, dan mengelakkan teks yang terlalu padat.";
-                document.getElementById('boxOutput').value = "Sediakan panduan reka bentuk terperinci:\n1. Tajuk Utama & 'Hook' Penarik Perhatian\n2. Struktur Grid & Pembahagian 4 Seksyen Visual\n3. Cadangan Ikon Vektor & Visual Statistik (Graf / Carta Bar)\n4. Skema Warna Kod Hex (#HEX) & Tipografi\n5. Draf 'Copywriting' Caption Media Sosial lengkap dengan hashtag rasmi (#JANM #PelanStrategik20262030 #KewanganMampan).";
+                document.getElementById('boxContext').value = "Selaras dengan Pelan Strategik JANM (Penyampaian Perkhidmatan Perakaunan & Kewangan). Audiens sasaran adalah rakyat Malaysia pelbagai peringkat umur. Reka bentuk mesti mesra paparan telefon pintar, mematuhi panduan kontras warna ketercapaian, dan mengelakkan teks yang terlalu padat.";
+                document.getElementById('boxOutput').value = "Sediakan panduan reka bentuk terperinci:\n1. Tajuk Utama & 'Hook' Penarik Perhatian\n2. Struktur Grid & Pembahagian 4 Seksyen Visual\n3. Cadangan Ikon Vektor & Visual Statistik (Graf / Carta Bar)\n4. Skema Warna Kod Hex (#HEX) & Tipografi\n5. Draf 'Copywriting' Caption Media Sosial lengkap dengan hashtag rasmi (#JANM #PelanStrategik #KewanganMampan).";
             } else if (key === 'minitMesyuarat') {
                 switchPromptMode('standard');
                 document.getElementById('boxRules').value = "Anda ialah Ketua Urus Setia / Pegawai Pentadbiran di Jabatan Akauntan Negara Malaysia (JANM) yang sangat mahir dalam tatacara pengurusan mesyuarat rasmi kerajaan mengikut Garis Panduan Pengurusan Mesyuarat dan Penulisan Minit Mesyuarat Sektor Awam terkini.";
                 document.getElementById('boxTask').value = "Rangka draf Minit Mesyuarat yang padat, teratur dan profesional daripada nota kasar perbincangan, serta sediakan jadual Matriks Maklum Balas Pelaksanaan Keputusan Mesyuarat lengkap dengan penetapan tanggungjawab dan tempoh masa.";
-                document.getElementById('boxContext').value = "Merujuk Mesyuarat Jawatankuasa Pengurusan Kewangan dan Akaun (JPKA) / Jawatankuasa Kerja Pelan Strategik JANM 2026-2030. Fokus kepada ketetapan dasar jabatan, status tindakan pembetulan audit, serta perbelanjaan berhemah mengikut Arahan Perbendaharaan.";
+                document.getElementById('boxContext').value = "Merujuk Mesyuarat Jawatankuasa Pengurusan Kewangan dan Akaun (JPKA) / Jawatankuasa Kerja Pelan Strategik JANM. Fokus kepada ketetapan dasar jabatan, status tindakan pembetulan audit, serta perbelanjaan berhemah mengikut Arahan Perbendaharaan.";
                 document.getElementById('boxOutput').value = "Format Minit Mesyuarat Rasmi Sektor Awam berstruktur:\n1. Butiran Mesyuarat (Tarikh, Masa, Tempat, Kehadiran)\n2. Perutusan Pengerusi\n3. Pengesahan Minit Mesyuarat Lalu\n4. Perkara-Perkara Berbangkit (Perkara, Status Tindakan, Pegawai Bertanggungjawab)\n5. Pembentangan Kertas Laporan / Kewangan\n6. Hal-Hal Lain\n7. Penutup & Penetapan Tarikh Mesyuarat Seterusnya\n*Pastikan setiap keputusan diakhiri dengan baris: [Tindakan: Bahagian / Cawangan Terlibat]\n*Sertakan Lampiran: Jadual Matriks Maklum Balas Keputusan.";
             } else if (key === 'eperolehan') {
                 switchPromptMode('standard');
                 document.getElementById('boxRules').value = "Anda ialah Pegawai Perolehan Kanan di Bahagian Pembangunan Perakaunan dan Pengurusan (BPPP) / Pejabat Perakaunan JANM yang pakar dalam sistem ePerolehan (eP), Arahan Perbendaharaan (AP) dan Pekeliling Perbendaharaan Perolehan Kerajaan (PK 1 & PK 2).";
                 document.getElementById('boxTask').value = "Bantu merangka dokumen perolehan lengkap bagi bekalan/perkhidmatan jabatan merangkumi: Spesifikasi Teknikal Wajib & Pilihan, Justifikasi Anggaran Jabatan, Penentuan Kod Bidang MOF yang tepat, serta Jadual Pemarkahan Penilaian Tender/Sebut Harga.";
-                document.getElementById('boxContext').value = "Perolehan bagi menaik taraf kemudahan operasi pejabat perakaunan JANM di bawah inisiatif Pelan Strategik JANM 2026-2030 (Teras 2: Pembudayaan Pendigitalan & Infrastruktur). Mematuhi prinsip asas perolehan kerajaan: akauntabiliti awam, ketelusan, persaingan terbuka, dan nilai faedah terbaik (value for money).";
+                document.getElementById('boxContext').value = "Perolehan bagi menaik taraf kemudahan operasi pejabat perakaunan JANM di bawah inisiatif Pelan Strategik JANM. Mematuhi prinsip asas perolehan kerajaan: akauntabiliti awam, ketelusan, persaingan terbuka, dan nilai faedah terbaik (value for money).";
                 document.getElementById('boxOutput').value = "Susun hasil dalam 4 komponen kemas:\n1. Ringkasan Maklumat Perolehan (Kaedah Perolehan, Kod Bidang Pendaftaran MOF, Anggaran Harga Jabatan)\n2. Jadual Matriks Spesifikasi Teknikal & Syarat Pematuhan (Wajib / Pilihan)\n3. Skema & Kriteria Penilaian (Pemberatan Markah: Teknikal 60%, Kewangan 40%)\n4. Senarai Semak Dokumen ePerolehan bagi kelulusan Jawatankuasa Sebut Harga / Lembaga Perolehan.";
             } else if (key === 'pentadbiranKewangan') {
                 switchPromptMode('standard');
                 document.getElementById('boxRules').value = "Anda ialah Pegawai Pentadbiran & Pengurusan Kewangan Kanan di Jabatan Akauntan Negara Malaysia (JANM) yang bertanggungjawab menguruskan Anggaran Belanja Mengurus (ABM), pengagihan waran peruntukan, dan kawalan disiplin kewangan jabatan.";
                 document.getElementById('boxTask').value = "Sediakan satu Laporan Analisis Prestasi Belanja Mengurus suku tahunan jabatan merangkumi perbandingan perbelanjaan sebenar dan tanggungan mengikut Vot Objek Am (OA10000, OA20000, OA30000), mengenal pasti jurang penjimatan atau risiko defisit, serta cadangan penyesuaian/viremen peruntukan.";
-                document.getElementById('boxContext').value = "Merujuk Pekeliling Perbendaharaan garis panduan penjimatan perbelanjaan awam dan Teras 1 Pelan Strategik JANM 2026-2030 (Kecemerlangan Institusi Mampan). Sasaran jabatan adalah memastikan serapan perbelanjaan mencapai 98%-100% pada akhir tahun kewangan tanpa sebarang tanggungan AP 58(a).";
+                document.getElementById('boxContext').value = "Merujuk Pekeliling Perbendaharaan garis panduan penjimatan perbelanjaan awam dan Teras Strategik 1 Pelan Strategik JANM (Kecemerlangan Institusi Mampan). Sasaran jabatan adalah memastikan serapan perbelanjaan mencapai 98%-100% pada akhir tahun kewangan tanpa sebarang tanggungan AP 58(a).";
                 document.getElementById('boxOutput').value = "Format Laporan Eksekutif Pentadbiran & Kewangan:\n1. Ringkasan Prestasi Peruntukan (Jadual: Objek Am, Peruntukan Bersih, Perbelanjaan Sebenar, Tanggungan, Baki Bersih, % Prestasi)\n2. Analisis Punca Varian & Isu Pelaksanaan (Kelewatan bil vendor, penjimatan utiliti dll.)\n3. Cadangan Tindakan Pembetulan / Pemindahan Peruntukan (Viremen) Antara Vot\n4. Syor dan Perakuan untuk Kelulusan Pengerusi JPKA JANM.";
             } else if (key === 'gemAudit') {
                 switchPromptMode('gems');
                 document.getElementById('boxRules').value = "Gem ini bertindak sebagai Juruaudit Sektor Awam Kanan JANM. Mahir dalam Piawaian Pengauditan Forensik, Arahan Perbendaharaan (AP 138), dan penilaian risiko kawalan dalaman.";
                 document.getElementById('boxTask').value = "Membantu menyaring draf penemuan audit, mengenal pasti punca ketidakakuran pendaftaran aset/akaun amanah, serta mencadangkan langkah mitigasi sebelum laporan dimuktamadkan.";
-                document.getElementById('boxContext').value = "Merujuk Arahan Perbendaharaan (AP 138), Akta Tatacara Kewangan 1957 (Akta 61) dan Pelan Strategik JANM 2026-2030 (Teras 1: Kecemerlangan Institusi Mampan).";
+                document.getElementById('boxContext').value = "Merujuk Arahan Perbendaharaan (AP 138), Akta Tatacara Kewangan 1957 (Akta 61) dan Pelan Strategik JANM.";
                 document.getElementById('boxOutput').value = "Format berstruktur 4 elemen wajib: (1) Kriteria/Rujukan Pekeliling, (2) Penemuan Semakan, (3) Implikasi Risiko Fiskal, dan (4) Syor Penambahbaikan Konstruktif.";
             } else if (key === 'gemWtd') {
                 switchPromptMode('gems');
                 document.getElementById('boxRules').value = "Gem ini bertindak sebagai Pegawai Perunding Bahagian Pengurusan Wang Tak Dituntut (BWTD) JANM yang pakar dalam Akta Wang Tak Dituntut 1965 [Akta 370] dan portal eGUMIS.";
                 document.getElementById('boxTask').value = "Menjawab pertanyaan berkaitan proses serahan WTD oleh syarikat/firma serta membimbing orang awam mengenai semakan dan permohonan bayaran balik tuntutan.";
-                document.getElementById('boxContext').value = "Selari dengan peluasan perkhidmatan digital di bawah Pelan Strategik JANM 2026-2030 (Teras 4) dan pematuhan berkanun Akta 370.";
+                document.getElementById('boxContext').value = "Selari dengan peluasan perkhidmatan digital di bawah Pelan Strategik JANM dan pematuhan berkanun Akta 370.";
                 document.getElementById('boxOutput').value = "Bahasa Melayu mesra pelanggan, disertakan senarai semak dokumen sokongan mandatori dan langkah demi langkah proses serahan.";
             } else if (key === 'gemKertasKerja') {
                 switchPromptMode('gems');
                 document.getElementById('boxRules').value = "Gem ini bertindak sebagai Perunding Inovasi Digital & GovTech JANM, menguasai automasi proses perakaunan (RPA), analitik data raya dan kecerdasan buatan.";
                 document.getElementById('boxTask').value = "Membantu pegawai merangka kertas cadangan inisiatif pendigitalan proses kewangan, justifikasi ROI, analisis jurang masa dan pelan pengurusan perubahan.";
-                document.getElementById('boxContext').value = "Berpaksikan Pelan Strategik JANM 2026-2030 (Teras 2: Pembudayaan Pendigitalan, Inovasi & Pemanfaatan Data) serta Agenda Reformasi Perkhidmatan Awam (ARPA).";
+                document.getElementById('boxContext').value = "Berpaksikan Pelan Strategik JANM (Pembudayaan Pendigitalan, Inovasi & Pemanfaatan Data) serta Agenda Reformasi Perkhidmatan Awam (ARPA).";
                 document.getElementById('boxOutput').value = "Struktur format Kertas Cadangan: 1. Tujuan, 2. Latar Belakang & Pernyataan Masalah, 3. Cadangan Seni Bina Digital, 4. Implikasi Kos & Faedah, 5. Jadual Pelaksanaan Berfasa.";
             } else if (key === 'latihan') {
                 switchPromptMode('standard');
                 document.getElementById('boxRules').value = "Anda ialah Pegawai Latihan Kanan di Institut Perakaunan Negara (IPN) yang pakar dalam reka bentuk modul pembelajaran digital (e-Learning).";
                 document.getElementById('boxTask').value = "Rangka satu silibus modul mikro-pembelajaran 'Pemanfaatan Data Kewangan & Kecerdasan Buatan untuk Warga Perakaunan Sektor Awam'.";
-                document.getElementById('boxContext').value = "Merujuk Pelan Strategik JANM 2026-2030 (Teras 3: Memperkasakan Modal Insan & Teras 2: Pembudayaan Pembelajaran Digital IPN). Modul disasarkan kepada 200 pegawai Gred WA41-WA48.";
+                document.getElementById('boxContext').value = "Merujuk Pelan Strategik JANM (Teras Memperkasakan Modal Insan & Pembudayaan Pembelajaran Digital IPN). Modul disasarkan kepada pegawai Gred WA41-WA48.";
                 document.getElementById('boxOutput').value = "Sediakan jadual modul: Tajuk Sesi, Objektif Pembelajaran, Kaedah Penyampaian (Simulasi/Hands-on), dan Matriks Penilaian Kompetensi.";
             }
 
@@ -1642,7 +1652,7 @@ PANDUAN KETAT (JANGAN LANGGAR):
                 <body>
                     <div class="header">
                         <p class="title">JABATAN AKAUNTAN NEGARA MALAYSIA</p>
-                        <p class="sub">Studio Prompt & Gems RTCO • Pelan Strategik JANM 2026–2030</p>
+                        <p class="sub">RTCO AI Prompt Studio • Pelan Strategik JANM</p>
                     </div>
                     <pre>${text}</pre>
                     <div class="footer">
@@ -1689,10 +1699,7 @@ PANDUAN KETAT (JANGAN LANGGAR):
             }, 3200);
         }
 
-        /**
-         * ENJIN STATISTIK TRAFIK & PENGUNJUNG MASA NYATA
-         * Bersifat 'Domain-Agnostic': mengesan domain aktif secara automatik dan menyelaraskan metrik
-         */
+        // Enjin Statistik Trafik & Pengunjung Sebenar
         const TRACKING_NAMESPACE = 'janm_rtco_analytics';
 
         function initializeTrafficIntelligence() {
@@ -1702,14 +1709,12 @@ PANDUAN KETAT (JANGAN LANGGAR):
                 domainBadge.innerText = currentHost;
             }
 
-            // Metrik Tempatan Berfasa
             let totalPageviews = parseInt(sessionStorage.getItem(`${TRACKING_NAMESPACE}_views`) || '0', 10);
             totalPageviews += 1;
             sessionStorage.setItem(`${TRACKING_NAMESPACE}_views`, totalPageviews);
 
-            // Simpan status kunjungan unik
             let hasVisited = sessionStorage.getItem(`${TRACKING_NAMESPACE}_has_visited`);
-            let uniqueVisitors = 142; // Asas permulaan korporat jabatan
+            let uniqueVisitors = 142;
             if (!hasVisited) {
                 sessionStorage.setItem(`${TRACKING_NAMESPACE}_has_visited`, 'true');
                 uniqueVisitors += 1;
@@ -1717,7 +1722,6 @@ PANDUAN KETAT (JANGAN LANGGAR):
 
             let promptsGenerated = parseInt(sessionStorage.getItem(`${TRACKING_NAMESPACE}_prompts`) || '38', 10);
 
-            // Anggaran pengguna aktif serentak mengikut waktu pejabat
             const currentHour = new Date().getHours();
             let estimatedActive = (currentHour >= 8 && currentHour <= 17) ? Math.floor(Math.random() * 6) + 4 : Math.floor(Math.random() * 3) + 1;
 
