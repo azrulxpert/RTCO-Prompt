@@ -1703,11 +1703,14 @@ PANDUAN KETAT:
         const TRACKING_NAMESPACE = 'janm_rtco_analytics';
 
         function initializeTrafficIntelligence() {
-            const currentHost = window.location.hostname || 'rtco-prompt-janm.netlify.app';
-            const domainBadge = document.getElementById('currentDomainBadge');
-            if (domainBadge) {
-                domainBadge.innerText = currentHost;
-            }
+    // Penyelarasan ke domain Cloudflare Pages terkini
+    const currentHost = window.location.hostname || 'rtco-prompt.pages.dev';
+    const domainBadge = document.getElementById('currentDomainBadge');
+    if (domainBadge) {
+        domainBadge.innerText = currentHost;
+    }
+    // ... enjin pemantauan statistik pelawat
+}
 
             let totalPageviews = parseInt(sessionStorage.getItem(`${TRACKING_NAMESPACE}_views`) || '0', 10);
             totalPageviews += 1;
