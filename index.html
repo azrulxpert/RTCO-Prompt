@@ -1717,8 +1717,11 @@ PANDUAN KETAT:
             }, 3200);
         }
 
-        // Enjin Statistik Trafik & Pengunjung Sebenar
+        // Enjin Statistik Trafik & Pengunjung Sebenar (Integrasi GAS)
         const TRACKING_NAMESPACE = 'janm_rtco_analytics';
+        
+        // ⚠️ PENTING: Tampalkan URL Web App GAS anda di bawah!
+        const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbw84TSjGOk8yVqjWlvR7myQ0VsaeNwKR__FIVdR1kaiQNrNEfDABYBOCepGsc8W3eID/exec'; 
 
         function initializeTrafficIntelligence() {
             const currentHost = window.location.hostname || 'rtco-prompt.pages.dev';
@@ -1727,45 +1730,69 @@ PANDUAN KETAT:
                 domainBadge.innerText = currentHost;
             }
 
-            let totalPageviews = parseInt(sessionStorage.getItem(`${TRACKING_NAMESPACE}_views`) || '0', 10);
-            totalPageviews += 1;
-            sessionStorage.setItem(`${TRACKING_NAMESPACE}_views`, totalPageviews);
+            // Semak status pelawat pada pelayar
+            let isNewVisitor = false;
+            let isNewSession = false;
 
-            let hasVisited = sessionStorage.getItem(`${TRACKING_NAMESPACE}_has_visited`);
-            let uniqueVisitors = 142;
-            if (!hasVisited) {
-                sessionStorage.setItem(`${TRACKING_NAMESPACE}_has_visited`, 'true');
-                uniqueVisitors += 1;
+            if (!localStorage.getItem(`${TRACKING_NAMESPACE}_uuid`)) {
+                localStorage.setItem(`${TRACKING_NAMESPACE}_uuid`, crypto.randomUUID ? crypto.randomUUID() : Date.now().toString());
+                isNewVisitor = true;
+            }
+            
+            if (!sessionStorage.getItem(`${TRACKING_NAMESPACE}_session_active`)) {
+                sessionStorage.setItem(`${TRACKING_NAMESPACE}_session_active`, 'true');
+                isNewSession = true;
             }
 
-            let promptsGenerated = parseInt(sessionStorage.getItem(`${TRACKING_NAMESPACE}_prompts`) || '38', 10);
+            // Hantar data ke Google Apps Script (GAS)
+            updateServerData('pageview', isNewVisitor, isNewSession);
 
+            // Simulasi Pengguna Aktif Masa Nyata (Kekal Tempatan kerana GAS tidak sesuai untuk WebSockets)
             const currentHour = new Date().getHours();
             let estimatedActive = (currentHour >= 8 && currentHour <= 17) ? Math.floor(Math.random() * 6) + 4 : Math.floor(Math.random() * 3) + 1;
-
-            updateTrafficUI(uniqueVisitors, 320 + totalPageviews, promptsGenerated, estimatedActive);
+            const elActive = document.getElementById('statActiveUsers');
+            if (elActive) elActive.innerText = `${estimatedActive} Pegawai`;
         }
 
-        function updateTrafficUI(unique, views, prompts, active) {
+        function updateTrafficUI(unique, sessions, prompts) {
             const elUnique = document.getElementById('statUniqueVisitors');
             const elViews = document.getElementById('statTotalViews');
             const elPrompts = document.getElementById('statPromptsGenerated');
-            const elActive = document.getElementById('statActiveUsers');
 
+            // Kesan pertambahan dengan animasi ringkas jika mahu, atau terus kemas kini
             if (elUnique) elUnique.innerText = Number(unique).toLocaleString('ms-MY');
-            if (elViews) elViews.innerText = Number(views).toLocaleString('ms-MY');
+            if (elViews) elViews.innerText = Number(sessions).toLocaleString('ms-MY');
             if (elPrompts) elPrompts.innerText = Number(prompts).toLocaleString('ms-MY');
-            if (elActive) elActive.innerText = `${active} Pegawai`;
+        }
+
+        function updateServerData(action, isNewVisitor = false, isNewSession = false) {
+            if(!GAS_WEB_APP_URL || GAS_WEB_APP_URL.includes('TAMPAL_URL')) return;
+
+            // Pastikan Content-Type adalah text/plain untuk mengelakkan isu CORS Preflight di GAS
+            fetch(GAS_WEB_APP_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8',
+                },
+                body: JSON.stringify({
+                    action: action,
+                    isNewVisitor: isNewVisitor,
+                    isNewSession: isNewSession
+                })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === 'success') {
+                    // Update UI dengan data sebenar daripada server Google Sheets
+                    updateTrafficUI(data.unique, data.sessions, data.prompts);
+                }
+            })
+            .catch(error => console.error("Ralat menyambung ke pangkalan data:", error));
         }
 
         function registerPromptGenerationEvent() {
-            let prompts = parseInt(sessionStorage.getItem(`${TRACKING_NAMESPACE}_prompts`) || '38', 10);
-            prompts += 1;
-            sessionStorage.setItem(`${TRACKING_NAMESPACE}_prompts`, prompts);
-            const elPrompts = document.getElementById('statPromptsGenerated');
-            if (elPrompts) {
-                elPrompts.innerText = Number(prompts).toLocaleString('ms-MY');
-            }
+            // Hantar isyarat 'prompt' ke pangkalan data
+            updateServerData('prompt');
         }
 
         window.addEventListener('DOMContentLoaded', () => {
