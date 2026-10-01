@@ -209,35 +209,34 @@
 
     </div>
 
-    <!-- MAIN HEADER -->
+    <!-- MAIN HEADER (OPTIMISED & EXECUTIVE) -->
     <header class="bg-janm-deep/90 border-b border-janm-border sticky top-0 z-40 backdrop-blur-2xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
             
-            <div class="flex items-center gap-3.5">
+            <!-- LEFT: LOGO & TAJUK (DILINDUNGI SEGARIS) -->
+            <div class="flex items-center gap-3 shrink-0">
                 <!-- Logo Rasmi Kementerian Kewangan & JANM -->
-                <img src="Logo Kementerian Kewangan JANM.png" alt="Logo Kementerian Kewangan JANM" class="h-11 sm:h-12 w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="reopenGateway()" onerror="this.onerror=null; this.src='JATA NEGARA.png';">
+                <img src="Logo Kementerian Kewangan JANM.png" alt="Logo Kementerian Kewangan JANM" class="h-10 sm:h-12 w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="reopenGateway()" onerror="this.onerror=null; this.src='JATA NEGARA.png';">
 
-                <div>
-                    <span class="font-display font-extrabold text-white text-sm sm:text-base tracking-wide block">RTCO AI PROMPT STUDIO</span>
+                <div class="shrink-0">
+                    <span class="font-display font-extrabold text-white text-sm sm:text-base tracking-wide block whitespace-nowrap">
+                        RTCO AI PROMPT STUDIO
+                    </span>
                     <!-- Dua Baris Nama Agensi Pada Header -->
-                    <div class="text-[10px] text-slate-300 leading-tight hidden sm:block">
+                    <div class="text-[10px] text-slate-300 leading-tight hidden md:block whitespace-nowrap">
                         <div>Kementerian Kewangan Malaysia</div>
                         <div class="text-amber-300/90 font-medium">Jabatan Akauntan Negara Malaysia</div>
                     </div>
                 </div>
             </div>
 
-            <div class="flex items-center gap-2 sm:gap-3">
-                <div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-janm-card border border-amber-400/30 text-[11px] font-mono">
-                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span class="text-slate-300">Disediakan:</span>
-                    <span class="text-amber-300 font-bold">Kamsiazrul Sidek (BPAD)</span>
-                </div>
-
+            <!-- RIGHT: ACTION DOCK (RINGKAS & KEMAS) -->
+            <div class="flex items-center gap-1.5 sm:gap-2 justify-end flex-wrap sm:flex-nowrap">
+                
                 <!-- Quick Preset Selector -->
                 <div class="relative">
-                    <select id="presetSelector" onchange="applyPresetTemplate(this.value)" class="bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs text-amber-300 rounded-xl px-3 py-2 pr-8 focus:outline-none focus:border-amber-400 transition cursor-pointer appearance-none max-w-[210px] sm:max-w-[260px] truncate">
-                        <option value="">⚡ Contoh Pantas Tugasan JANM...</option>
+                    <select id="presetSelector" onchange="applyPresetTemplate(this.value)" class="bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs text-amber-300 rounded-xl px-2.5 py-2 pr-7 focus:outline-none focus:border-amber-400 transition cursor-pointer appearance-none max-w-[170px] sm:max-w-[210px] truncate">
+                        <option value="">⚡ Contoh Pantas JANM...</option>
                         <optgroup label="📊 Pembentangan & Slaid" class="bg-janm-deep text-amber-300 font-semibold">
                             <option value="slaidPembentangan" class="text-slate-100 font-normal">📊 Pembentangan Executive & PowerPoint</option>
                         </optgroup>
@@ -260,26 +259,26 @@
                             <option value="latihan" class="text-slate-100 font-normal">📚 Perancangan Latihan Digital IPN</option>
                         </optgroup>
                     </select>
-                    <i class="fa-solid fa-angle-down text-[10px] text-amber-400 absolute right-3 top-3 pointer-events-none"></i>
+                    <i class="fa-solid fa-angle-down text-[10px] text-amber-400 absolute right-2.5 top-3 pointer-events-none"></i>
                 </div>
 
-                <button onclick="openVaultModal()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-cyan-500/40 text-xs font-medium text-cyan-300 transition">
-                    <i class="fa-solid fa-bookmark text-amber-400"></i>
-                    <span class="hidden sm:inline">Koleksi Saya</span>
+                <button onclick="openVaultModal()" class="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-cyan-500/40 text-xs font-medium text-cyan-300 transition whitespace-nowrap">
+                    <i class="fa-solid fa-bookmark text-amber-400 text-xs"></i>
+                    <span class="hidden md:inline">Koleksi Saya</span>
                 </button>
 
-                <button onclick="reopenGateway()" class="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs font-medium text-slate-200 hover:text-amber-300 transition">
-                    <i class="fa-solid fa-door-open text-cyan-400"></i>
+                <button onclick="reopenGateway()" class="hidden lg:flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs font-medium text-slate-200 hover:text-amber-300 transition whitespace-nowrap">
+                    <i class="fa-solid fa-door-open text-cyan-400 text-xs"></i>
                     <span>Pusat AI</span>
                 </button>
 
-                <button onclick="openHelpDialog()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs font-medium text-cyan-300 transition">
-                    <i class="fa-solid fa-graduation-cap text-amber-400"></i>
-                    <span class="hidden sm:inline">Panduan RTCO</span>
+                <button onclick="openHelpDialog()" class="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs font-medium text-cyan-300 transition whitespace-nowrap">
+                    <i class="fa-solid fa-graduation-cap text-amber-400 text-xs"></i>
+                    <span class="hidden sm:inline">Panduan</span>
                 </button>
 
-                <button onclick="clearRTCOFields()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-rose-950/40 hover:bg-rose-900/60 border border-rose-800/40 text-xs font-medium text-rose-300 transition">
-                    <i class="fa-solid fa-arrow-rotate-left"></i>
+                <button onclick="clearRTCOFields()" class="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-rose-950/40 hover:bg-rose-900/60 border border-rose-800/40 text-xs font-medium text-rose-300 transition whitespace-nowrap">
+                    <i class="fa-solid fa-arrow-rotate-left text-xs"></i>
                     <span class="hidden sm:inline">Kosongkan</span>
                 </button>
 
