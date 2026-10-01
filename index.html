@@ -263,6 +263,11 @@
                     <i class="fa-solid fa-angle-down text-[10px] text-amber-400 absolute right-3 top-3 pointer-events-none"></i>
                 </div>
 
+                <button onclick="openVaultModal()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-cyan-500/40 text-xs font-medium text-cyan-300 transition">
+                    <i class="fa-solid fa-bookmark text-amber-400"></i>
+                    <span class="hidden sm:inline">Koleksi Saya</span>
+                </button>
+
                 <button onclick="reopenGateway()" class="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs font-medium text-slate-200 hover:text-amber-300 transition">
                     <i class="fa-solid fa-door-open text-cyan-400"></i>
                     <span>Pusat AI</span>
@@ -606,7 +611,7 @@
 
                 <div class="glass-panel rounded-3xl p-5 flex flex-col justify-between flex-grow shadow-2xl relative border-t-2 border-t-amber-400">
                     <div>
-                        <!-- Mode Switcher -->
+                        <!-- Mode Switcher & Save Button -->
                         <div class="flex items-center justify-between pb-3 mb-3 border-b border-janm-border gap-2">
                             <div class="inline-flex p-1 rounded-xl bg-slate-950/90 border border-janm-border">
                                 <button id="btnModeStandard" onclick="switchPromptMode('standard')" class="px-3 py-1 rounded-lg text-xs font-bold transition bg-amber-500 text-slate-950 shadow-sm">
@@ -616,7 +621,12 @@
                                     <i class="fa-solid fa-gem text-cyan-300 mr-1"></i> Gemini Gem
                                 </button>
                             </div>
-                            <span id="charCountLabel" class="font-mono text-[11px] text-amber-300 bg-blue-950/80 px-2.5 py-1 rounded-md border border-amber-500/30">0 aksara</span>
+                            <div class="flex items-center gap-2">
+                                <button onclick="saveCurrentPromptToVault()" class="text-[11px] font-mono text-amber-300 hover:text-amber-200 bg-amber-950/60 hover:bg-amber-900/80 px-2.5 py-1 rounded-md border border-amber-500/40 transition flex items-center gap-1">
+                                    <i class="fa-solid fa-bookmark text-amber-400"></i> Simpan
+                                </button>
+                                <span id="charCountLabel" class="font-mono text-[11px] text-amber-300 bg-blue-950/80 px-2.5 py-1 rounded-md border border-amber-500/30">0 aksara</span>
+                            </div>
                         </div>
 
                         <div id="modePillDescription" class="text-[11px] text-slate-300 bg-blue-950/50 p-2 rounded-xl mb-3 border border-blue-800/40 flex items-center gap-2">
@@ -752,6 +762,36 @@
         </div>
     </div>
 
+    <!-- KOLEKSI PROMPT SAYA (VAULT MODAL) -->
+    <div id="vaultModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
+        <div class="glass-panel max-w-2xl w-full rounded-3xl p-6 border border-cyan-500/30 relative max-h-[90vh] overflow-y-auto">
+            <div class="flex items-center justify-between border-b border-janm-border pb-3 mb-4">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-bookmark text-amber-300 text-lg"></i>
+                    <h3 class="font-bold text-white font-display text-base">KOLEKSI FORMULASI PROMPT SAYA</h3>
+                </div>
+                <button onclick="closeVaultModal()" class="text-slate-400 hover:text-white text-lg">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+                Formulasi RTCO yang anda simpan disimpan secara selamat di dalam memori pelayar peranti anda. Anda boleh memuatkan semula draf atau memadamkannya pada bila-bila masa.
+            </p>
+
+            <div id="vaultListContainer" class="space-y-3 max-h-[50vh] overflow-y-auto pr-1">
+                <!-- Senarai item simpanan akan dimuatkan melalui JS -->
+            </div>
+
+            <div class="mt-6 flex justify-between items-center border-t border-janm-border/60 pt-4">
+                <span class="text-[11px] font-mono text-slate-400" id="vaultItemCount">0 Formulasi Disimpan</span>
+                <button onclick="closeVaultModal()" class="px-5 py-2 bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-950 font-bold rounded-xl text-xs hover:opacity-90 transition font-display">
+                    TUTUP
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- PANDUAN RTCO MODAL -->
     <div id="helpModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="glass-panel max-w-xl w-full rounded-3xl p-6 border border-amber-500/30 relative max-h-[90vh] overflow-y-auto">
@@ -785,6 +825,20 @@
                     <p class="text-slate-300 leading-relaxed text-xs">
                         Penggubalan prompt berkesan memerlukan <strong>pengasingan peranan secara berdisiplin</strong>. Setiap komponen (R, T, C, O) perlu difokuskan pada fungsinya yang tepat agar model kecerdasan buatan memahami kehendak tugasan dengan tepat tanpa kekeliruan.
                     </p>
+                </div>
+
+                <!-- Kad Praktikal Terbaik Lampiran Kerangka Asal -->
+                <div class="p-3.5 rounded-2xl bg-amber-950/70 border border-amber-400/50">
+                    <span class="font-bold text-amber-300 font-mono text-xs block mb-1 flex items-center gap-1.5">
+                        <i class="fa-solid fa-paperclip text-amber-400"></i> Lampiran Format / Kerangka Rujukan Sedia Ada
+                    </span>
+                    <p class="text-slate-300 leading-relaxed text-xs mb-1">
+                        Bagi penyediaan <strong>Slaid Pembentangan, Minit Mesyuarat, atau Memo Rasmi</strong>, dinyatakan praktikal terbaik:
+                    </p>
+                    <ul class="list-disc list-inside text-xs text-slate-300 space-y-1 pl-1">
+                        <li><strong>Draf Teks / Kerangka Ringkas:</strong> Nyatakan susunan kerangka tersebut di ruangan <em>Context</em> atau <em>Output</em>.</li>
+                        <li><strong>Fail Fizikal (.pptx, .docx, .pdf):</strong> Maklumkan di dalam prompt untuk merujuk fail asal yang dilampirkan bersama semasa menampal prompt di kotak sembang ChatGPT / Gemini.</li>
+                    </ul>
                 </div>
 
                 <div class="p-3.5 rounded-2xl bg-janm-obsidian/90 border border-amber-500/30">
@@ -1279,7 +1333,7 @@
             if (fbC) fbC.innerText = evalC.feedback;
             if (fbO) fbO.innerText = evalO.feedback;
 
-            // Output bersih tanpa teks ulasan pengganggu untuk memudahkan copy-paste terus ke ChatGPT/Gemini
+            // Output bersih tanpa ulasan pengganggu
             let fullText = "";
             if (currentPromptMode === 'gems') {
                 fullText = `# 1. IDENTITY & PROFESSIONAL ROLE (RULES)
@@ -1720,6 +1774,136 @@ PANDUAN KETAT:
                 modal.classList.remove('flex');
                 modal.classList.add('hidden');
             }
+        }
+
+        // KOLEKSI PROMPT SAYA (VAULT MANAGEMENT)
+        const VAULT_STORAGE_KEY = 'janm_rtco_vault_items';
+
+        function openVaultModal() {
+            playHapticTick();
+            const modal = document.getElementById('vaultModal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                renderVaultList();
+            }
+        }
+
+        function closeVaultModal() {
+            const modal = document.getElementById('vaultModal');
+            if (modal) {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+            }
+        }
+
+        function getVaultItems() {
+            try {
+                return JSON.parse(localStorage.getItem(VAULT_STORAGE_KEY) || '[]');
+            } catch(e) {
+                return [];
+            }
+        }
+
+        function saveCurrentPromptToVault() {
+            playHapticTick();
+            const rules = document.getElementById('boxRules')?.value.trim() || '';
+            const task = document.getElementById('boxTask')?.value.trim() || '';
+            const context = document.getElementById('boxContext')?.value.trim() || '';
+            const output = document.getElementById('boxOutput')?.value.trim() || '';
+
+            if (!rules && !task && !context && !output) {
+                triggerToast("Ruangan Kosong", "Sila isi sekurang-kurangnya satu medan RTCO sebelum menyimpan.");
+                return;
+            }
+
+            const promptTitle = prompt("Masukkan nama/tajuk ringkas untuk simpanan formulasi ini:", task.substring(0, 30) || "Formulasi RTCO Saya");
+            if (!promptTitle) return;
+
+            const vaultItems = getVaultItems();
+            const newItem = {
+                id: Date.now(),
+                title: promptTitle,
+                mode: currentPromptMode,
+                date: new Date().toLocaleDateString('ms-MY'),
+                rules, task, context, output
+            };
+
+            vaultItems.unshift(newItem);
+            localStorage.setItem(VAULT_STORAGE_KEY, JSON.stringify(vaultItems));
+            triggerToast("Disimpan ke Koleksi", `Formulasi "${promptTitle}" disimpan secara selamat di peranti anda.`);
+        }
+
+        function renderVaultList() {
+            const container = document.getElementById('vaultListContainer');
+            const countEl = document.getElementById('vaultItemCount');
+            if (!container) return;
+
+            const items = getVaultItems();
+            if (countEl) countEl.innerText = `${items.length} Formulasi Disimpan`;
+
+            if (items.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-8 text-slate-500 border border-dashed border-slate-800 rounded-2xl">
+                        <i class="fa-solid fa-box-open text-3xl mb-2 text-slate-600"></i>
+                        <p class="text-xs font-mono">Tiada formulasi disimpan setakat ini.</p>
+                        <p class="text-[10px] text-slate-500 mt-1">Gunakan butang "Simpan" di sebelah kanan terminal prompt untuk menyimpan draf RTCO anda.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = items.map((item, index) => `
+                <div class="bg-janm-obsidian/90 border border-janm-border rounded-2xl p-3.5 hover:border-cyan-400/50 transition flex items-center justify-between gap-3">
+                    <div class="min-w-0 flex-1">
+                        <div class="flex items-center gap-2">
+                            <span class="font-bold text-xs text-white truncate">${escapeHtml(item.title)}</span>
+                            <span class="text-[9px] font-mono px-2 py-0.5 rounded-full ${item.mode === 'gems' ? 'bg-cyan-950 text-cyan-300 border border-cyan-800' : 'bg-amber-950 text-amber-300 border border-amber-800'}">${item.mode === 'gems' ? 'Gemini Gem' : 'Prompt Harian'}</span>
+                        </div>
+                        <p class="text-[10px] text-slate-400 mt-1 line-clamp-1 font-mono">${escapeHtml(item.task || item.rules || 'Tiada deskripsi')}</p>
+                        <span class="text-[9px] text-slate-500 font-mono mt-1 block">Tarikh: ${item.date}</span>
+                    </div>
+                    <div class="flex items-center gap-2 shrink-0">
+                        <button onclick="loadVaultItem(${item.id})" class="px-3 py-1.5 bg-cyan-950 hover:bg-cyan-900 text-cyan-300 border border-cyan-500/40 rounded-xl text-xs font-semibold transition flex items-center gap-1">
+                            <i class="fa-solid fa-arrow-right-to-bracket text-[10px]"></i> Guna
+                        </button>
+                        <button onclick="deleteVaultItem(${item.id})" class="p-1.5 text-rose-400 hover:text-rose-300 hover:bg-rose-950/60 rounded-lg transition" title="Padam">
+                            <i class="fa-solid fa-trash text-xs"></i>
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function loadVaultItem(id) {
+            playHapticTick();
+            const items = getVaultItems();
+            const target = items.find(i => i.id === id);
+            if (!target) return;
+
+            if (document.getElementById('boxRules')) document.getElementById('boxRules').value = target.rules || '';
+            if (document.getElementById('boxTask')) document.getElementById('boxTask').value = target.task || '';
+            if (document.getElementById('boxContext')) document.getElementById('boxContext').value = target.context || '';
+            if (document.getElementById('boxOutput')) document.getElementById('boxOutput').value = target.output || '';
+
+            if (target.mode) switchPromptMode(target.mode);
+
+            compileRealtimePrompt();
+            closeVaultModal();
+            triggerToast("Formulasi Dimuatkan", `Formulasi "${target.title}" dimuatkan ke dalam ruang input.`);
+        }
+
+        function deleteVaultItem(id) {
+            playHapticTick();
+            let items = getVaultItems();
+            items = items.filter(i => i.id !== id);
+            localStorage.setItem(VAULT_STORAGE_KEY, JSON.stringify(items));
+            renderVaultList();
+            triggerToast("Dipadam", "Formulasi telah dipadam daripada simpanan tempatan.");
+        }
+
+        function escapeHtml(str) {
+            return String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
         }
 
         function triggerToast(title, message) {
