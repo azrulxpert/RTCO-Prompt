@@ -354,95 +354,95 @@
             </div>
         </div>
 
-        <!-- ANALISIS FORMULASI PROMPT EKSEKUTIF -->
-        <div class="mb-6 glass-panel rounded-3xl p-5 border border-janm-border shadow-xl">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-4 pb-4 border-b border-janm-border/60">
+        <!-- ANALISIS FORMULASI PROMPT EKSEKUTIF (STICKY / FROZEN ON SCROLL) -->
+        <div class="mb-6 glass-panel rounded-3xl p-4 sm:p-5 border border-janm-border shadow-2xl sticky top-20 z-30 backdrop-blur-2xl bg-janm-obsidian/90 transition-all duration-300">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-4 pb-3 border-b border-janm-border/60">
                 <div class="flex items-center gap-3 w-full lg:w-auto">
-                    <div class="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-inner">
-                        <i class="fa-solid fa-chart-pie text-lg"></i>
+                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-inner shrink-0">
+                        <i class="fa-solid fa-chart-pie text-base sm:text-lg"></i>
                     </div>
                     <div>
                         <div class="flex items-center gap-2">
-                            <h2 class="font-display font-extrabold text-white text-base">ANALISIS FORMULASI PROMPT EKSEKUTIF</h2>
-                            <span id="overallBadge" class="bg-slate-900 text-slate-400 border border-slate-700 text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold">Peringkat Asas</span>
+                            <h2 class="font-display font-extrabold text-white text-xs sm:text-sm tracking-wide uppercase">ANALISIS FORMULASI PROMPT EKSEKUTIF</h2>
+                            <span id="overallBadge" class="bg-slate-900 text-slate-400 border border-slate-700 text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded-full font-bold">Peringkat Asas</span>
                         </div>
-                        <p class="text-xs text-slate-300">Analisis Penjajaran dan Ketepatan Struktur Komponen RTCO</p>
+                        <p class="text-[11px] text-slate-300 hidden sm:block">Analisis Penjajaran dan Ketepatan Struktur Komponen RTCO Masa Nyata</p>
                     </div>
                 </div>
 
                 <!-- Headline KPI Cards -->
-                <div class="grid grid-cols-3 gap-3 w-full lg:w-auto font-mono text-center">
-                    <div class="bg-janm-obsidian/90 px-4 py-2 rounded-2xl border border-janm-border">
-                        <span class="text-[10px] text-slate-400 block uppercase">Skor Keseluruhan</span>
-                        <span id="overallScoreText" class="text-lg font-extrabold text-amber-300">0%</span>
+                <div class="grid grid-cols-3 gap-2 sm:gap-3 w-full lg:w-auto font-mono text-center">
+                    <div class="bg-janm-obsidian/95 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl border border-janm-border">
+                        <span class="text-[9px] sm:text-[10px] text-slate-400 block uppercase">Skor Keseluruhan</span>
+                        <span id="overallScoreText" class="text-sm sm:text-lg font-extrabold text-amber-300">0%</span>
                     </div>
-                    <div class="bg-janm-obsidian/90 px-4 py-2 rounded-2xl border border-janm-border">
-                        <span class="text-[10px] text-slate-400 block uppercase">Status Formulasi</span>
-                        <span id="promptStatusText" class="text-xs font-bold text-slate-300 mt-1 block">Dalam Penggubalan</span>
+                    <div class="bg-janm-obsidian/95 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl border border-janm-border">
+                        <span class="text-[9px] sm:text-[10px] text-slate-400 block uppercase">Status Formulasi</span>
+                        <span id="promptStatusText" class="text-[10px] sm:text-xs font-bold text-slate-300 mt-0.5 block truncate">Dalam Penggubalan</span>
                     </div>
-                    <div class="bg-janm-obsidian/90 px-4 py-2 rounded-2xl border border-janm-border">
-                        <span class="text-[10px] text-slate-400 block uppercase">Tahap Kesiagaan</span>
-                        <span id="promptReadinessText" class="text-xs font-bold text-slate-400 mt-1 block">Belum Lengkap</span>
+                    <div class="bg-janm-obsidian/95 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl border border-janm-border">
+                        <span class="text-[9px] sm:text-[10px] text-slate-400 block uppercase">Tahap Kesiagaan</span>
+                        <span id="promptReadinessText" class="text-[10px] sm:text-xs font-bold text-slate-400 mt-0.5 block truncate">Belum Lengkap</span>
                     </div>
                 </div>
             </div>
 
             <!-- 4 Pillar Metrics -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4 font-mono">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 mt-3 font-mono">
                 <!-- R: Persona Clarity -->
-                <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-slate-300 flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-amber-400"></span> Kejelasan Peranan (R)
+                <div class="bg-janm-obsidian/95 p-2.5 sm:p-3 rounded-2xl border border-janm-border">
+                    <div class="flex justify-between items-center text-[11px] sm:text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5 truncate">
+                            <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span> Kejelasan Peranan (R)
                         </span>
-                        <span id="analyticsR" class="font-bold text-amber-300">0%</span>
+                        <span id="analyticsR" class="font-bold text-amber-300 ml-1">0%</span>
                     </div>
-                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-2 overflow-hidden">
+                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-1.5 overflow-hidden">
                         <div id="analyticsBarR" class="bg-amber-400 h-full w-0 transition-all duration-300"></div>
                     </div>
-                    <span id="feedbackR" class="text-[9px] text-slate-400 mt-1.5 block truncate">Belum diisi</span>
+                    <span id="feedbackR" class="text-[9px] text-slate-400 mt-1 block truncate">Belum diisi</span>
                 </div>
 
                 <!-- T: Task Definition -->
-                <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-slate-300 flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Definisi Tugasan (T)
+                <div class="bg-janm-obsidian/95 p-2.5 sm:p-3 rounded-2xl border border-janm-border">
+                    <div class="flex justify-between items-center text-[11px] sm:text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5 truncate">
+                            <span class="w-2 h-2 rounded-full bg-cyan-400 shrink-0"></span> Definisi Tugasan (T)
                         </span>
-                        <span id="analyticsT" class="font-bold text-cyan-300">0%</span>
+                        <span id="analyticsT" class="font-bold text-cyan-300 ml-1">0%</span>
                     </div>
-                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-2 overflow-hidden">
+                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-1.5 overflow-hidden">
                         <div id="analyticsBarT" class="bg-cyan-400 h-full w-0 transition-all duration-300"></div>
                     </div>
-                    <span id="feedbackT" class="text-[9px] text-slate-400 mt-1.5 block truncate">Belum diisi</span>
+                    <span id="feedbackT" class="text-[9px] text-slate-400 mt-1 block truncate">Belum diisi</span>
                 </div>
 
                 <!-- C: Context Strength -->
-                <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-slate-300 flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Kekuatan Konteks (C)
+                <div class="bg-janm-obsidian/95 p-2.5 sm:p-3 rounded-2xl border border-janm-border">
+                    <div class="flex justify-between items-center text-[11px] sm:text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5 truncate">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span> Kekuatan Konteks (C)
                         </span>
-                        <span id="analyticsC" class="font-bold text-emerald-300">0%</span>
+                        <span id="analyticsC" class="font-bold text-emerald-300 ml-1">0%</span>
                     </div>
-                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-2 overflow-hidden">
+                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-1.5 overflow-hidden">
                         <div id="analyticsBarC" class="bg-emerald-400 h-full w-0 transition-all duration-300"></div>
                     </div>
-                    <span id="feedbackC" class="text-[9px] text-slate-400 mt-1.5 block truncate">Belum diisi</span>
+                    <span id="feedbackC" class="text-[9px] text-slate-400 mt-1 block truncate">Belum diisi</span>
                 </div>
 
                 <!-- O: Output Precision -->
-                <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
-                    <div class="flex justify-between items-center text-xs">
-                        <span class="text-slate-300 flex items-center gap-1.5">
-                            <span class="w-2 h-2 rounded-full bg-amber-300"></span> Ketepatan Format (O)
+                <div class="bg-janm-obsidian/95 p-2.5 sm:p-3 rounded-2xl border border-janm-border">
+                    <div class="flex justify-between items-center text-[11px] sm:text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5 truncate">
+                            <span class="w-2 h-2 rounded-full bg-amber-300 shrink-0"></span> Ketepatan Format (O)
                         </span>
-                        <span id="analyticsO" class="font-bold text-amber-200">0%</span>
+                        <span id="analyticsO" class="font-bold text-amber-200 ml-1">0%</span>
                     </div>
-                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-2 overflow-hidden">
+                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-1.5 overflow-hidden">
                         <div id="analyticsBarO" class="bg-amber-300 h-full w-0 transition-all duration-300"></div>
                     </div>
-                    <span id="feedbackO" class="text-[9px] text-slate-400 mt-1.5 block truncate">Belum diisi</span>
+                    <span id="feedbackO" class="text-[9px] text-slate-400 mt-1 block truncate">Belum diisi</span>
                 </div>
             </div>
         </div>
