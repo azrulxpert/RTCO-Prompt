@@ -7,7 +7,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome 6.5.1 CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-fontawesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Fonts: Plus Jakarta Sans, Space Grotesk, JetBrains Mono & Italianno -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -209,34 +209,35 @@
 
     </div>
 
-    <!-- MAIN HEADER (OPTIMISED & EXECUTIVE - WHITESPACE NOWRAP FIXED) -->
+    <!-- MAIN HEADER -->
     <header class="bg-janm-deep/90 border-b border-janm-border sticky top-0 z-40 backdrop-blur-2xl">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
             
-            <!-- LEFT: LOGO & TAJUK (DILINDUNGI SEGARIS) -->
-            <div class="flex items-center gap-3 shrink-0">
+            <div class="flex items-center gap-3.5">
                 <!-- Logo Rasmi Kementerian Kewangan & JANM -->
-                <img src="Logo Kementerian Kewangan JANM.png" alt="Logo Kementerian Kewangan JANM" class="h-10 sm:h-12 w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="reopenGateway()" onerror="this.onerror=null; this.src='JATA NEGARA.png';">
+                <img src="Logo Kementerian Kewangan JANM.png" alt="Logo Kementerian Kewangan JANM" class="h-11 sm:h-12 w-auto object-contain drop-shadow-md cursor-pointer hover:scale-105 transition-transform" onclick="reopenGateway()" onerror="this.onerror=null; this.src='JATA NEGARA.png';">
 
-                <div class="shrink-0">
-                    <span class="font-display font-extrabold text-white text-sm sm:text-base tracking-wide block whitespace-nowrap">
-                        RTCO AI PROMPT STUDIO
-                    </span>
+                <div>
+                    <span class="font-display font-extrabold text-white text-sm sm:text-base tracking-wide block">RTCO AI PROMPT STUDIO</span>
                     <!-- Dua Baris Nama Agensi Pada Header -->
-                    <div class="text-[10px] text-slate-300 leading-tight hidden md:block whitespace-nowrap">
+                    <div class="text-[10px] text-slate-300 leading-tight hidden sm:block">
                         <div>Kementerian Kewangan Malaysia</div>
                         <div class="text-amber-300/90 font-medium">Jabatan Akauntan Negara Malaysia</div>
                     </div>
                 </div>
             </div>
 
-            <!-- RIGHT: ACTION DOCK (RINGKAS & KEMAS) -->
-            <div class="flex items-center gap-1.5 sm:gap-2 justify-end flex-wrap sm:flex-nowrap">
-                
+            <div class="flex items-center gap-2 sm:gap-3">
+                <div class="hidden xl:flex items-center gap-2 px-3 py-1.5 rounded-xl bg-janm-card border border-amber-400/30 text-[11px] font-mono">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    <span class="text-slate-300">Disediakan:</span>
+                    <span class="text-amber-300 font-bold">Kamsiazrul Sidek (BPAD)</span>
+                </div>
+
                 <!-- Quick Preset Selector -->
                 <div class="relative">
-                    <select id="presetSelector" onchange="applyPresetTemplate(this.value)" class="bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs text-amber-300 rounded-xl px-2.5 py-2 pr-7 focus:outline-none focus:border-amber-400 transition cursor-pointer appearance-none max-w-[170px] sm:max-w-[210px] truncate">
-                        <option value="">⚡ Contoh Pantas JANM...</option>
+                    <select id="presetSelector" onchange="applyPresetTemplate(this.value)" class="bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs text-amber-300 rounded-xl px-3 py-2 pr-8 focus:outline-none focus:border-amber-400 transition cursor-pointer appearance-none max-w-[210px] sm:max-w-[260px] truncate">
+                        <option value="">⚡ Contoh Pantas Tugasan JANM...</option>
                         <optgroup label="📊 Pembentangan & Slaid" class="bg-janm-deep text-amber-300 font-semibold">
                             <option value="slaidPembentangan" class="text-slate-100 font-normal">📊 Pembentangan Executive & PowerPoint</option>
                         </optgroup>
@@ -259,26 +260,21 @@
                             <option value="latihan" class="text-slate-100 font-normal">📚 Perancangan Latihan Digital IPN</option>
                         </optgroup>
                     </select>
-                    <i class="fa-solid fa-angle-down text-[10px] text-amber-400 absolute right-2.5 top-3 pointer-events-none"></i>
+                    <i class="fa-solid fa-angle-down text-[10px] text-amber-400 absolute right-3 top-3 pointer-events-none"></i>
                 </div>
 
-                <button onclick="openVaultModal()" class="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-cyan-500/40 text-xs font-medium text-cyan-300 transition whitespace-nowrap">
-                    <i class="fa-solid fa-bookmark text-amber-400 text-xs"></i>
-                    <span class="hidden md:inline">Koleksi Saya</span>
-                </button>
-
-                <button onclick="reopenGateway()" class="hidden lg:flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs font-medium text-slate-200 hover:text-amber-300 transition whitespace-nowrap">
-                    <i class="fa-solid fa-door-open text-cyan-400 text-xs"></i>
+                <button onclick="reopenGateway()" class="hidden md:flex items-center gap-1.5 px-3 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs font-medium text-slate-200 hover:text-amber-300 transition">
+                    <i class="fa-solid fa-door-open text-cyan-400"></i>
                     <span>Pusat AI</span>
                 </button>
 
-                <button onclick="openHelpDialog()" class="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs font-medium text-cyan-300 transition whitespace-nowrap">
-                    <i class="fa-solid fa-graduation-cap text-amber-400 text-xs"></i>
-                    <span class="hidden sm:inline">Panduan</span>
+                <button onclick="openHelpDialog()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-janm-card hover:bg-janm-cardHover border border-janm-border text-xs font-medium text-cyan-300 transition">
+                    <i class="fa-solid fa-graduation-cap text-amber-400"></i>
+                    <span class="hidden sm:inline">Panduan RTCO</span>
                 </button>
 
-                <button onclick="clearRTCOFields()" class="flex items-center gap-1.5 px-2.5 py-2 rounded-xl bg-rose-950/40 hover:bg-rose-900/60 border border-rose-800/40 text-xs font-medium text-rose-300 transition whitespace-nowrap">
-                    <i class="fa-solid fa-arrow-rotate-left text-xs"></i>
+                <button onclick="clearRTCOFields()" class="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-rose-950/40 hover:bg-rose-900/60 border border-rose-800/40 text-xs font-medium text-rose-300 transition">
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
                     <span class="hidden sm:inline">Kosongkan</span>
                 </button>
 
@@ -354,95 +350,95 @@
             </div>
         </div>
 
-        <!-- ANALISIS FORMULASI PROMPT EKSEKUTIF (STICKY / FROZEN ON SCROLL INCLUDED!) -->
-        <div class="mb-6 glass-panel rounded-3xl p-4 sm:p-5 border border-janm-border shadow-2xl sticky top-20 z-30 backdrop-blur-2xl bg-janm-obsidian/90 transition-all duration-300">
-            <div class="flex flex-col lg:flex-row items-center justify-between gap-4 pb-3 border-b border-janm-border/60">
+        <!-- ANALISIS FORMULASI PROMPT EKSEKUTIF -->
+        <div class="mb-6 glass-panel rounded-3xl p-5 border border-janm-border shadow-xl">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-4 pb-4 border-b border-janm-border/60">
                 <div class="flex items-center gap-3 w-full lg:w-auto">
-                    <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-inner shrink-0">
-                        <i class="fa-solid fa-chart-pie text-base sm:text-lg"></i>
+                    <div class="w-10 h-10 rounded-2xl bg-amber-500/20 border border-amber-400/40 flex items-center justify-center text-amber-300 shadow-inner">
+                        <i class="fa-solid fa-chart-pie text-lg"></i>
                     </div>
                     <div>
                         <div class="flex items-center gap-2">
-                            <h2 class="font-display font-extrabold text-white text-xs sm:text-sm tracking-wide uppercase">ANALISIS FORMULASI PROMPT EKSEKUTIF</h2>
-                            <span id="overallBadge" class="bg-slate-900 text-slate-400 border border-slate-700 text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded-full font-bold">Peringkat Asas</span>
+                            <h2 class="font-display font-extrabold text-white text-base">ANALISIS FORMULASI PROMPT EKSEKUTIF</h2>
+                            <span id="overallBadge" class="bg-slate-900 text-slate-400 border border-slate-700 text-[10px] font-mono px-2.5 py-0.5 rounded-full font-bold">Peringkat Asas</span>
                         </div>
-                        <p class="text-[11px] text-slate-300 hidden sm:block">Analisis Penjajaran dan Ketepatan Struktur Komponen RTCO Masa Nyata</p>
+                        <p class="text-xs text-slate-300">Analisis Penjajaran dan Ketepatan Struktur Komponen RTCO</p>
                     </div>
                 </div>
 
                 <!-- Headline KPI Cards -->
-                <div class="grid grid-cols-3 gap-2 sm:gap-3 w-full lg:w-auto font-mono text-center">
-                    <div class="bg-janm-obsidian/95 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl border border-janm-border">
-                        <span class="text-[9px] sm:text-[10px] text-slate-400 block uppercase">Skor Keseluruhan</span>
-                        <span id="overallScoreText" class="text-sm sm:text-lg font-extrabold text-amber-300">0%</span>
+                <div class="grid grid-cols-3 gap-3 w-full lg:w-auto font-mono text-center">
+                    <div class="bg-janm-obsidian/90 px-4 py-2 rounded-2xl border border-janm-border">
+                        <span class="text-[10px] text-slate-400 block uppercase">Skor Keseluruhan</span>
+                        <span id="overallScoreText" class="text-lg font-extrabold text-amber-300">0%</span>
                     </div>
-                    <div class="bg-janm-obsidian/95 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl border border-janm-border">
-                        <span class="text-[9px] sm:text-[10px] text-slate-400 block uppercase">Status Formulasi</span>
-                        <span id="promptStatusText" class="text-[10px] sm:text-xs font-bold text-slate-300 mt-0.5 block truncate">Dalam Penggubalan</span>
+                    <div class="bg-janm-obsidian/90 px-4 py-2 rounded-2xl border border-janm-border">
+                        <span class="text-[10px] text-slate-400 block uppercase">Status Formulasi</span>
+                        <span id="promptStatusText" class="text-xs font-bold text-slate-300 mt-1 block">Dalam Penggubalan</span>
                     </div>
-                    <div class="bg-janm-obsidian/95 px-3 py-1.5 sm:px-4 sm:py-2 rounded-2xl border border-janm-border">
-                        <span class="text-[9px] sm:text-[10px] text-slate-400 block uppercase">Tahap Kesiagaan</span>
-                        <span id="promptReadinessText" class="text-[10px] sm:text-xs font-bold text-slate-400 mt-0.5 block truncate">Belum Lengkap</span>
+                    <div class="bg-janm-obsidian/90 px-4 py-2 rounded-2xl border border-janm-border">
+                        <span class="text-[10px] text-slate-400 block uppercase">Tahap Kesiagaan</span>
+                        <span id="promptReadinessText" class="text-xs font-bold text-slate-400 mt-1 block">Belum Lengkap</span>
                     </div>
                 </div>
             </div>
 
             <!-- 4 Pillar Metrics -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 mt-3 font-mono">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4 font-mono">
                 <!-- R: Persona Clarity -->
-                <div class="bg-janm-obsidian/95 p-2.5 sm:p-3 rounded-2xl border border-janm-border">
-                    <div class="flex justify-between items-center text-[11px] sm:text-xs">
-                        <span class="text-slate-300 flex items-center gap-1.5 truncate">
-                            <span class="w-2 h-2 rounded-full bg-amber-400 shrink-0"></span> Kejelasan Peranan (R)
+                <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-amber-400"></span> Kejelasan Peranan (R)
                         </span>
-                        <span id="analyticsR" class="font-bold text-amber-300 ml-1">0%</span>
+                        <span id="analyticsR" class="font-bold text-amber-300">0%</span>
                     </div>
-                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-2 overflow-hidden">
                         <div id="analyticsBarR" class="bg-amber-400 h-full w-0 transition-all duration-300"></div>
                     </div>
-                    <span id="feedbackR" class="text-[9px] text-slate-400 mt-1 block truncate">Belum diisi</span>
+                    <span id="feedbackR" class="text-[9px] text-slate-400 mt-1.5 block truncate">Belum diisi</span>
                 </div>
 
                 <!-- T: Task Definition -->
-                <div class="bg-janm-obsidian/95 p-2.5 sm:p-3 rounded-2xl border border-janm-border">
-                    <div class="flex justify-between items-center text-[11px] sm:text-xs">
-                        <span class="text-slate-300 flex items-center gap-1.5 truncate">
-                            <span class="w-2 h-2 rounded-full bg-cyan-400 shrink-0"></span> Definisi Tugasan (T)
+                <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-cyan-400"></span> Definisi Tugasan (T)
                         </span>
-                        <span id="analyticsT" class="font-bold text-cyan-300 ml-1">0%</span>
+                        <span id="analyticsT" class="font-bold text-cyan-300">0%</span>
                     </div>
-                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-2 overflow-hidden">
                         <div id="analyticsBarT" class="bg-cyan-400 h-full w-0 transition-all duration-300"></div>
                     </div>
-                    <span id="feedbackT" class="text-[9px] text-slate-400 mt-1 block truncate">Belum diisi</span>
+                    <span id="feedbackT" class="text-[9px] text-slate-400 mt-1.5 block truncate">Belum diisi</span>
                 </div>
 
                 <!-- C: Context Strength -->
-                <div class="bg-janm-obsidian/95 p-2.5 sm:p-3 rounded-2xl border border-janm-border">
-                    <div class="flex justify-between items-center text-[11px] sm:text-xs">
-                        <span class="text-slate-300 flex items-center gap-1.5 truncate">
-                            <span class="w-2 h-2 rounded-full bg-emerald-400 shrink-0"></span> Kekuatan Konteks (C)
+                <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Kekuatan Konteks (C)
                         </span>
-                        <span id="analyticsC" class="font-bold text-emerald-300 ml-1">0%</span>
+                        <span id="analyticsC" class="font-bold text-emerald-300">0%</span>
                     </div>
-                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-2 overflow-hidden">
                         <div id="analyticsBarC" class="bg-emerald-400 h-full w-0 transition-all duration-300"></div>
                     </div>
-                    <span id="feedbackC" class="text-[9px] text-slate-400 mt-1 block truncate">Belum diisi</span>
+                    <span id="feedbackC" class="text-[9px] text-slate-400 mt-1.5 block truncate">Belum diisi</span>
                 </div>
 
                 <!-- O: Output Precision -->
-                <div class="bg-janm-obsidian/95 p-2.5 sm:p-3 rounded-2xl border border-janm-border">
-                    <div class="flex justify-between items-center text-[11px] sm:text-xs">
-                        <span class="text-slate-300 flex items-center gap-1.5 truncate">
-                            <span class="w-2 h-2 rounded-full bg-amber-300 shrink-0"></span> Ketepatan Format (O)
+                <div class="bg-janm-obsidian/90 p-3 rounded-2xl border border-janm-border">
+                    <div class="flex justify-between items-center text-xs">
+                        <span class="text-slate-300 flex items-center gap-1.5">
+                            <span class="w-2 h-2 rounded-full bg-amber-300"></span> Ketepatan Format (O)
                         </span>
-                        <span id="analyticsO" class="font-bold text-amber-200 ml-1">0%</span>
+                        <span id="analyticsO" class="font-bold text-amber-200">0%</span>
                     </div>
-                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-1.5 overflow-hidden">
+                    <div class="w-full bg-slate-900 h-1.5 rounded-full mt-2 overflow-hidden">
                         <div id="analyticsBarO" class="bg-amber-300 h-full w-0 transition-all duration-300"></div>
                     </div>
-                    <span id="feedbackO" class="text-[9px] text-slate-400 mt-1 block truncate">Belum diisi</span>
+                    <span id="feedbackO" class="text-[9px] text-slate-400 mt-1.5 block truncate">Belum diisi</span>
                 </div>
             </div>
         </div>
@@ -557,26 +553,26 @@
                     </div>
                 </div>
 
-                <!-- C - CONTEXT (DITINGKATKAN UNTUK FLEKSIBILITI MEDIA/VIDEO & NON-JANM) -->
+                <!-- C - CONTEXT -->
                 <div class="glass-panel rounded-2xl p-4 sm:p-5 border-l-4 border-l-emerald-400 transition hover:border-l-emerald-300">
                     <div class="flex items-center justify-between gap-3 mb-2.5">
                         <div class="flex items-center gap-2.5 min-w-0">
                             <span class="w-7 h-7 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center justify-center font-bold font-mono text-xs shadow-sm shrink-0">C</span>
                             <div class="min-w-0">
                                 <h3 class="text-xs sm:text-sm font-bold text-white truncate">
-                                    Context / Rujukan Dasar, Latar Belakang & Tema
+                                    Context / Rujukan Dasar & Konteks
                                 </h3>
-                                <p class="text-[11px] text-emerald-300/80 truncate">Audiens, situasi, mood visual, atau pekeliling rasmi</p>
+                                <p class="text-[11px] text-emerald-300/80 truncate">Pekeliling, arahan dan asas situasi</p>
                             </div>
                         </div>
                         <button type="button" id="btnExpandContext" onclick="smartExpandField('context')" class="shrink-0 whitespace-nowrap text-[11px] text-emerald-300 hover:text-emerald-200 flex items-center gap-1.5 font-medium bg-emerald-950/50 hover:bg-emerald-900/60 px-3 py-1.5 rounded-lg border border-emerald-500/40 transition shadow-sm">
                             <i class="fa-solid fa-wand-magic-sparkles text-emerald-400"></i> <span id="labelExpandContext">Kembang Idea AI</span>
                         </button>
                     </div>
-                    <textarea id="boxContext" rows="3" onfocus="handleFieldFocus('context')" oninput="compileRealtimePrompt()" placeholder="Taip ringkas (cth: 'video promosi kesedaran awam', 'tema rasmi JANM', atau 'rujuk AP 138'). Klik butang AI untuk memperincikan konteks rasmi atau kreatif mengikut keperluan tugasan." class="w-full bg-janm-obsidian/90 border border-janm-border rounded-xl p-3 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition font-sans"></textarea>
+                    <textarea id="boxContext" rows="3" onfocus="handleFieldFocus('context')" oninput="compileRealtimePrompt()" placeholder="Taip ringkas (cth: 'warna biru emas tema janm' atau 'rujuk AP 138'). Klik butang AI untuk memperincikan konteks tadbir urus dan rujukan rasmi." class="w-full bg-janm-obsidian/90 border border-janm-border rounded-xl p-3 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition font-sans"></textarea>
                     <div class="mt-2 flex items-center gap-2 text-[10px] text-slate-400 font-mono">
                         <span class="text-emerald-400"><i class="fa-solid fa-check"></i> Merangkumi:</span>
-                        <span>Sasaran Audiens • Tema & Mood • Rujukan Dasar/Pekeliling (jika ada) • Latar Belakang Tugasan</span>
+                        <span>Pelan Strategik JANM • Arahan Perbendaharaan • Skema Warna • Khalayak Sasaran</span>
                     </div>
                 </div>
 
@@ -610,7 +606,7 @@
 
                 <div class="glass-panel rounded-3xl p-5 flex flex-col justify-between flex-grow shadow-2xl relative border-t-2 border-t-amber-400">
                     <div>
-                        <!-- Mode Switcher & Save Button -->
+                        <!-- Mode Switcher -->
                         <div class="flex items-center justify-between pb-3 mb-3 border-b border-janm-border gap-2">
                             <div class="inline-flex p-1 rounded-xl bg-slate-950/90 border border-janm-border">
                                 <button id="btnModeStandard" onclick="switchPromptMode('standard')" class="px-3 py-1 rounded-lg text-xs font-bold transition bg-amber-500 text-slate-950 shadow-sm">
@@ -620,12 +616,7 @@
                                     <i class="fa-solid fa-gem text-cyan-300 mr-1"></i> Gemini Gem
                                 </button>
                             </div>
-                            <div class="flex items-center gap-2">
-                                <button onclick="saveCurrentPromptToVault()" class="text-[11px] font-mono text-amber-300 hover:text-amber-200 bg-amber-950/60 hover:bg-amber-900/80 px-2.5 py-1 rounded-md border border-amber-500/40 transition flex items-center gap-1">
-                                    <i class="fa-solid fa-bookmark text-amber-400"></i> Simpan
-                                </button>
-                                <span id="charCountLabel" class="font-mono text-[11px] text-amber-300 bg-blue-950/80 px-2.5 py-1 rounded-md border border-amber-500/30">0 aksara</span>
-                            </div>
+                            <span id="charCountLabel" class="font-mono text-[11px] text-amber-300 bg-blue-950/80 px-2.5 py-1 rounded-md border border-amber-500/30">0 aksara</span>
                         </div>
 
                         <div id="modePillDescription" class="text-[11px] text-slate-300 bg-blue-950/50 p-2 rounded-xl mb-3 border border-blue-800/40 flex items-center gap-2">
@@ -761,36 +752,6 @@
         </div>
     </div>
 
-    <!-- KOLEKSI PROMPT SAYA (VAULT MODAL) -->
-    <div id="vaultModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
-        <div class="glass-panel max-w-2xl w-full rounded-3xl p-6 border border-cyan-500/30 relative max-h-[90vh] overflow-y-auto">
-            <div class="flex items-center justify-between border-b border-janm-border pb-3 mb-4">
-                <div class="flex items-center gap-2">
-                    <i class="fa-solid fa-bookmark text-amber-300 text-lg"></i>
-                    <h3 class="font-bold text-white font-display text-base">KOLEKSI FORMULASI PROMPT SAYA</h3>
-                </div>
-                <button onclick="closeVaultModal()" class="text-slate-400 hover:text-white text-lg">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-
-            <p class="text-xs text-slate-300 mb-4 leading-relaxed">
-                Formulasi RTCO yang anda simpan disimpan secara selamat di dalam memori pelayar peranti anda. Anda boleh memuatkan semula draf atau memadamkannya pada bila-bila masa.
-            </p>
-
-            <div id="vaultListContainer" class="space-y-3 max-h-[50vh] overflow-y-auto pr-1">
-                <!-- Senarai item simpanan akan dimuatkan melalui JS -->
-            </div>
-
-            <div class="mt-6 flex justify-between items-center border-t border-janm-border/60 pt-4">
-                <span class="text-[11px] font-mono text-slate-400" id="vaultItemCount">0 Formulasi Disimpan</span>
-                <button onclick="closeVaultModal()" class="px-5 py-2 bg-gradient-to-r from-amber-400 to-cyan-400 text-slate-950 font-bold rounded-xl text-xs hover:opacity-90 transition font-display">
-                    TUTUP
-                </button>
-            </div>
-        </div>
-    </div>
-
     <!-- PANDUAN RTCO MODAL -->
     <div id="helpModal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4">
         <div class="glass-panel max-w-xl w-full rounded-3xl p-6 border border-amber-500/30 relative max-h-[90vh] overflow-y-auto">
@@ -826,20 +787,6 @@
                     </p>
                 </div>
 
-                <!-- Kad Praktikal Terbaik Lampiran Kerangka Asal -->
-                <div class="p-3.5 rounded-2xl bg-amber-950/70 border border-amber-400/50">
-                    <span class="font-bold text-amber-300 font-mono text-xs block mb-1 flex items-center gap-1.5">
-                        <i class="fa-solid fa-paperclip text-amber-400"></i> Lampiran Format / Kerangka Rujukan Sedia Ada
-                    </span>
-                    <p class="text-slate-300 leading-relaxed text-xs mb-1">
-                        Bagi penyediaan <strong>Slaid Pembentangan, Minit Mesyuarat, atau Memo Rasmi</strong>, dinyatakan praktikal terbaik:
-                    </p>
-                    <ul class="list-disc list-inside text-xs text-slate-300 space-y-1 pl-1">
-                        <li><strong>Draf Teks / Kerangka Ringkas:</strong> Nyatakan susunan kerangka tersebut di ruangan <em>Context</em> atau <em>Output</em>.</li>
-                        <li><strong>Fail Fizikal (.pptx, .docx, .pdf):</strong> Maklumkan di dalam prompt untuk merujuk fail asal yang dilampirkan bersama semasa menampal prompt di kotak sembang ChatGPT / Gemini.</li>
-                    </ul>
-                </div>
-
                 <div class="p-3.5 rounded-2xl bg-janm-obsidian/90 border border-amber-500/30">
                     <span class="font-bold text-amber-300 font-mono text-xs block mb-1">R - RULES (Peranan & Persona)</span>
                     <p class="text-slate-300 leading-relaxed text-xs">Tetapkan identiti profesional, bidang kepakaran, etika perkhidmatan awam dan tona komunikasi rasmi.</p>
@@ -849,8 +796,8 @@
                     <p class="text-slate-300 leading-relaxed text-xs">Nyatakan tindakan kerja secara jelas (contoh: sediakan minit mesyuarat, rangka konsep visual, analisis varian perbelanjaan).</p>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-janm-obsidian/90 border border-emerald-500/30">
-                    <span class="font-bold text-emerald-300 font-mono text-xs block mb-1">C - CONTEXT (Rujukan, Tema & Audiens)</span>
-                    <p class="text-slate-300 leading-relaxed text-xs">Sasaran audiens, mood visual, latar belakang situasi, atau pekeliling berkaitan mengikut keperluan tugasan.</p>
+                    <span class="font-bold text-emerald-300 font-mono text-xs block mb-1">C - CONTEXT (Rujukan & Dasar)</span>
+                    <p class="text-slate-300 leading-relaxed text-xs">Asas perundangan atau pekeliling berkaitan (Arahan Perbendaharaan, Akta Tatacara Kewangan 1957, Akta WTD 1965).</p>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-janm-obsidian/90 border border-indigo-500/30">
                     <span class="font-bold text-indigo-300 font-mono text-xs block mb-1">O - OUTPUT (Format & Susunan Hasil)</span>
@@ -1102,8 +1049,8 @@
                 botSpeech.innerText = "Fokus [Task]: Nyatakan kerja khusus yang perlu dilaksanakan. Mulakan dengan kata kerja tindakan yang jelas.";
                 moodBadge.innerText = "Tugasan Khusus (T)";
             } else if (type === 'context') {
-                botSpeech.innerText = "Fokus [Context]: Nyatakan latar belakang, sasaran audiens, tema/mood, atau rujukan dasar/pekeliling mengikut keperluan tugasan anda.";
-                moodBadge.innerText = "Konteks & Latar Belakang (C)";
+                botSpeech.innerText = "Fokus [Context]: Nyatakan rujukan undang-undang, Arahan Perbendaharaan atau latar belakang situasi kerja.";
+                moodBadge.innerText = "Konteks & Dasar (C)";
             } else if (type === 'output') {
                 botSpeech.innerText = "Fokus [Output]: Tentukan format hasil akhir seperti slaid pembentangan, dokumen Word/PDF, atau jadual Excel.";
                 moodBadge.innerText = "Format Jawapan (O)";
@@ -1176,18 +1123,18 @@
                 else feedback = "Gunakan Kata Kerja Tindakan";
 
             } else if (type === 'context') {
-                const hasPolicyRef = /(janm|kementerian|pelan strategik|arahan perbendaharaan|ap\s*138|akta|pekeliling|mpsas|ipsas|wtd|egumis|perolehan|jpka|mof|dasar|garis panduan|standard|peraturan|rujukan)/i.test(lower);
-                const hasAudienceOrDomain = /(rakyat|warga|kakitangan|pejabat perakaunan|agensi|sektor awam|kerajaan|industri|khalayak|audiens|penonton|masyarakat|awam|pelanggan|pengguna)/i.test(lower);
-                const hasSituation = /(bersempena|isu|situasi|sasaran|warna|tema|keutamaan|kekangan|objektif|mood|video|kempen|promosi|sinematik|latar belakang|penceritaan|storytelling)/i.test(lower);
+                const hasPolicyRef = /(janm|kementerian|pelan strategik|arahan perbendaharaan|ap\s*138|akta|pekeliling|mpsas|ipsas|wtd|egumis|perolehan|jpka|mof)/i.test(lower);
+                const hasAudienceOrDomain = /(rakyat|warga|kakitangan|pejabat perakaunan|agensi|sektor awam|kerajaan|industri|khalayak)/i.test(lower);
+                const hasSituation = /(bersempena|isu|situasi|sasaran|warna|tema|keutamaan|kekangan|objektif)/i.test(lower);
 
-                if (hasPolicyRef) score += 35;
-                if (hasAudienceOrDomain) score += 35;
-                if (hasSituation) score += 20;
-                if (words.length >= 6 && words.length <= 120) score += 10;
+                if (hasPolicyRef) score += 45;
+                if (hasAudienceOrDomain) score += 25;
+                if (hasSituation) score += 15;
+                if (words.length >= 8 && words.length <= 120) score += 15;
 
-                if (score >= 70) feedback = "Konteks & Latar Belakang Sangat Kukuh";
-                else if (score >= 40) feedback = "Konteks Memadai";
-                else feedback = "Sertakan Audiens / Latar Belakang / Dasar";
+                if (score >= 80) feedback = "Konteks & Dasar Sangat Kukuh";
+                else if (score >= 50) feedback = "Konteks Memadai";
+                else feedback = "Sertakan Rujukan Dasar / Situasi";
 
             } else if (type === 'output') {
                 const hasFormat = /(jadual|matriks|memo|laporan|kolom|format|struktur|seksyen|poin|bullet|perenggan|slaid|slide|powerpoint|excel|word|pdf)/i.test(lower);
@@ -1332,7 +1279,7 @@
             if (fbC) fbC.innerText = evalC.feedback;
             if (fbO) fbO.innerText = evalO.feedback;
 
-            // Output bersih tanpa ulasan pengganggu
+            // Output bersih tanpa teks ulasan pengganggu untuk memudahkan copy-paste terus ke ChatGPT/Gemini
             let fullText = "";
             if (currentPromptMode === 'gems') {
                 fullText = `# 1. IDENTITY & PROFESSIONAL ROLE (RULES)
@@ -1452,15 +1399,14 @@ PANDUAN KETAT:
 
             } else if (type === 'context') {
                 specificSystemPrompt = `Anda ialah Pakar Kejuruteraan Prompt RTCO bagi Jabatan Akauntan Negara Malaysia (JANM).
-TUGAS MUTLAK: Ambil input ringkas pengguna dan kembangkannya KHUSUS dan TERHAD untuk bahagian CONTEXT (Konteks, Dasar, Latar Belakang, Tema & Rujukan) sahaja.
+TUGAS MUTLAK: Ambil input ringkas pengguna dan kembangkannya KHUSUS dan TERHAD untuk bahagian CONTEXT (Konteks, Dasar, Latar Belakang & Rujukan) sahaja.
 PANDUAN KETAT:
-1. HANYA huraikan: Latar belakang situasi, sasaran audiens, tema, mood visual, kekangan, atau punca rujukan dasar/pekeliling (jika berkaitan).
-2. FLEKSIBILITI: Jika tugasan bersifat umum atau kreatif (seperti video, poster, kempen, slaid), kembangkan mengikut tema dan audiens pilihan pengguna tanpa memaksakan pekeliling JANM secara tegar kecuali jika dinyatakan.
-3. DILARANG SAMA SEKALI memasukkan peranan (Rules), senarai kerja (Task), atau susunan format jawapan (Output).
-4. Terus berikan teks isi tanpa kata pengantar.`;
+1. HANYA huraikan: Punca rujukan (Pelan Strategik JANM, Arahan Perbendaharaan, Akta WTD 1965), sasaran audiens, tema korporat, atau kekangan situasi.
+2. DILARANG SAMA SEKALI memasukkan peranan (Rules), senarai kerja (Task), atau susunan format jawapan (Output).
+3. Terus berikan teks isi tanpa kata pengantar.`;
                 specificUserPrompt = currentText 
-                    ? `Input pengguna untuk [CONTEXT]: "${currentText}". Kembangkan latar belakang dan konteks rujukan ini secara fleksibel mengikut tema pengguna.`
-                    : `Berikan satu contoh konteks latar belakang atau tema sasaran audiens yang sesuai bagi bahagian [CONTEXT].`;
+                    ? `Input pengguna untuk [CONTEXT]: "${currentText}". Kembangkan latar belakang dan konteks rujukan ini sahaja.`
+                    : `Berikan satu contoh konteks dasar atau tema rasmi bagi bahagian [CONTEXT].`;
 
             } else if (type === 'output') {
                 specificSystemPrompt = `Anda ialah Pakar Kejuruteraan Prompt RTCO bagi Jabatan Akauntan Negara Malaysia (JANM).
@@ -1545,20 +1491,16 @@ PANDUAN KETAT:
                 }
             } 
             else if (type === 'context') {
-                if (lower.includes('video') || lower.includes('montaj') || lower.includes('skrip') || lower.includes('film') || lower.includes('sinematik')) {
-                    boxElement.value = userText.length > 0 
-                        ? `Konteks penerbitan video: ${userText}. Sasaran audiens: Penonton umum / warga organisasi. Mood visual: Dinamik, profesional dan berimpak tinggi dengan elemen penceritaan (storytelling) yang menarik.`
-                        : "Konteks penerbitan video korporat/kreatif: Sasaran audiens merangkumi warga organisasi dan orang awam. Mood & gaya visual: Dinamik, moden, berimpak tinggi dengan susunan penceritaan (storytelling) yang jelas dan menarik.";
-                } else if (lower.includes('grafik') || lower.includes('gambar') || lower.includes('poster') || lower.includes('warna') || lower.includes('slaid')) {
+                if (lower.includes('grafik') || lower.includes('gambar') || lower.includes('poster') || lower.includes('warna') || lower.includes('slaid')) {
                     boxElement.value = userText.length > 0 
                         ? `Berpandukan konteks kerja: ${userText}. Skema warna dan gaya estetika mengikut pilihan/tema tugasan anda, atau boleh menggunakan warna rasmi JANM (Biru Diraja #051636 dan Emas Warisan #f59e0b) jika melibatkan dokumen rasmi jabatan.`
                         : "Berpandukan tema dan identiti korporat pilihan anda (atau warna rasmi JANM: Biru Diraja #051636, Emas Warisan #f59e0b dan Biru Siber #00d2ff jika untuk kegunaan rasmi jabatan). Visual mestilah profesional, kemas dan sesuai dengan khalayak sasaran.";
                 } else if (lower.includes('audit') || lower.includes('kewangan') || lower.includes('wang')) {
                     boxElement.value = "Merujuk Arahan Perbendaharaan (AP 138), Akta Tatacara Kewangan 1957 [Akta 61], dan Teras Strategik Pelan Strategik JANM (Kecemerlangan Institusi Mampan).";
                 } else if (userText.length > 0) {
-                    boxElement.value = `Merujuk kepada konteks/situasi: ${userText}, serta diselaraskan dengan sasaran audiens dan objektif perkhidmatan yang ditetapkan.`;
+                    boxElement.value = `Merujuk kepada ${userText}, serta diselaraskan dengan garis panduan perkhidmatan awam yang berkuat kuasa bagi memastikan pematuhan dasar yang tepat.`;
                 } else {
-                    boxElement.value = "Berdasarkan konteks tugasan rasmi / korporat (atau Pelan Strategik JANM jika untuk kegunaan rasmi jabatan). Sasaran audiens merangkumi warga jabatan, pihak berkepentingan, dan orang awam.";
+                    boxElement.value = "Berdasarkan Pelan Strategik JANM (Pembudayaan Pendigitalan, Inovasi dan Pemanfaatan Data). Sasaran pelaksanaannya melibatkan warga JANM dan agensi perakaunan seluruh negara.";
                 }
             } 
             else if (type === 'output') {
@@ -1778,136 +1720,6 @@ PANDUAN KETAT:
                 modal.classList.remove('flex');
                 modal.classList.add('hidden');
             }
-        }
-
-        // KOLEKSI PROMPT SAYA (VAULT MANAGEMENT)
-        const VAULT_STORAGE_KEY = 'janm_rtco_vault_items';
-
-        function openVaultModal() {
-            playHapticTick();
-            const modal = document.getElementById('vaultModal');
-            if (modal) {
-                modal.classList.remove('hidden');
-                modal.classList.add('flex');
-                renderVaultList();
-            }
-        }
-
-        function closeVaultModal() {
-            const modal = document.getElementById('vaultModal');
-            if (modal) {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-            }
-        }
-
-        function getVaultItems() {
-            try {
-                return JSON.parse(localStorage.getItem(VAULT_STORAGE_KEY) || '[]');
-            } catch(e) {
-                return [];
-            }
-        }
-
-        function saveCurrentPromptToVault() {
-            playHapticTick();
-            const rules = document.getElementById('boxRules')?.value.trim() || '';
-            const task = document.getElementById('boxTask')?.value.trim() || '';
-            const context = document.getElementById('boxContext')?.value.trim() || '';
-            const output = document.getElementById('boxOutput')?.value.trim() || '';
-
-            if (!rules && !task && !context && !output) {
-                triggerToast("Ruangan Kosong", "Sila isi sekurang-kurangnya satu medan RTCO sebelum menyimpan.");
-                return;
-            }
-
-            const promptTitle = prompt("Masukkan nama/tajuk ringkas untuk simpanan formulasi ini:", task.substring(0, 30) || "Formulasi RTCO Saya");
-            if (!promptTitle) return;
-
-            const vaultItems = getVaultItems();
-            const newItem = {
-                id: Date.now(),
-                title: promptTitle,
-                mode: currentPromptMode,
-                date: new Date().toLocaleDateString('ms-MY'),
-                rules, task, context, output
-            };
-
-            vaultItems.unshift(newItem);
-            localStorage.setItem(VAULT_STORAGE_KEY, JSON.stringify(vaultItems));
-            triggerToast("Disimpan ke Koleksi", `Formulasi "${promptTitle}" disimpan secara selamat di peranti anda.`);
-        }
-
-        function renderVaultList() {
-            const container = document.getElementById('vaultListContainer');
-            const countEl = document.getElementById('vaultItemCount');
-            if (!container) return;
-
-            const items = getVaultItems();
-            if (countEl) countEl.innerText = `${items.length} Formulasi Disimpan`;
-
-            if (items.length === 0) {
-                container.innerHTML = `
-                    <div class="text-center py-8 text-slate-500 border border-dashed border-slate-800 rounded-2xl">
-                        <i class="fa-solid fa-box-open text-3xl mb-2 text-slate-600"></i>
-                        <p class="text-xs font-mono">Tiada formulasi disimpan setakat ini.</p>
-                        <p class="text-[10px] text-slate-500 mt-1">Gunakan butang "Simpan" di sebelah kanan terminal prompt untuk menyimpan draf RTCO anda.</p>
-                    </div>
-                `;
-                return;
-            }
-
-            container.innerHTML = items.map((item, index) => `
-                <div class="bg-janm-obsidian/90 border border-janm-border rounded-2xl p-3.5 hover:border-cyan-400/50 transition flex items-center justify-between gap-3">
-                    <div class="min-w-0 flex-1">
-                        <div class="flex items-center gap-2">
-                            <span class="font-bold text-xs text-white truncate">${escapeHtml(item.title)}</span>
-                            <span class="text-[9px] font-mono px-2 py-0.5 rounded-full ${item.mode === 'gems' ? 'bg-cyan-950 text-cyan-300 border border-cyan-800' : 'bg-amber-950 text-amber-300 border border-amber-800'}">${item.mode === 'gems' ? 'Gemini Gem' : 'Prompt Harian'}</span>
-                        </div>
-                        <p class="text-[10px] text-slate-400 mt-1 line-clamp-1 font-mono">${escapeHtml(item.task || item.rules || 'Tiada deskripsi')}</p>
-                        <span class="text-[9px] text-slate-500 font-mono mt-1 block">Tarikh: ${item.date}</span>
-                    </div>
-                    <div class="flex items-center gap-2 shrink-0">
-                        <button onclick="loadVaultItem(${item.id})" class="px-3 py-1.5 bg-cyan-950 hover:bg-cyan-900 text-cyan-300 border border-cyan-500/40 rounded-xl text-xs font-semibold transition flex items-center gap-1">
-                            <i class="fa-solid fa-arrow-right-to-bracket text-[10px]"></i> Guna
-                        </button>
-                        <button onclick="deleteVaultItem(${item.id})" class="p-1.5 text-rose-400 hover:text-rose-300 hover:bg-rose-950/60 rounded-lg transition" title="Padam">
-                            <i class="fa-solid fa-trash text-xs"></i>
-                        </button>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        function loadVaultItem(id) {
-            playHapticTick();
-            const items = getVaultItems();
-            const target = items.find(i => i.id === id);
-            if (!target) return;
-
-            if (document.getElementById('boxRules')) document.getElementById('boxRules').value = target.rules || '';
-            if (document.getElementById('boxTask')) document.getElementById('boxTask').value = target.task || '';
-            if (document.getElementById('boxContext')) document.getElementById('boxContext').value = target.context || '';
-            if (document.getElementById('boxOutput')) document.getElementById('boxOutput').value = target.output || '';
-
-            if (target.mode) switchPromptMode(target.mode);
-
-            compileRealtimePrompt();
-            closeVaultModal();
-            triggerToast("Formulasi Dimuatkan", `Formulasi "${target.title}" dimuatkan ke dalam ruang input.`);
-        }
-
-        function deleteVaultItem(id) {
-            playHapticTick();
-            let items = getVaultItems();
-            items = items.filter(i => i.id !== id);
-            localStorage.setItem(VAULT_STORAGE_KEY, JSON.stringify(items));
-            renderVaultList();
-            triggerToast("Dipadam", "Formulasi telah dipadam daripada simpanan tempatan.");
-        }
-
-        function escapeHtml(str) {
-            return String(str || '').replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
         }
 
         function triggerToast(title, message) {
