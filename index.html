@@ -7,7 +7,7 @@
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome 6.5.1 CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-fontawesome/6.5.1/css/all.min.css">
     <!-- Google Fonts: Plus Jakarta Sans, Space Grotesk, JetBrains Mono & Italianno -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -209,7 +209,7 @@
 
     </div>
 
-    <!-- MAIN HEADER (OPTIMISED & EXECUTIVE) -->
+    <!-- MAIN HEADER (OPTIMISED & EXECUTIVE - WHITESPACE NOWRAP FIXED) -->
     <header class="bg-janm-deep/90 border-b border-janm-border sticky top-0 z-40 backdrop-blur-2xl">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
             
@@ -354,7 +354,7 @@
             </div>
         </div>
 
-        <!-- ANALISIS FORMULASI PROMPT EKSEKUTIF (STICKY / FROZEN ON SCROLL) -->
+        <!-- ANALISIS FORMULASI PROMPT EKSEKUTIF (STICKY / FROZEN ON SCROLL INCLUDED!) -->
         <div class="mb-6 glass-panel rounded-3xl p-4 sm:p-5 border border-janm-border shadow-2xl sticky top-20 z-30 backdrop-blur-2xl bg-janm-obsidian/90 transition-all duration-300">
             <div class="flex flex-col lg:flex-row items-center justify-between gap-4 pb-3 border-b border-janm-border/60">
                 <div class="flex items-center gap-3 w-full lg:w-auto">
@@ -557,26 +557,26 @@
                     </div>
                 </div>
 
-                <!-- C - CONTEXT -->
+                <!-- C - CONTEXT (DITINGKATKAN UNTUK FLEKSIBILITI MEDIA/VIDEO & NON-JANM) -->
                 <div class="glass-panel rounded-2xl p-4 sm:p-5 border-l-4 border-l-emerald-400 transition hover:border-l-emerald-300">
                     <div class="flex items-center justify-between gap-3 mb-2.5">
                         <div class="flex items-center gap-2.5 min-w-0">
                             <span class="w-7 h-7 rounded-xl bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 flex items-center justify-center font-bold font-mono text-xs shadow-sm shrink-0">C</span>
                             <div class="min-w-0">
                                 <h3 class="text-xs sm:text-sm font-bold text-white truncate">
-                                    Context / Rujukan Dasar & Konteks
+                                    Context / Rujukan Dasar, Latar Belakang & Tema
                                 </h3>
-                                <p class="text-[11px] text-emerald-300/80 truncate">Pekeliling, arahan dan asas situasi</p>
+                                <p class="text-[11px] text-emerald-300/80 truncate">Audiens, situasi, mood visual, atau pekeliling rasmi</p>
                             </div>
                         </div>
                         <button type="button" id="btnExpandContext" onclick="smartExpandField('context')" class="shrink-0 whitespace-nowrap text-[11px] text-emerald-300 hover:text-emerald-200 flex items-center gap-1.5 font-medium bg-emerald-950/50 hover:bg-emerald-900/60 px-3 py-1.5 rounded-lg border border-emerald-500/40 transition shadow-sm">
                             <i class="fa-solid fa-wand-magic-sparkles text-emerald-400"></i> <span id="labelExpandContext">Kembang Idea AI</span>
                         </button>
                     </div>
-                    <textarea id="boxContext" rows="3" onfocus="handleFieldFocus('context')" oninput="compileRealtimePrompt()" placeholder="Taip ringkas (cth: 'warna biru emas tema janm' atau 'rujuk AP 138'). Klik butang AI untuk memperincikan konteks tadbir urus dan rujukan rasmi." class="w-full bg-janm-obsidian/90 border border-janm-border rounded-xl p-3 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition font-sans"></textarea>
+                    <textarea id="boxContext" rows="3" onfocus="handleFieldFocus('context')" oninput="compileRealtimePrompt()" placeholder="Taip ringkas (cth: 'video promosi kesedaran awam', 'tema rasmi JANM', atau 'rujuk AP 138'). Klik butang AI untuk memperincikan konteks rasmi atau kreatif mengikut keperluan tugasan." class="w-full bg-janm-obsidian/90 border border-janm-border rounded-xl p-3 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-emerald-400 focus:ring-1 focus:ring-emerald-400 transition font-sans"></textarea>
                     <div class="mt-2 flex items-center gap-2 text-[10px] text-slate-400 font-mono">
                         <span class="text-emerald-400"><i class="fa-solid fa-check"></i> Merangkumi:</span>
-                        <span>Pelan Strategik JANM • Arahan Perbendaharaan • Skema Warna • Khalayak Sasaran</span>
+                        <span>Sasaran Audiens • Tema & Mood • Rujukan Dasar/Pekeliling (jika ada) • Latar Belakang Tugasan</span>
                     </div>
                 </div>
 
@@ -849,8 +849,8 @@
                     <p class="text-slate-300 leading-relaxed text-xs">Nyatakan tindakan kerja secara jelas (contoh: sediakan minit mesyuarat, rangka konsep visual, analisis varian perbelanjaan).</p>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-janm-obsidian/90 border border-emerald-500/30">
-                    <span class="font-bold text-emerald-300 font-mono text-xs block mb-1">C - CONTEXT (Rujukan & Dasar)</span>
-                    <p class="text-slate-300 leading-relaxed text-xs">Asas perundangan atau pekeliling berkaitan (Arahan Perbendaharaan, Akta Tatacara Kewangan 1957, Akta WTD 1965).</p>
+                    <span class="font-bold text-emerald-300 font-mono text-xs block mb-1">C - CONTEXT (Rujukan, Tema & Audiens)</span>
+                    <p class="text-slate-300 leading-relaxed text-xs">Sasaran audiens, mood visual, latar belakang situasi, atau pekeliling berkaitan mengikut keperluan tugasan.</p>
                 </div>
                 <div class="p-3.5 rounded-2xl bg-janm-obsidian/90 border border-indigo-500/30">
                     <span class="font-bold text-indigo-300 font-mono text-xs block mb-1">O - OUTPUT (Format & Susunan Hasil)</span>
@@ -1102,8 +1102,8 @@
                 botSpeech.innerText = "Fokus [Task]: Nyatakan kerja khusus yang perlu dilaksanakan. Mulakan dengan kata kerja tindakan yang jelas.";
                 moodBadge.innerText = "Tugasan Khusus (T)";
             } else if (type === 'context') {
-                botSpeech.innerText = "Fokus [Context]: Nyatakan rujukan undang-undang, Arahan Perbendaharaan atau latar belakang situasi kerja.";
-                moodBadge.innerText = "Konteks & Dasar (C)";
+                botSpeech.innerText = "Fokus [Context]: Nyatakan latar belakang, sasaran audiens, tema/mood, atau rujukan dasar/pekeliling mengikut keperluan tugasan anda.";
+                moodBadge.innerText = "Konteks & Latar Belakang (C)";
             } else if (type === 'output') {
                 botSpeech.innerText = "Fokus [Output]: Tentukan format hasil akhir seperti slaid pembentangan, dokumen Word/PDF, atau jadual Excel.";
                 moodBadge.innerText = "Format Jawapan (O)";
@@ -1176,18 +1176,18 @@
                 else feedback = "Gunakan Kata Kerja Tindakan";
 
             } else if (type === 'context') {
-                const hasPolicyRef = /(janm|kementerian|pelan strategik|arahan perbendaharaan|ap\s*138|akta|pekeliling|mpsas|ipsas|wtd|egumis|perolehan|jpka|mof)/i.test(lower);
-                const hasAudienceOrDomain = /(rakyat|warga|kakitangan|pejabat perakaunan|agensi|sektor awam|kerajaan|industri|khalayak)/i.test(lower);
-                const hasSituation = /(bersempena|isu|situasi|sasaran|warna|tema|keutamaan|kekangan|objektif)/i.test(lower);
+                const hasPolicyRef = /(janm|kementerian|pelan strategik|arahan perbendaharaan|ap\s*138|akta|pekeliling|mpsas|ipsas|wtd|egumis|perolehan|jpka|mof|dasar|garis panduan|standard|peraturan|rujukan)/i.test(lower);
+                const hasAudienceOrDomain = /(rakyat|warga|kakitangan|pejabat perakaunan|agensi|sektor awam|kerajaan|industri|khalayak|audiens|penonton|masyarakat|awam|pelanggan|pengguna)/i.test(lower);
+                const hasSituation = /(bersempena|isu|situasi|sasaran|warna|tema|keutamaan|kekangan|objektif|mood|video|kempen|promosi|sinematik|latar belakang|penceritaan|storytelling)/i.test(lower);
 
-                if (hasPolicyRef) score += 45;
-                if (hasAudienceOrDomain) score += 25;
-                if (hasSituation) score += 15;
-                if (words.length >= 8 && words.length <= 120) score += 15;
+                if (hasPolicyRef) score += 35;
+                if (hasAudienceOrDomain) score += 35;
+                if (hasSituation) score += 20;
+                if (words.length >= 6 && words.length <= 120) score += 10;
 
-                if (score >= 80) feedback = "Konteks & Dasar Sangat Kukuh";
-                else if (score >= 50) feedback = "Konteks Memadai";
-                else feedback = "Sertakan Rujukan Dasar / Situasi";
+                if (score >= 70) feedback = "Konteks & Latar Belakang Sangat Kukuh";
+                else if (score >= 40) feedback = "Konteks Memadai";
+                else feedback = "Sertakan Audiens / Latar Belakang / Dasar";
 
             } else if (type === 'output') {
                 const hasFormat = /(jadual|matriks|memo|laporan|kolom|format|struktur|seksyen|poin|bullet|perenggan|slaid|slide|powerpoint|excel|word|pdf)/i.test(lower);
@@ -1452,14 +1452,15 @@ PANDUAN KETAT:
 
             } else if (type === 'context') {
                 specificSystemPrompt = `Anda ialah Pakar Kejuruteraan Prompt RTCO bagi Jabatan Akauntan Negara Malaysia (JANM).
-TUGAS MUTLAK: Ambil input ringkas pengguna dan kembangkannya KHUSUS dan TERHAD untuk bahagian CONTEXT (Konteks, Dasar, Latar Belakang & Rujukan) sahaja.
+TUGAS MUTLAK: Ambil input ringkas pengguna dan kembangkannya KHUSUS dan TERHAD untuk bahagian CONTEXT (Konteks, Dasar, Latar Belakang, Tema & Rujukan) sahaja.
 PANDUAN KETAT:
-1. HANYA huraikan: Punca rujukan (Pelan Strategik JANM, Arahan Perbendaharaan, Akta WTD 1965), sasaran audiens, tema korporat, atau kekangan situasi.
-2. DILARANG SAMA SEKALI memasukkan peranan (Rules), senarai kerja (Task), atau susunan format jawapan (Output).
-3. Terus berikan teks isi tanpa kata pengantar.`;
+1. HANYA huraikan: Latar belakang situasi, sasaran audiens, tema, mood visual, kekangan, atau punca rujukan dasar/pekeliling (jika berkaitan).
+2. FLEKSIBILITI: Jika tugasan bersifat umum atau kreatif (seperti video, poster, kempen, slaid), kembangkan mengikut tema dan audiens pilihan pengguna tanpa memaksakan pekeliling JANM secara tegar kecuali jika dinyatakan.
+3. DILARANG SAMA SEKALI memasukkan peranan (Rules), senarai kerja (Task), atau susunan format jawapan (Output).
+4. Terus berikan teks isi tanpa kata pengantar.`;
                 specificUserPrompt = currentText 
-                    ? `Input pengguna untuk [CONTEXT]: "${currentText}". Kembangkan latar belakang dan konteks rujukan ini sahaja.`
-                    : `Berikan satu contoh konteks dasar atau tema rasmi bagi bahagian [CONTEXT].`;
+                    ? `Input pengguna untuk [CONTEXT]: "${currentText}". Kembangkan latar belakang dan konteks rujukan ini secara fleksibel mengikut tema pengguna.`
+                    : `Berikan satu contoh konteks latar belakang atau tema sasaran audiens yang sesuai bagi bahagian [CONTEXT].`;
 
             } else if (type === 'output') {
                 specificSystemPrompt = `Anda ialah Pakar Kejuruteraan Prompt RTCO bagi Jabatan Akauntan Negara Malaysia (JANM).
@@ -1544,16 +1545,20 @@ PANDUAN KETAT:
                 }
             } 
             else if (type === 'context') {
-                if (lower.includes('grafik') || lower.includes('gambar') || lower.includes('poster') || lower.includes('warna') || lower.includes('slaid')) {
+                if (lower.includes('video') || lower.includes('montaj') || lower.includes('skrip') || lower.includes('film') || lower.includes('sinematik')) {
+                    boxElement.value = userText.length > 0 
+                        ? `Konteks penerbitan video: ${userText}. Sasaran audiens: Penonton umum / warga organisasi. Mood visual: Dinamik, profesional dan berimpak tinggi dengan elemen penceritaan (storytelling) yang menarik.`
+                        : "Konteks penerbitan video korporat/kreatif: Sasaran audiens merangkumi warga organisasi dan orang awam. Mood & gaya visual: Dinamik, moden, berimpak tinggi dengan susunan penceritaan (storytelling) yang jelas dan menarik.";
+                } else if (lower.includes('grafik') || lower.includes('gambar') || lower.includes('poster') || lower.includes('warna') || lower.includes('slaid')) {
                     boxElement.value = userText.length > 0 
                         ? `Berpandukan konteks kerja: ${userText}. Skema warna dan gaya estetika mengikut pilihan/tema tugasan anda, atau boleh menggunakan warna rasmi JANM (Biru Diraja #051636 dan Emas Warisan #f59e0b) jika melibatkan dokumen rasmi jabatan.`
                         : "Berpandukan tema dan identiti korporat pilihan anda (atau warna rasmi JANM: Biru Diraja #051636, Emas Warisan #f59e0b dan Biru Siber #00d2ff jika untuk kegunaan rasmi jabatan). Visual mestilah profesional, kemas dan sesuai dengan khalayak sasaran.";
                 } else if (lower.includes('audit') || lower.includes('kewangan') || lower.includes('wang')) {
                     boxElement.value = "Merujuk Arahan Perbendaharaan (AP 138), Akta Tatacara Kewangan 1957 [Akta 61], dan Teras Strategik Pelan Strategik JANM (Kecemerlangan Institusi Mampan).";
                 } else if (userText.length > 0) {
-                    boxElement.value = `Merujuk kepada ${userText}, serta diselaraskan dengan garis panduan perkhidmatan awam yang berkuat kuasa bagi memastikan pematuhan dasar yang tepat.`;
+                    boxElement.value = `Merujuk kepada konteks/situasi: ${userText}, serta diselaraskan dengan sasaran audiens dan objektif perkhidmatan yang ditetapkan.`;
                 } else {
-                    boxElement.value = "Berdasarkan Pelan Strategik JANM (Pembudayaan Pendigitalan, Inovasi dan Pemanfaatan Data). Sasaran pelaksanaannya melibatkan warga JANM dan agensi perakaunan seluruh negara.";
+                    boxElement.value = "Berdasarkan konteks tugasan rasmi / korporat (atau Pelan Strategik JANM jika untuk kegunaan rasmi jabatan). Sasaran audiens merangkumi warga jabatan, pihak berkepentingan, dan orang awam.";
                 }
             } 
             else if (type === 'output') {
